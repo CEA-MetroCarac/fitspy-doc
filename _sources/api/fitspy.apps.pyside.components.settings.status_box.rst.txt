@@ -1,0 +1,9 @@
+fitspy.apps.pyside.components.settings.status\_box module
+=========================================================
+
+.. automodule:: fitspy.apps.pyside.components.settings.status_box
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

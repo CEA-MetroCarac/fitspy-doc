@@ -6,10 +6,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fitting &mdash; Fitspy 2024.5 documentation</title>
+  <title>Fitting &mdash; Fitspy 2025.1dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
 
   
       <script src="../_static/jquery.js"></script>
@@ -17,6 +19,8 @@
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/sphinx_highlight.js"></script>
+      <script src="../_static/clipboard.min.js"></script>
+      <script src="../_static/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -141,12 +145,12 @@
 <section id="fitting-algorithm">
 <h3>Fitting algorithm<a class="headerlink" href="#fitting-algorithm" title="Permalink to this heading"></a></h3>
 <p>In the GUI, the pre-selected fitting algorithms  are <code class="code docutils literal notranslate"><span class="pre">Leastsq</span></code>, <code class="code docutils literal notranslate"><span class="pre">Least_squares</span></code>, <code class="code docutils literal notranslate"><span class="pre">Nelder-Mead</span></code>, <code class="code docutils literal notranslate"><span class="pre">SLSQP</span></code> which correspond in <strong>`lmfit`</strong> to the <em>‘leastsq’, ‘least_squares’, ‘nelder’</em> and <em>‘slsqp’</em> fitting algorithms (resp.).</p>
-<p>In python script, all the allowed <strong>`lmfit`</strong> fitting algorithms can be used via the <code class="code docutils literal notranslate"><span class="pre">method</span></code> argument passed to <a class="reference internal" href="../api/fitspy.spectrum.html#fitspy.spectrum.Spectrum.fit" title="fitspy.spectrum.Spectrum.fit"><code class="xref py py-func docutils literal notranslate"><span class="pre">fit()</span></code></a>.</p>
+<p>In python script, all the allowed <strong>`lmfit`</strong> fitting algorithms can be used via the <code class="code docutils literal notranslate"><span class="pre">method</span></code> argument passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">fit()</span></code>.</p>
 </section>
 <section id="convergence-criterion">
 <h3>Convergence criterion<a class="headerlink" href="#convergence-criterion" title="Permalink to this heading"></a></h3>
 <p>The convergence criterion is most often associated with a threshold to be reached on the calculated residual during the minimization procedure (gradient descent). Each fitting method used by <strong>`lmfit`</strong> has its own way of specifying this criterion.
-For <code class="code docutils literal notranslate"><span class="pre">Leastsq</span></code> and <code class="code docutils literal notranslate"><span class="pre">Least_squares</span></code> the <code class="code docutils literal notranslate"><span class="pre">xtol</span></code> parameter can be pass to the fit function (see the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html">scipy</a> documentation for more details about this parameter). Otherwise, for the other fitting methods, in scripting mode, tolerance criteria can be passed through the <code class="code docutils literal notranslate"><span class="pre">fit_kws</span></code> in the <code class="code docutils literal notranslate"><span class="pre">kwargs</span></code> arguments of the <a class="reference internal" href="../api/fitspy.spectrum.html#fitspy.spectrum.Spectrum.fit" title="fitspy.spectrum.Spectrum.fit"><code class="xref py py-func docutils literal notranslate"><span class="pre">fit()</span></code></a> function (in a format compatible with the fit method).</p>
+For <code class="code docutils literal notranslate"><span class="pre">Leastsq</span></code> and <code class="code docutils literal notranslate"><span class="pre">Least_squares</span></code> the <code class="code docutils literal notranslate"><span class="pre">xtol</span></code> parameter can be pass to the fit function (see the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html">scipy</a> documentation for more details about this parameter). Otherwise, for the other fitting methods, in scripting mode, tolerance criteria can be passed through the <code class="code docutils literal notranslate"><span class="pre">fit_kws</span></code> in the <code class="code docutils literal notranslate"><span class="pre">kwargs</span></code> arguments of the <code class="xref py py-func docutils literal notranslate"><span class="pre">fit()</span></code> function (in a format compatible with the fit method).</p>
 <p>This convergence criterion naturally has a significant impact on performance. (Refer to the section <a class="reference external" href="fitting.html#performance">above</a>).</p>
 </section>
 <section id="maximum-number-of-iterations">
@@ -156,7 +160,7 @@ For <code class="code docutils literal notranslate"><span class="pre">Leastsq</s
 </section>
 <section id="weighting">
 <h3>Weighting<a class="headerlink" href="#weighting" title="Permalink to this heading"></a></h3>
-<p>Similarly to noisy areas of outliers, the presence of negative values in the profiles to be fitted, resulting notably from baseline or background removal, can adversely affect the quality of results. To mitigate the impact of these negative values during the fit, a weight of ‘0’ can be assigned to them. This is achieved through the <strong>‘fit negative values : Off’</strong> option in the GUI or by the <code class="code docutils literal notranslate"><span class="pre">fit_negative</span></code> parameter passed to <a class="reference internal" href="../api/fitspy.spectrum.html#fitspy.spectrum.Spectrum.fit" title="fitspy.spectrum.Spectrum.fit"><code class="xref py py-func docutils literal notranslate"><span class="pre">fit()</span></code></a>.</p>
+<p>Similarly to noisy areas of outliers, the presence of negative values in the profiles to be fitted, resulting notably from baseline or background removal, can adversely affect the quality of results. To mitigate the impact of these negative values during the fit, a weight of ‘0’ can be assigned to them. This is achieved through the <strong>‘fit negative values : Off’</strong> option in the GUI or by the <code class="code docutils literal notranslate"><span class="pre">fit_negative</span></code> parameter passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">fit()</span></code>.</p>
 <p>(The same with <code class="code docutils literal notranslate"><span class="pre">fit_outliers</span></code> for outliers and <code class="code docutils literal notranslate"><span class="pre">coef_noise</span></code> to bypass regions defined mainly by noise).</p>
 </section>
 <section id="multi-threading">
@@ -243,7 +247,7 @@ For <code class="code docutils literal notranslate"><span class="pre">Leastsq</s
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2024, The Fitspy development team.</p>
+    <p>&#169; Copyright 2023-2025, The Fitspy development team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -1,0 +1,9 @@
+fitspy.apps.pyside.main module
+==============================
+
+.. automodule:: fitspy.apps.pyside.main
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

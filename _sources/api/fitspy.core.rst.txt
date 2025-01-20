@@ -1,0 +1,26 @@
+fitspy.core package
+===================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.core.baseline
+   fitspy.core.models
+   fitspy.core.spectra
+   fitspy.core.spectra_map
+   fitspy.core.spectrum
+   fitspy.core.utils
+   fitspy.core.utils_mp
+
+Module contents
+---------------
+
+.. automodule:: fitspy.core
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

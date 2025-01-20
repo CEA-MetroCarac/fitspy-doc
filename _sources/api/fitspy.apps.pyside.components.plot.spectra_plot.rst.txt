@@ -1,0 +1,9 @@
+fitspy.apps.pyside.components.plot.spectra\_plot module
+=======================================================
+
+.. automodule:: fitspy.apps.pyside.components.plot.spectra_plot
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

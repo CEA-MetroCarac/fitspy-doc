@@ -1,0 +1,9 @@
+fitspy.apps.pyside.components.plot.model module
+===============================================
+
+.. automodule:: fitspy.apps.pyside.components.plot.model
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

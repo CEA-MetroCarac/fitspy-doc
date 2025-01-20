@@ -1,0 +1,24 @@
+fitspy.apps.pyside.components.plot package
+==========================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.apps.pyside.components.plot.controller
+   fitspy.apps.pyside.components.plot.map2d_plot
+   fitspy.apps.pyside.components.plot.model
+   fitspy.apps.pyside.components.plot.spectra_plot
+   fitspy.apps.pyside.components.plot.toolbar
+
+Module contents
+---------------
+
+.. automodule:: fitspy.apps.pyside.components.plot
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

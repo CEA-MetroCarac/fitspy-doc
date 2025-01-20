@@ -1,0 +1,9 @@
+fitspy.apps.pyside.components.settings.custom\_spinbox module
+=============================================================
+
+.. automodule:: fitspy.apps.pyside.components.settings.custom_spinbox
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

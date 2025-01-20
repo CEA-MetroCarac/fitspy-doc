@@ -1,0 +1,9 @@
+fitspy.apps.pyside.components.settings.peaks\_table module
+==========================================================
+
+.. automodule:: fitspy.apps.pyside.components.settings.peaks_table
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

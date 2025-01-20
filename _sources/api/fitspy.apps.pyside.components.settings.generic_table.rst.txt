@@ -1,0 +1,9 @@
+fitspy.apps.pyside.components.settings.generic\_table module
+============================================================
+
+.. automodule:: fitspy.apps.pyside.components.settings.generic_table
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

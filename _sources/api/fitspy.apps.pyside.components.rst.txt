@@ -1,0 +1,31 @@
+fitspy.apps.pyside.components package
+=====================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.apps.pyside.components.files
+   fitspy.apps.pyside.components.plot
+   fitspy.apps.pyside.components.settings
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.apps.pyside.components.about
+   fitspy.apps.pyside.components.menubar
+
+Module contents
+---------------
+
+.. automodule:: fitspy.apps.pyside.components
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

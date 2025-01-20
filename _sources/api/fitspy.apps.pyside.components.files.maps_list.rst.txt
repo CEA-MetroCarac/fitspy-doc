@@ -1,0 +1,9 @@
+fitspy.apps.pyside.components.files.maps\_list module
+=====================================================
+
+.. automodule:: fitspy.apps.pyside.components.files.maps_list
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

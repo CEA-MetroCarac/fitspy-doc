@@ -1,0 +1,9 @@
+fitspy.apps.pyside.components.plot.map2d\_plot module
+=====================================================
+
+.. automodule:: fitspy.apps.pyside.components.plot.map2d_plot
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

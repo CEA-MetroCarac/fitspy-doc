@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fitspy.apps package &mdash; Fitspy 2025.1dev documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+
+  
+      <script src="../_static/jquery.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+      <script src="../_static/doctools.js"></script>
+      <script src="../_static/sphinx_highlight.js"></script>
+      <script src="../_static/clipboard.min.js"></script>
+      <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fitspy.apps.pyside package" href="fitspy.apps.pyside.html" />
+    <link rel="prev" title="fitspy package" href="fitspy.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Fitspy
+              <img src="../_static/logo_black.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/input_data.html">Input data files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/baseline.html">Baselines and Background models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/peak_models.html">Peak models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/fitting.html">Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/workflow.html">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/auto_mode.html">Auto mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/gui.html">GUI description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/outputs.html">Outputs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes.html">Release Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/dev_notes.html">Developers Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API References</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">fitspy</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="fitspy.html">fitspy package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="fitspy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">fitspy.apps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.core.html">fitspy.core package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.html#module-fitspy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fitspy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">fitspy</a></li>
+          <li class="breadcrumb-item"><a href="fitspy.html">fitspy package</a></li>
+      <li class="breadcrumb-item active">fitspy.apps package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/fitspy.apps.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fitspy-apps-package">
+<h1>fitspy.apps package<a class="headerlink" href="#fitspy-apps-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fitspy.apps.pyside.html">fitspy.apps.pyside package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.pyside.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.pyside.components.html">fitspy.apps.pyside.components package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.pyside.components.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.pyside.components.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.pyside.components.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.pyside.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.pyside.main.html">fitspy.apps.pyside.main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.pyside.main_controller.html">fitspy.apps.pyside.main_controller module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.pyside.main_model.html">fitspy.apps.pyside.main_model module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.pyside.main_view.html">fitspy.apps.pyside.main_view module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.pyside.utils.html">fitspy.apps.pyside.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.pyside.html#module-fitspy.apps.pyside">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fitspy.apps.tkinter.html">fitspy.apps.tkinter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html">fitspy.apps.tkinter.callbacks module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks"><code class="docutils literal notranslate"><span class="pre">Callbacks</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html">fitspy.apps.tkinter.gui module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI"><code class="docutils literal notranslate"><span class="pre">GUI</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.Appli"><code class="docutils literal notranslate"><span class="pre">Appli</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.fitspy_launcher"><code class="docutils literal notranslate"><span class="pre">fitspy_launcher()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html">fitspy.apps.tkinter.toplevels module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ResultView"><code class="docutils literal notranslate"><span class="pre">ResultView</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView"><code class="docutils literal notranslate"><span class="pre">ParamsView</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.StatsView"><code class="docutils literal notranslate"><span class="pre">StatsView</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.Settings"><code class="docutils literal notranslate"><span class="pre">Settings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.FitSettings"><code class="docutils literal notranslate"><span class="pre">FitSettings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.FigureSettings"><code class="docutils literal notranslate"><span class="pre">FigureSettings</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html">fitspy.apps.tkinter.utils module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.add"><code class="docutils literal notranslate"><span class="pre">add()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.add_entry"><code class="docutils literal notranslate"><span class="pre">add_entry()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.interactive_entry"><code class="docutils literal notranslate"><span class="pre">interactive_entry()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.convert_dict_from_tk_variables"><code class="docutils literal notranslate"><span class="pre">convert_dict_from_tk_variables()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.ToggleFrame"><code class="docutils literal notranslate"><span class="pre">ToggleFrame</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector"><code class="docutils literal notranslate"><span class="pre">FilesSelector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.ProgressBar"><code class="docutils literal notranslate"><span class="pre">ProgressBar</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.html#module-fitspy.apps.tkinter">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="module-fitspy.apps">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fitspy.apps" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="fitspy.html" class="btn btn-neutral float-left" title="fitspy package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fitspy.apps.pyside.html" class="btn btn-neutral float-right" title="fitspy.apps.pyside package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, The Fitspy development team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

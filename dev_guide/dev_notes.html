@@ -6,10 +6,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developers Notes &mdash; Fitspy 2024.5 documentation</title>
+  <title>Developers Notes &mdash; Fitspy 2025.1dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
 
   
       <script src="../_static/jquery.js"></script>
@@ -17,6 +19,8 @@
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/sphinx_highlight.js"></script>
+      <script src="../_static/clipboard.min.js"></script>
+      <script src="../_static/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -64,6 +68,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developers Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#issues">Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#visual-studio-code-setup-to-preview-rst-files">Visual Studio Code Setup to Preview .rst Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pull-requests">Pull Requests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#todo-list">TODO List</a></li>
 </ul>
@@ -111,22 +116,121 @@
 <li><p>copy and paste the error traceback.</p></li>
 </ul>
 </section>
+<section id="visual-studio-code-setup-to-preview-rst-files">
+<h2>Visual Studio Code Setup to Preview .rst Files<a class="headerlink" href="#visual-studio-code-setup-to-preview-rst-files" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Install the RestructuredText Extension</strong>:
+- Open Visual Studio Code.
+- Go to the Extensions view (<cite>Ctrl+Shift+X</cite>).
+- Search for “reStructuredText” and install the extension by LeXtudio.</p></li>
+<li><p><strong>Install Dependencies</strong>:
+- Open the terminal in Visual Studio Code (<cite>Ctrl+</cite> ` <a href="#id1"><span class="problematic" id="id2">`</span></a>).
+- Run the following commands to install Dev environment dependencies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span><span class="p">[</span><span class="n">dev</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
 <section id="pull-requests">
 <h2>Pull Requests<a class="headerlink" href="#pull-requests" title="Permalink to this heading"></a></h2>
 <p>If you want to contribute to improve the Fitspy source code, you can send us a <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/pulls">pull request</a> against the main branch. Small bug fixes and corrections to the user guide are typically a good starting point. But don’t hesitate also for significant code contributions, such as support for a new file format - if needed, we’ll help you to get the code ready to common standards.</p>
 </section>
 <section id="todo-list">
 <h2>TODO List<a class="headerlink" href="#todo-list" title="Permalink to this heading"></a></h2>
-<ul class="simple">
-<li><p>investigate erratic timelaps when opening files with tkinter.filedialog</p></li>
-<li><p>update dynamically the 2D map figure during fitting</p></li>
-<li><p>make widgets size depending on the users screen size</p></li>
-<li><p>enable widget stretching</p></li>
-<li><p><strong>change Tkinter for pyQt or PySide</strong> :) (task scheduled for mid-2024)</p></li>
-<li><p>create a fitspy icon for the taskbar</p></li>
-<li><p>create an ‘About’</p></li>
-<li><p>add the progress bar inside the GUI</p></li>
+<dl>
+<dt>TODO Base:</dt><dd><ul class="simple">
+<li><p>[ ] when changing a component of a fitted spectrum (peak, baseline, …) ‘reset’ the spectrum color status</p></li>
+<li><p>[ ] Revisit the slider to make it visible (particularly in the light mode)</p></li>
+<li><p>[x] Add None in Baseline Options</p></li>
+<li><p>[x] Write a submodule that provides all functions necessary to manipulate GUI via code only. + Rewrite examples to use this submodule</p></li>
+<li><p>[/] Update documentation (partially done) - adapt the doc for Models and Main Figure in the GUI section</p></li>
+<li><p>[x] Add a “Highlight spectra” click mode</p></li>
+<li><p>[x] restore spectrum colorize_from_fit_status</p></li>
+<li><p>[x] Implement peaks model + bkg model load button</p></li>
+<li><p>[x] Implement back save_results</p></li>
+<li><p>[x] Implement back model reloading</p></li>
 </ul>
+<dl class="simple">
+<dt>Menubar:</dt><dd><ul class="simple">
+<li><p>[x] Implement CLEAR + SAVE GLOBAL STATE + OPEN GLOBAL STATE (drag n drop &amp; open button should call same function)</p></li>
+<li><p>[x] About + Manual + Doc (could redirect to sphinx doc)</p></li>
+</ul>
+</dd>
+<dt>Peaks Table:</dt><dd><ul class="simple">
+<li><p>[x] Add background parameters (in table or elsewhere in GUI)</p></li>
+<li><p>[x] Add missing columns for some Peak Models</p></li>
+<li><p>[x] Implement expressions</p></li>
+<li><p>[x] User Warning for incorrect bounds</p></li>
+</ul>
+</dd>
+<dt>Toolbar:</dt><dd><ul class="simple">
+<li><p>[x] Add checkbox “preserve axis” (= preserve zoom)</p></li>
+</ul>
+</dd>
+<dt>2DMap:</dt><dd><ul class="simple">
+<li><p>[x] Implement back export .csv</p></li>
+<li><p>[x] Implement Min/Max (replace with a DoubleRangedSlider ?)</p></li>
+<li><p>[x] Add Label choice and plot update</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>TODO Fixes:</dt><dd><ul class="simple">
+<li><p>[x] Results of previous calculations have to be preserved and displayed (colorize_from_status) when reloading a map</p></li>
+<li><p>[ ] Investigate exit not exiting properly on some systems (could be due to Threads, use QThread instead ?) <a class="reference external" href="https://github.com/ultralytics/ultralytics/issues/11679">ultralytics issue 1167</a></p></li>
+<li><p>[ ] reinit in Spectrum() doesn’t reinit fit_params</p></li>
+<li><p>[ ] Expressions in saved models are “” instead of None</p></li>
+<li><p>[ ] Manage callbacks when no files have been loaded (allow saving model, placing points, and baseline without loading spectra)</p></li>
+<li><p>[ ] Baseline_points, empty Y if attached ?</p></li>
+<li><p>[x] Peaks labels can sometimes overflow the plot</p></li>
+<li><p>[x] Icons color dont follow theme</p></li>
+<li><p>[x] Spectrum list is disordered compared to the map. When browsing through the spectra in the list, it should traverse the map from top to bottom and left to right.</p></li>
+<li><p>[x] Port updates commit 6d303df (main)</p></li>
+</ul>
+</dd>
+<dt>TODO Opti:</dt><dd><ul class="simple">
+<li><p>[ ] Check (and avoid) multiple calls - code profiling</p></li>
+<li><p>[ ] Refactor peaks_table.py + bkg_table.py by creating a new class</p></li>
+<li><p>[ ] MULTIPROC BASELINE via apply_model ?</p></li>
+<li><p>[ ] Optimize plotting (setxdata and setydata instead of replotting the whole figure ?)</p></li>
+</ul>
+</dd>
+<dt>TODO Others:</dt><dd><ul class="simple">
+<li><p>[x] restore &amp; update examples/ + tests/</p></li>
+<li><p>[ ] Defaults values for peaks (and maybe more) may be irrelevant depending on data’s nature</p></li>
+<li><p>[ ] Inconsistencies in args names fnames vs files</p></li>
+<li><p>[ ] Explicit types in functions might be useful for maintainers(e.g. <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/blob/cfee0e6c881045447feed2105ec79c208b8d6a5a/fitspy/app/components/settings/controller.py#L183C9-L183C20">def func(arg: type) -&gt; type:</a>)</p></li>
+<li><p>[x] Change peak table colum _vary to _fixed</p></li>
+<li><p>[ ] Why using np.float64 for baseline points ??</p></li>
+<li><p>[ ] update README.md</p></li>
+<li><p>[ ] update CITATION.cff</p></li>
+<li><p>[x] add github workflows back</p></li>
+<li><p>[x] update paper/</p></li>
+</ul>
+</dd>
+<dt>TODO Nice to Have:</dt><dd><ul class="simple">
+<li><p>[ ] Fitspy Icon for taskbar</p></li>
+<li><p>[ ] Multirow-edit for peaks settings (see <a class="reference external" href="https://stackoverflow.com/questions/14586715/how-can-i-achieve-to-update-multiple-rows-in-a-qtableview">https://stackoverflow.com/questions/14586715/how-can-i-achieve-to-update-multiple-rows-in-a-qtableview</a>)</p></li>
+<li><p>[ ] Update save/load mechanisms to include data or not based on ‘save spectrum file path only’ checkbox state</p></li>
+<li><p>[ ] update dynamically the 2D map figure during fitting</p></li>
+<li><p>[ ] Plot Dark/Light <a class="reference external" href="https://stackoverflow.com/questions/77748488/how-to-dynamically-change-the-sheet-type-theme-during-runtime">dynamic theme change</a></p></li>
+<li><p>[ ] Idea : scroll on plot to edit nearest peak bounds</p></li>
+<li><p>[ ] Add a button to copy 2D Map in clipboard ? (add mpl toolbar ?)</p></li>
+<li><p>[x] See multiple spectrum with their baseline subtracted or not (need to redefine what to plot for secondary spectrum instead of just x0+y0)</p></li>
+<li><p>[x] add a confirmation prompt before load_state to avoid erasing current work</p></li>
+<li><p>[x] New View option ‘subtract bkg’ (see existing ‘subtract baseline’)</p></li>
+<li><p>[x] Colormap settings</p></li>
+<li><p>[x] Add shortcuts for menu actions</p></li>
+<li><p>[x] Warn user to disable pan/zoom if 3 clicks are detected in a short time (indicating user might want to place a peak/baseline point)</p></li>
+</ul>
+</dd>
+<dt>TODO Production:</dt><dd><ul class="simple">
+<li><p>[ ] Update Github Actions tests + Auto Pypi Pre-release/Pre-release, see <a class="reference external" href="https://github.com/CEA-MetroCarac/pyvsnr/tree/main/.github/workflows">pyvsnr workflows</a></p></li>
+<li><p>[ ] Update Zenodo</p></li>
+</ul>
+</dd>
+</dl>
 </section>
 </section>
 
@@ -141,7 +245,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2024, The Fitspy development team.</p>
+    <p>&#169; Copyright 2023-2025, The Fitspy development team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

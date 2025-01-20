@@ -1,0 +1,9 @@
+fitspy.core.baseline module
+===========================
+
+.. automodule:: fitspy.core.baseline
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

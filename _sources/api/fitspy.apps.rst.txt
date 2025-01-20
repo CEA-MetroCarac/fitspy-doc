@@ -1,0 +1,21 @@
+fitspy.apps package
+===================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.apps.pyside
+   fitspy.apps.tkinter
+
+Module contents
+---------------
+
+.. automodule:: fitspy.apps
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

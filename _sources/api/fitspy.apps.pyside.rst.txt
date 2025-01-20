@@ -1,0 +1,32 @@
+fitspy.apps.pyside package
+==========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.apps.pyside.components
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.apps.pyside.main
+   fitspy.apps.pyside.main_controller
+   fitspy.apps.pyside.main_model
+   fitspy.apps.pyside.main_view
+   fitspy.apps.pyside.utils
+
+Module contents
+---------------
+
+.. automodule:: fitspy.apps.pyside
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

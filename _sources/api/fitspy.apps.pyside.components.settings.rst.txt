@@ -1,0 +1,30 @@
+fitspy.apps.pyside.components.settings package
+==============================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.apps.pyside.components.settings.baseline_table
+   fitspy.apps.pyside.components.settings.bkg_table
+   fitspy.apps.pyside.components.settings.controller
+   fitspy.apps.pyside.components.settings.custom_spinbox
+   fitspy.apps.pyside.components.settings.dragndrop_combo
+   fitspy.apps.pyside.components.settings.generic_table
+   fitspy.apps.pyside.components.settings.model
+   fitspy.apps.pyside.components.settings.model_builder
+   fitspy.apps.pyside.components.settings.more_settings
+   fitspy.apps.pyside.components.settings.peaks_table
+   fitspy.apps.pyside.components.settings.status_box
+
+Module contents
+---------------
+
+.. automodule:: fitspy.apps.pyside.components.settings
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

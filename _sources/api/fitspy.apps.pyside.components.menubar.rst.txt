@@ -1,0 +1,9 @@
+fitspy.apps.pyside.components.menubar module
+============================================
+
+.. automodule:: fitspy.apps.pyside.components.menubar
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

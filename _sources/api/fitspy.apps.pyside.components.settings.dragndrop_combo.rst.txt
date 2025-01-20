@@ -1,0 +1,9 @@
+fitspy.apps.pyside.components.settings.dragndrop\_combo module
+==============================================================
+
+.. automodule:: fitspy.apps.pyside.components.settings.dragndrop_combo
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

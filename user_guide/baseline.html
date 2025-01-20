@@ -6,10 +6,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baselines and Background models &mdash; Fitspy 2024.5 documentation</title>
+  <title>Baselines and Background models &mdash; Fitspy 2025.1dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
 
   
       <script src="../_static/jquery.js"></script>
@@ -17,6 +19,8 @@
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/sphinx_highlight.js"></script>
+      <script src="../_static/clipboard.min.js"></script>
+      <script src="../_static/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -151,14 +155,14 @@ This feature allows to adapt the baseline points to the spectrum notably when pr
 </pre></div>
 </div>
 <p>Example of two models defined in python:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">fitspy</span> <span class="kn">import</span> <span class="n">BKG_MODELS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fitspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">BKG_MODELS</span>
 
 
-<span class="k">def</span> <span class="nf">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">slope</span><span class="p">,</span> <span class="n">constant</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">slope</span><span class="p">,</span> <span class="n">constant</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">constant</span>
 
-<span class="k">def</span> <span class="nf">exponential</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">coef</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">exponential</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">coef</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">ampli</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">coef</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
 
 <span class="n">BKG_MODELS</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Linear_2&quot;</span><span class="p">:</span> <span class="n">linear</span><span class="p">})</span>
@@ -166,7 +170,7 @@ This feature allows to adapt the baseline points to the spectrum notably when pr
 </pre></div>
 </div>
 <p>Through the GUI, the corresponding <em>‘.txt’</em> or <em>‘.py’</em> files can be loaded via the button <code class="code docutils literal notranslate"><span class="pre">Load</span></code> located to the right of the <strong>BKG model</strong> combobox.</p>
-<p>In python, the users models can be loaded by the related functions <a class="reference internal" href="../api/fitspy.utils.html#fitspy.utils.load_models_from_txt" title="fitspy.utils.load_models_from_txt"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_models_from_txt()</span></code></a> and <a class="reference internal" href="../api/fitspy.utils.html#fitspy.utils.load_models_from_py" title="fitspy.utils.load_models_from_py"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_models_from_py()</span></code></a>.
+<p>In python, the users models can be loaded by the related functions <code class="xref py py-func docutils literal notranslate"><span class="pre">load_models_from_txt()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">load_models_from_py()</span></code>.
 <em>(See example in</em> <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/tree/main/examples/ex_gui_users_defined_models.py">ex_gui_users_defined_models.py</a> <em>)</em></p>
 <p>For recurrent use, the user-defined models can be defined in files named <code class="code docutils literal notranslate"><span class="pre">bkg_models.txt</span></code> or <code class="code docutils literal notranslate"><span class="pre">bkg_models.py</span></code> to put in <code class="code docutils literal notranslate"><span class="pre">%HOMEUSER%/Fitspy</span></code>.</p>
 <p>The variable associated with the support must necessarily be used in expressions under the term <code class="code docutils literal notranslate"><span class="pre">x</span></code> and the mathematical functions must be designated according to the terminology defined in the <a class="reference external" href="https://newville.github.io/asteval/basics.html#built-in-functions">asteval</a> package.</p>
@@ -194,7 +198,7 @@ The same for <code class="code docutils literal notranslate"><span class="pre">E
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2024, The Fitspy development team.</p>
+    <p>&#169; Copyright 2023-2025, The Fitspy development team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

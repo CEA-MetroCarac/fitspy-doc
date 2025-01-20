@@ -1,0 +1,23 @@
+fitspy.apps.tkinter package
+===========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.apps.tkinter.callbacks
+   fitspy.apps.tkinter.gui
+   fitspy.apps.tkinter.toplevels
+   fitspy.apps.tkinter.utils
+
+Module contents
+---------------
+
+.. automodule:: fitspy.apps.tkinter
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

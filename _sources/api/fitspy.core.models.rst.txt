@@ -1,0 +1,9 @@
+fitspy.core.models module
+=========================
+
+.. automodule:: fitspy.core.models
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

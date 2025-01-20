@@ -6,10 +6,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workflow &mdash; Fitspy 2024.5 documentation</title>
+  <title>Workflow &mdash; Fitspy 2025.1dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
 
   
       <script src="../_static/jquery.js"></script>
@@ -17,6 +19,8 @@
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/sphinx_highlight.js"></script>
+      <script src="../_static/clipboard.min.js"></script>
+      <script src="../_static/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -107,18 +111,51 @@
 </ul>
 <section id="gui-mode">
 <h2>GUI Mode<a class="headerlink" href="#gui-mode" title="Permalink to this heading"></a></h2>
+<p>** PySide GUI :**</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_static/pyside/workflow.png"><img alt="_static/pyside/workflow.png" src="_static/pyside/workflow.png" style="width: 300px;" /></a>
+</figure>
+<br><p><strong>To create a `Fitspy` model:</strong></p>
+<ul class="simple">
+<li><p>(<a class="reference external" href="gui.html?files_selection">1</a>) <strong>Select file(s) using drag an drop mode</strong></p></li>
+<li><p>(<a class="reference external" href="gui.html?overall_settings">2a</a>) <em>Define the</em> <code class="code docutils literal notranslate"><span class="pre">X-range</span></code></p></li>
+<li><p>(<a class="reference external" href="gui.html?baseline">2b</a>) <em>Select the baseline mode</em></p></li>
+<li><p>(<a class="reference external" href="gui.html?baseline">3</a>) <em>if</em> <code class="code docutils literal notranslate"><span class="pre">Linear</span></code> <em>or</em> <code class="code docutils literal notranslate"><span class="pre">Polynomial</span></code> <em>mode, click on the</em> <code class="code docutils literal notranslate"><span class="pre">Baseline</span> <span class="pre">Points</span></code> and select them on the main figure* <strong>(*)</strong></p></li>
+<li><p>(<a class="reference external" href="gui.html?fitting">2c</a>) <strong>Select a</strong> <code class="code docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">model</span></code></p></li>
+<li><p>(<a class="reference external" href="fitting.html">3</a>) <strong>After clicking on</strong> <code class="code docutils literal notranslate"><span class="pre">Peaks</span> <span class="pre">points</span></code>, <strong>Select them on the main figure (*)</strong></p></li>
+<li><p>(<a class="reference external" href="gui.html?fitting">3</a>) <em>Add a background</em> (<code class="code docutils literal notranslate"><span class="pre">BKG</span> <span class="pre">model</span></code>) <em>to be fitted</em></p></li>
+<li><p>(<a class="reference external" href="fitting.html">4</a>) <em>Adjust extra-parameters</em></p></li>
+<li><p>(<a class="reference external" href="fitting.html">5</a>) <code class="code docutils literal notranslate"><span class="pre">Fit</span></code> <strong>the spectrum/spectra selected in the files selector widget</strong></p></li>
+<li><p>(<a class="reference external" href="gui.html?fitting">7</a>) <em>Use the peak and bkg tables to see the results and to set bounds and constraints for a new fitting</em></p></li>
+<li><p>(<a class="reference external" href="gui.html?models">6</a>) <code class="code docutils literal notranslate"><span class="pre">Save</span></code> <em>the Model(s) in a `.json` file (to be replayed later)</em></p></li>
+</ul>
+<p><strong>(*)</strong> <em>use left/right click on the figure to add/delete a baseline or a peak point</em></p>
+<p>Once saved, a <cite>Fitspy</cite> model enables to recover a previous state (as-it, if all the spectra defined in the model can be loaded again) as follows:</p>
+<ul class="simple">
+<li><p>(<a class="reference external" href="gui.html?fitting">9</a>) <code class="code docutils literal notranslate"><span class="pre">Add</span></code> <em>the `Fitspy` model (`.json` file)</em></p></li>
+<li><p>(<a class="reference external" href="gui.html?fitting">5</a>) <code class="code docutils literal notranslate"><span class="pre">Fit</span></code> <strong>the selected spectra</strong></p></li>
+<li><p>(<a class="reference external" href="fitting.html">10</a>) <code class="code docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Results</span></code> (<strong>fitted parameters</strong> and <strong>statistics</strong>)</p></li>
+</ul>
+<p>Or, after removing all spectra in the file selector widget (<code class="code docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">All</span></code>), the <cite>Fitspy</cite> model can be apply to another data set as follows:</p>
+<ul class="simple">
+<li><p>(<a class="reference external" href="gui.html?files_selection">1</a>) <strong>Select file(s) using drag an drop mode</strong></p></li>
+<li><p>(<a class="reference external" href="gui.html?models">9</a>) <code class="code docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Model</span></code> <em>And select it from the Combobox</em></p></li>
+<li><p>(<a class="reference external" href="gui.html?models">15</a>) <code class="code docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">Model</span></code></p></li>
+<li><p>(<a class="reference external" href="fitting.html">10</a>) <strong>Save results</strong> (<strong>fitted parameters</strong> and <strong>statistics</strong>)</p></li>
+</ul>
+<p>** Tkinter GUI :**</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/workflow.png"><img alt="../_images/workflow.png" src="../_images/workflow.png" style="width: 300px;" /></a>
 </figure>
 <br><p><strong>To create a `Fitspy` model:</strong></p>
 <ul class="simple">
-<li><p>(<a class="reference external" href="gui.html?files_selection.html">1</a>) <strong>Select file(s) from</strong> <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Files</span></code>  <strong>or</strong>  <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Dir</span></code></p></li>
-<li><p>(<a class="reference external" href="gui.html?overall_settings.html">2</a>) <em>Define the</em> <code class="code docutils literal notranslate"><span class="pre">X-range</span></code></p></li>
-<li><p>(<a class="reference external" href="gui.html?baseline.html">3</a>) <em>Click on the</em> <code class="code docutils literal notranslate"><span class="pre">Baseline</span></code> <em>panel to activate it (if not)</em></p></li>
-<li><p>(<a class="reference external" href="gui.html?baseline.html">4</a>) <em>Select baseline points on the main figure</em> <strong>(*)</strong></p></li>
-<li><p>(<a class="reference external" href="gui.html?fitting.html">5</a>) <strong>Click on the</strong> <code class="code docutils literal notranslate"><span class="pre">Fitting</span></code> <strong>panel to activate it (if not)</strong></p></li>
-<li><p>(<a class="reference external" href="gui.html?fitting.html">6</a>) <strong>Select a</strong> <code class="code docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">model</span></code></p></li>
-<li><p>(<a class="reference external" href="gui.html?fitting">7</a>) <em>Select a peak point on the main figure</em> <strong>(*)</strong></p></li>
+<li><p>(<a class="reference external" href="gui.html?files_selection">1</a>) <strong>Select file(s) from</strong> <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Files</span></code>  <strong>or</strong>  <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Dir</span></code></p></li>
+<li><p>(<a class="reference external" href="gui.html?overall_settings">2</a>) <em>Define the</em> <code class="code docutils literal notranslate"><span class="pre">X-range</span></code></p></li>
+<li><p>(<a class="reference external" href="gui.html?baseline">3</a>) <em>Click on the</em> <code class="code docutils literal notranslate"><span class="pre">Baseline</span></code> <em>panel to activate it (if not)</em></p></li>
+<li><p>(<a class="reference external" href="gui.html?baseline">4</a>) <em>Select baseline points on the main figure</em> <strong>(*)</strong></p></li>
+<li><p>(<a class="reference external" href="gui.html?fitting">5</a>) <strong>Click on the</strong> <code class="code docutils literal notranslate"><span class="pre">Fitting</span></code> <strong>panel to activate it (if not)</strong></p></li>
+<li><p>(<a class="reference external" href="gui.html?fitting">6</a>) <strong>Select a</strong> <code class="code docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">model</span></code></p></li>
+<li><p>(<a class="reference external" href="gui.html?fitting">7</a>) <strong>Select a peak point on the main figure (*)</strong></p></li>
 <li><p>(<a class="reference external" href="gui.html?fitting">8</a>) <em>Add a background</em> (<code class="code docutils literal notranslate"><span class="pre">BKG</span> <span class="pre">model</span></code>) <em>to be fitted</em></p></li>
 <li><p>(<a class="reference external" href="gui.html?fitting">9</a>) <em>Use</em> <code class="code docutils literal notranslate"><span class="pre">Parameters</span></code> <em>to see the results and to set bounds and constraints for a new fitting</em></p></li>
 <li><p>(<a class="reference external" href="gui.html?models">12</a>) <code class="code docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Select</span></code> <em>or</em> <code class="code docutils literal notranslate"><span class="pre">Save</span> <span class="pre">All</span></code> <em>the `Models` in a `.json` file (to be replayed later)</em></p></li>
@@ -132,8 +169,8 @@
 </ul>
 <p>Or, after removing all spectra in the file selector widget (<code class="code docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">All</span></code>), the <cite>Fitspy</cite> model can be apply to another data set as follows:</p>
 <ul class="simple">
-<li><p>(<a class="reference external" href="gui.html?files_selection.html">1</a>) <strong>Select file(s) from</strong> <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Files</span></code>  <strong>or</strong>  <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Dir</span></code></p></li>
-<li><p>(<a class="reference external" href="gui.html?models">14</a>) <code class="code docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Model</span></code> <a href="#id16"><span class="problematic" id="id17">*</span></a>(associated to the first <cite>spectra</cite> if several)</p></li>
+<li><p>(<a class="reference external" href="gui.html?files_selection">1</a>) <strong>Select file(s) from</strong> <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Files</span></code>  <strong>or</strong>  <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Dir</span></code></p></li>
+<li><p>(<a class="reference external" href="gui.html?models">14</a>) <code class="code docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Model</span></code> <a href="#id31"><span class="problematic" id="id32">*</span></a>(associated to the first <cite>spectra</cite> if several)</p></li>
 <li><p>(<a class="reference external" href="gui.html?models">15</a>) <code class="code docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">to</span> <span class="pre">Sel.</span></code> <em>or</em> <code class="code docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">to</span> <span class="pre">All</span></code></p></li>
 <li><p>(<a class="reference external" href="fitting.html">11</a>) <code class="code docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Results</span></code> (<strong>fitted parameters</strong> and <strong>statistics</strong>)</p></li>
 </ul>
@@ -141,7 +178,7 @@
 <section id="scripting-mode">
 <h2>Scripting Mode<a class="headerlink" href="#scripting-mode" title="Permalink to this heading"></a></h2>
 <p>Although it is more recommended to use the GUI to define a <cite>Fitspy</cite> model <strong>visually</strong> , here is a partial example of how to do it by script:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fitspy.spectrum</span> <span class="kn">import</span> <span class="n">Spectrum</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">fitspy.core.spectrum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Spectrum</span>
 
 <span class="n">spectrum</span> <span class="o">=</span> <span class="n">Spectrum</span><span class="p">()</span>
 
@@ -161,9 +198,9 @@
 </pre></div>
 </div>
 <p>Once defined, a <cite>Fitspy</cite> model saved in a ‘.json’ file can be applied to a more consequent data set as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">from</span> <span class="nn">fitspy.spectra</span> <span class="kn">import</span> <span class="n">Spectra</span>
-<span class="kn">from</span> <span class="nn">fitspy.spectrum</span> <span class="kn">import</span> <span class="n">Spectrum</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fitspy.core.spectra</span><span class="w"> </span><span class="kn">import</span> <span class="n">Spectra</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fitspy.core.spectrum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Spectrum</span>
 
 
 <span class="c1"># list of the spectra pathnames to handle</span>
@@ -199,7 +236,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2024, The Fitspy development team.</p>
+    <p>&#169; Copyright 2023-2025, The Fitspy development team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

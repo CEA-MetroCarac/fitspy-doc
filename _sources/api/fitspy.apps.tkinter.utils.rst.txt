@@ -1,0 +1,9 @@
+fitspy.apps.tkinter.utils module
+================================
+
+.. automodule:: fitspy.apps.tkinter.utils
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

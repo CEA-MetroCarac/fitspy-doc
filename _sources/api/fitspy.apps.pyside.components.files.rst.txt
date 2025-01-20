@@ -1,0 +1,24 @@
+fitspy.apps.pyside.components.files package
+===========================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.apps.pyside.components.files.controller
+   fitspy.apps.pyside.components.files.dragndrop_list
+   fitspy.apps.pyside.components.files.maps_list
+   fitspy.apps.pyside.components.files.model
+   fitspy.apps.pyside.components.files.spectrum_list
+
+Module contents
+---------------
+
+.. automodule:: fitspy.apps.pyside.components.files
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

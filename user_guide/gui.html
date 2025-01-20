@@ -6,10 +6,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GUI description &mdash; Fitspy 2024.5 documentation</title>
+  <title>GUI description &mdash; Fitspy 2025.1dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
 
   
       <script src="../_static/jquery.js"></script>
@@ -17,6 +19,8 @@
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/sphinx_highlight.js"></script>
+      <script src="../_static/clipboard.min.js"></script>
+      <script src="../_static/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -55,12 +59,13 @@
 <li class="toctree-l1"><a class="reference internal" href="auto_mode.html">Auto mode</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">GUI description</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#files-selection">Files selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#global-actions">Global actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#global-actions-tkinter">Global actions (Tkinter)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#overall-settings">Overall settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#baseline">Baseline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#normalization">Normalization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fitting">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#models">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#models-tkinter-gui">Models (Tkinter GUI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#models-pyside-gui">Models (PySide GUI)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#main-figure">Main Figure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#d-map-figures">2D-map Figures</a></li>
 </ul>
@@ -106,6 +111,10 @@
              
   <section id="gui-description">
 <h1>GUI description<a class="headerlink" href="#gui-description" title="Permalink to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of 2025, both GUIs (Tkinter and PySide) offer nearly identical features. Consequently, the descriptions below primarily refer to the Tkinter GUI. Any specificities of the PySide GUI will be detailed where applicable.</p>
+</div>
 <section id="files-selection">
 <h2>Files selection<a class="headerlink" href="#files-selection" title="Permalink to this heading"></a></h2>
 <p>The files selection is realized with the following widget:</p>
@@ -115,10 +124,10 @@
 <br><p><code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Files</span></code> enables to load spectra (as ‘.txt’ files) selected individually or by block while <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Dir.</span></code> loads all spectra that are contained in a selected directory.</p>
 <p><strong>2D-map</strong>: Once loaded in the GUI, if <cite>Fitspy</cite> detects that a ‘.txt’ file corresponds to a 2D-map input data file (via the tabulation <code class="code docutils literal notranslate"><span class="pre">t</span></code> as first character), this one is expanded.
 That is to say that each spectrum of the 2D-map appears individually in the files selection widget according to the 2D-map file basename and the (X) and (Y) spectrum coordinates in the grid as prefix:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">basename</span><span class="p">}</span> <span class="n">X</span><span class="o">=</span><span class="p">{</span><span class="n">X</span><span class="p">}</span> <span class="n">Y</span><span class="o">=</span><span class="p">{</span><span class="n">Y</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">basename</span><span class="p">}</span>  <span class="n">X</span><span class="o">=</span><span class="p">{</span><span class="n">X</span><span class="p">}</span> <span class="n">Y</span><span class="o">=</span><span class="p">{</span><span class="n">Y</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>A  2D-map figure is also opened to facilitate both the spectrum selection and the interaction with the files selector widget.</p>
+<p>A  2D-map figure is also opened to facilitate both the spectrum selection and the interaction with the files selector widget. Additionally, it allows to see the fit parameters in 2D displaying.</p>
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../_images/2d-map.png"><img alt="../_images/2d-map.png" src="../_images/2d-map.png" style="width: 50%;" /></a>
 <figcaption>
@@ -126,8 +135,8 @@ That is to say that each spectrum of the 2D-map appears individually in the file
 </figcaption>
 </figure>
 </section>
-<section id="global-actions">
-<h2>Global actions<a class="headerlink" href="#global-actions" title="Permalink to this heading"></a></h2>
+<section id="global-actions-tkinter">
+<h2>Global actions (Tkinter)<a class="headerlink" href="#global-actions-tkinter" title="Permalink to this heading"></a></h2>
 <figure class="align-center">
 <img alt="../_images/global_actions.png" src="../_images/global_actions.png" />
 </figure>
@@ -152,6 +161,10 @@ That is to say that each spectrum of the 2D-map appears individually in the file
 <p><code class="code docutils literal notranslate"><span class="pre">Outliers</span> <span class="pre">Calc</span></code> allows defining a line (called in <cite>Fitspy</cite> <strong>outliers_limit</strong>) from which values above are considered as outliers.
 This line is defined as corresponding to the envelope of the spectra multiplied by the <code class="code docutils literal notranslate"><span class="pre">coef</span></code> factor.
 Consequently, the spectra loaded at the time of defining this line must be consistent with each other. (See <a class="reference external" href="fitting.html#outliers">here</a> for more details).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the <strong>PySide GUI</strong>, the outliers envelop parameters settings and calculation are perform from the <code class="code docutils literal notranslate"><span class="pre">More</span> <span class="pre">settings</span></code> panel</p>
+</div>
 </section>
 <section id="baseline">
 <h2>Baseline<a class="headerlink" href="#baseline" title="Permalink to this heading"></a></h2>
@@ -186,7 +199,7 @@ It’s important to note that a ‘<em>n</em>’-order polynomial approximation 
 <br><p><strong>The current frame is activated and deactivated when clicking on it.</strong></p>
 <p><code class="code docutils literal notranslate"><span class="pre">Auto</span></code> can be used for the automatic determination of peaks, considering the selected <code class="code docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">model</span></code>.</p>
 <p>For manual peaks positioning by the user, each <code class="code docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">model</span></code> (to be chosen between <strong>Gaussian</strong>, <strong>Lorentzian</strong>, <strong>Asymetric Gaussian</strong>, <strong>Asymetric Lorentzian</strong>, <strong>Pseudovoigt</strong> or as a <strong>user-defined model</strong>, see <a class="reference external" href="peak_models.html">here</a>) is applied when left-clicking in the figure. (A right-click in the figure removes the nearest peak).</p>
-<p><code class="code docutils literal notranslate"><span class="pre">Fit</span> <span class="pre">Selec.</span></code> and <code class="code docutils literal notranslate"><span class="pre">Fit</span> <span class="pre">All</span></code> perform the fitting based on the conditions defined in the <code class="code docutils literal notranslate"><span class="pre">Fit</span> <span class="pre">Settings</span></code> widget:</p>
+<p><code class="code docutils literal notranslate"><span class="pre">Fit</span> <span class="pre">Selec.</span></code> and <code class="code docutils literal notranslate"><span class="pre">Fit</span> <span class="pre">All</span></code> perform the fitting based on the conditions defined in the <code class="code docutils literal notranslate"><span class="pre">Fit</span> <span class="pre">Settings</span></code> widget for the <strong>Tkinter GUI</strong> and in the <code class="code docutils literal notranslate"><span class="pre">More</span> <span class="pre">Settings</span></code> for the <strong>PySide GUI</strong>:</p>
 <figure class="align-center">
 <img alt="../_images/fit_settings.png" src="../_images/fit_settings.png" />
 </figure>
@@ -209,8 +222,8 @@ The example below shows how to constrain the second fitted peak to be half the a
 </figure>
 <br><p><code class="code docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Results</span></code> consists of saving the fitted parameters and related statistics in a folder predefined by the user, respectively in a .csv and a .txt file using the spectrum file basename (See <a class="reference external" href="outputs.html#fit-results">here</a>  for more details).</p>
 </section>
-<section id="models">
-<h2>Models<a class="headerlink" href="#models" title="Permalink to this heading"></a></h2>
+<section id="models-tkinter-gui">
+<h2>Models (Tkinter GUI)<a class="headerlink" href="#models-tkinter-gui" title="Permalink to this heading"></a></h2>
 <figure class="align-center">
 <img alt="../_images/models.png" src="../_images/models.png" />
 </figure>
@@ -221,16 +234,19 @@ This implies that all the files defined in the <em>.json</em>  are reachable whe
 <p><code class="code docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Model</span></code> consists of reloading the first spectrum model (baseline and peaks definition, …) but <strong>not the spectrum file itself</strong>, related to the first model saved in the <em>.json</em>.</p>
 <p><code class="code docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">to</span> <span class="pre">Sel.</span></code> or <code class="code docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">to</span> <span class="pre">All</span></code> allows applying <strong>strictly</strong> <em>(ie without considering the parameters defined in the GUI)</em> the loaded model to the spectra selected in the files selection widget, or to all the spectra (resp.).</p>
 </section>
+<section id="models-pyside-gui">
+<h2>Models (PySide GUI)<a class="headerlink" href="#models-pyside-gui" title="Permalink to this heading"></a></h2>
+<p>TODO</p>
+</section>
 <section id="main-figure">
 <h2>Main Figure<a class="headerlink" href="#main-figure" title="Permalink to this heading"></a></h2>
 <p>The main Figure widget displays the loaded spectra and allows manipulation of baseline and peaks models with the mouse.</p>
 <p>The standard navigation toolbar from <em>Matplotlib</em> allows panning, zooming and saving the current figure.
-The function associated with the <img alt="home" src="../_images/home.png" />
-icon has been reconfigured to allow the figure rescaling on the current displayed spectrum.</p>
+In the Tkinter GUI, the function associated with the <img alt="home" src="../_images/home.png" /> icon has been reconfigured to allow the figure rescaling on the current displayed spectrum.</p>
 <figure class="align-center">
 <img alt="../_images/navigation_toolbox.png" src="../_images/navigation_toolbox.png" />
 </figure>
-<br><p><code class="code docutils literal notranslate"><span class="pre">Figure</span> <span class="pre">settings</span></code> (at the top) allows personalizing plots displays, figure title, and axis labels.</p>
+<br><p><code class="code docutils literal notranslate"><span class="pre">Figure</span> <span class="pre">settings</span></code> (at the top for the <strong>Tkinter GUI</strong>) and <code class="code docutils literal notranslate"><span class="pre">View</span> <span class="pre">Options</span></code> (below the figure for the <strong>PySide GUI</strong>) allow personalizing plots displays, figure title, and axis labels (TO ADAPT for PySide).</p>
 <figure class="align-center">
 <img alt="../_images/figure_settings.png" src="../_images/figure_settings.png" />
 </figure>
@@ -263,7 +279,7 @@ icon has been reconfigured to allow the figure rescaling on the current displaye
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2024, The Fitspy development team.</p>
+    <p>&#169; Copyright 2023-2025, The Fitspy development team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
