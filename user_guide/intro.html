@@ -124,7 +124,7 @@
 <h2>Install and launching<a class="headerlink" href="#install-and-launching" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Since its 2025.1 version, Fitspy can be launched using two interfaces: one corresponds to the original GUI built with <strong>Tkinter</strong>, and the other, more recent one, developed using <strong>PySide6</strong> with more ‘flexibility’. As of 2025, both GUIs offer nearly identical features, but future efforts regarding fixes and updates will primarily focus on the PySide GUI.</p>
+<p>Since its 2025.1 version, Fitspy can be launched using two interfaces: one corresponds to the original GUI built with <strong>Tkinter</strong>, and the other, more recent one, developed using <strong>PySide</strong> with more ‘flexibility’. As of 2025, both GUIs offer nearly identical features, but future efforts regarding fixes and updates will primarily focus on the <strong>PySide</strong> GUI.</p>
 </div>
 <p>if python is not already installed in your PC:</p>
 <blockquote>
@@ -138,7 +138,7 @@
 <li><p>For a <strong>basic install/upgrade</strong> and launching:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">fitspy</span> <span class="o">--</span><span class="n">upgrade</span>
 <span class="n">fitspy</span> <span class="c1"># advanced GUI based on PySide</span>
-<span class="n">fitspy_tk</span> <span class="c1"># primary GUI based on Tkinter</span>
+<span class="n">fitspy</span><span class="o">-</span><span class="n">tk</span> <span class="c1"># primary GUI based on Tkinter</span>
 </pre></div>
 </div>
 </li>
@@ -148,7 +148,7 @@
 <li><p>For a <strong>full install</strong> with data sets, examples and tests (requiring <a class="reference external" href="https://git-scm.com/downloads">git</a>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">CEA</span><span class="o">-</span><span class="n">MetroCarac</span><span class="o">/</span><span class="n">fitspy</span><span class="o">.</span><span class="n">git</span>
 <span class="n">fitspy</span> <span class="c1"># advanced GUI based on PySide</span>
-<span class="n">fitspy_tk</span> <span class="c1"># primary GUI based on Tkinter</span>
+<span class="n">fitspy</span><span class="o">-</span><span class="n">tk</span> <span class="c1"># primary GUI based on Tkinter</span>
 
 <span class="c1"># examples execution</span>
 <span class="n">cd</span> <span class="n">fitspy</span><span class="o">/</span><span class="n">examples</span>
@@ -168,7 +168,7 @@
 <section id="quick-start">
 <span id="id1"></span><h2>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this heading"></a></h2>
 <p>Once the <cite>Fitspy</cite> GUI has opened,</p>
-<p><strong>PySide GUI :</strong></p>
+<p>&lt;u&gt;**PySide GUI**&lt;/u&gt; :</p>
 <p>from right to left, the strict minimum operations (in red) for a spectrum fitting consists of:</p>
 <ul class="simple">
 <li><p>(<a class="reference external" href="files_selection.html">1</a>) <strong>Select file(s) using drag an drop mode</strong></p></li>
@@ -182,7 +182,7 @@
 <a class="reference internal image-reference" href="_static/pyside/workflow.png"><img alt="_static/pyside/workflow.png" src="_static/pyside/workflow.png" style="width: 300px;" /></a>
 </figure>
 <br><p><em>(The entire workflow is described</em> <a class="reference external" href="workflow.html">here</a> <em>).</em></p>
-<p><strong>Tkinter GUI :</strong></p>
+<p>&lt;u&gt;**Tkinter GUI**&lt;/u&gt;:</p>
 <p>from top to bottom of the right panel, the strict minimum operations (in red) for a spectrum fitting consists of:</p>
 <ul class="simple">
 <li><p>(<a class="reference external" href="files_selection.html">1</a>) <strong>Select file(s) from</strong> <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Files</span></code>  <strong>or</strong>  <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Dir</span></code></p></li>
@@ -203,7 +203,7 @@
 <p>The main class of Fitspy is <code class="xref py py-class docutils literal notranslate"><span class="pre">Spectra</span></code> (inherited from <cite>list</cite>) that contains a list of  <code class="xref py py-class docutils literal notranslate"><span class="pre">Spectrum</span></code> objects.</p>
 <p>For each of these <code class="xref py py-class docutils literal notranslate"><span class="pre">Spectrum</span></code> objects, a (x, y) profile is associated. (More details <a class="reference external" href="files_selection.html?2D-map_spectra=#d-spectrum">here</a>).</p>
 <p>Additionally, 2D maps of spectra (named <code class="xref py py-class docutils literal notranslate"><span class="pre">SpectraMap</span></code>) that consist in a set of <code class="xref py py-class docutils literal notranslate"><span class="pre">Spectrum</span></code> with associated grid coordinates can be provided as input according to a dedicated format. (More details <a class="reference external" href="files_selection.html?2D-map_spectra=#d-map-spectra">here</a>).</p>
-<p>The spectra processing are based on  <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLine</span></code> (optional) and peaks <code class="xref py py-mod docutils literal notranslate"><span class="pre">models</span></code> like Gaussian, Lorentzian, … used to fit the spectra profiles.</p>
+<p>The spectra processing are based on  <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLine</span></code> (optional) and peaks <a class="reference internal" href="../api/fitspy.models.html#module-fitspy.models" title="fitspy.models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">models</span></code></a> like Gaussian, Lorentzian, … used to fit the spectra profiles.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/spectra.png"><img alt="../_images/spectra.png" src="../_images/spectra.png" style="width: 75%;" /></a>
 </figure>

@@ -10,6 +10,18 @@ Subpackages
    fitspy.apps
    fitspy.core
 
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fitspy.baseline
+   fitspy.models
+   fitspy.spectra
+   fitspy.spectra_map
+   fitspy.spectrum
+
 Module contents
 ---------------
 

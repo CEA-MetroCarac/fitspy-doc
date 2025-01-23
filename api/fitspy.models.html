@@ -6,10 +6,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fitspy.models module &mdash; Fitspy 2024.5 documentation</title>
+  <title>fitspy.models module &mdash; Fitspy 2025.1dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
 
   
       <script src="../_static/jquery.js"></script>
@@ -17,7 +19,8 @@
       <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
       <script src="../_static/doctools.js"></script>
       <script src="../_static/sphinx_highlight.js"></script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../_static/clipboard.min.js"></script>
+      <script src="../_static/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -76,8 +79,6 @@
 <li class="toctree-l4"><a class="reference internal" href="fitspy.spectra.html">fitspy.spectra module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="fitspy.spectra_map.html">fitspy.spectra_map module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="fitspy.spectrum.html">fitspy.spectrum module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fitspy.utils.html">fitspy.utils module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fitspy.utils_mp.html">fitspy.utils_mp module</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="fitspy.html#module-fitspy">Module contents</a></li>
@@ -115,48 +116,6 @@
              
   <section id="module-fitspy.models">
 <span id="fitspy-models-module"></span><h1>fitspy.models module<a class="headerlink" href="#module-fitspy.models" title="Permalink to this heading"></a></h1>
-<p>Module containing different basic models (gaussian, lorentzian, …)</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="fitspy.models.gaussian">
-<span class="sig-prename descclassname"><span class="pre">fitspy.models.</span></span><span class="sig-name descname"><span class="pre">gaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.models.gaussian" title="Permalink to this definition"></a></dt>
-<dd><p>Return Gaussian function defined as:
-<span class="math notranslate nohighlight">\(ampli * e^{-(x-x0)^2/(2*\sigma^2)}\)</span>
-with <span class="math notranslate nohighlight">\(\sigma = fwhm / (2*\sqrt{2*log(2)})\)</span></p>
-<p class="rubric">Example</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="fitspy.models.gaussian_asym">
-<span class="sig-prename descclassname"><span class="pre">fitspy.models.</span></span><span class="sig-name descname"><span class="pre">gaussian_asym</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.models.gaussian_asym" title="Permalink to this definition"></a></dt>
-<dd><p>Return Asymmetric Gaussian function defined as:
-<span class="math notranslate nohighlight">\((x &lt; x0) * Gaussian(fwhm\_l) +  (x &gt;= x0) * Gaussian(fwhm\_r)\)</span></p>
-<p class="rubric">Example</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="fitspy.models.lorentzian">
-<span class="sig-prename descclassname"><span class="pre">fitspy.models.</span></span><span class="sig-name descname"><span class="pre">lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.models.lorentzian" title="Permalink to this definition"></a></dt>
-<dd><p>Return Lorentzian function defined as:
-<span class="math notranslate nohighlight">\(ampli * \frac{fwhm^2}{4 * ((x - x0)^2 + fwhm^2 / 4)}\)</span></p>
-<p class="rubric">Example</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="fitspy.models.lorentzian_asym">
-<span class="sig-prename descclassname"><span class="pre">fitspy.models.</span></span><span class="sig-name descname"><span class="pre">lorentzian_asym</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.models.lorentzian_asym" title="Permalink to this definition"></a></dt>
-<dd><p>Return Asymmetric Lorentzian function defined as:
-<span class="math notranslate nohighlight">\((x &lt; x0) * Lorentzian(fwhm\_l) +  (x &gt;= x0) * Lorentzian(fwhm\_r)\)</span></p>
-<p class="rubric">Example</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="fitspy.models.pseudovoigt">
-<span class="sig-prename descclassname"><span class="pre">fitspy.models.</span></span><span class="sig-name descname"><span class="pre">pseudovoigt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.models.pseudovoigt" title="Permalink to this definition"></a></dt>
-<dd><p>Return Pseudovoigt function defined as:
-<span class="math notranslate nohighlight">\(alpha * Gaussian + (1 - alpha) * Lorentzian\)</span></p>
-<p class="rubric">Example</p>
-</dd></dl>
-
 </section>
 
 
@@ -170,7 +129,7 @@ with <span class="math notranslate nohighlight">\(\sigma = fwhm / (2*\sqrt{2*log
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2024, The Fitspy development team.</p>
+    <p>&#169; Copyright 2023-2025, The Fitspy development team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

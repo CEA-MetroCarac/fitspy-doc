@@ -63,6 +63,7 @@
 <p class="caption" role="heading"><span class="caption-text">Release Notes</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-2025-dev">Version 2025.dev</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-2024-5-september-4-2024">Version 2024.5 (September 4, 2024)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-2024-4-february-27-2024">Version 2024.4 (February 27, 2024)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-2024-2-january-29-2024">Version 2024.2 (January 29, 2024)</a></li>
@@ -106,6 +107,27 @@
              
   <section id="release-notes">
 <h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this heading"></a></h1>
+<section id="version-2025-dev">
+<h2>Version 2025.dev<a class="headerlink" href="#version-2025-dev" title="Permalink to this heading"></a></h2>
+<p><strong>New features:</strong></p>
+<ul class="simple">
+<li><p>A PySide application has been added (MAJOR CHANGE), aiming to be more flexible, easier to maintain (using the MVC approach), and more user-friendly (featuring Drag-and-Drop functionality, etc…).</p></li>
+<li><p>Consequently, the project structure has been significantly reorganized: <code class="docutils literal notranslate"><span class="pre">Spectrum</span></code>, <code class="docutils literal notranslate"><span class="pre">Spectra</span></code>, and related modules have been moved into the <code class="docutils literal notranslate"><span class="pre">fitspy.core</span></code> directory, and <code class="docutils literal notranslate"><span class="pre">fitspy.app</span></code> has been renamed to <code class="docutils literal notranslate"><span class="pre">fitspy.apps</span></code> (with separate subdirectories for <code class="docutils literal notranslate"><span class="pre">tkinter</span></code> and <code class="docutils literal notranslate"><span class="pre">pyside</span></code>).</p></li>
+<li><p>Input data can now be saved directly in the model (as a .json file), allowing it to be replayed as-is, without relying on file path dependencies.</p></li>
+</ul>
+<p><strong>Enhancements:</strong></p>
+<ul class="simple">
+<li><p>Peak label visibility has been improved (PySide).</p></li>
+<li><p>Colormap settings have been added for peaks and 2D maps (PySide).</p></li>
+<li><p>User warnings have been introduced for incorrect bounds in model parameters (PySide).</p></li>
+<li><p>The ‘baseline’ subtraction feature has been extended to include the ‘background’.</p></li>
+<li><p>Spectra subsampling has been introduced in the semi-automatic baseline approach to reduce calculation time when applied to very large spectra.</p></li>
+</ul>
+<p><strong>Bug fixes:</strong></p>
+<ul class="simple">
+<li><p>create the related <code class="docutils literal notranslate"><span class="pre">dirname_fig</span></code> in <code class="docutils literal notranslate"><span class="pre">save_figures()</span></code> if the directory does not exist</p></li>
+</ul>
+</section>
 <section id="version-2024-5-september-4-2024">
 <h2>Version 2024.5 (September 4, 2024)<a class="headerlink" href="#version-2024-5-september-4-2024" title="Permalink to this heading"></a></h2>
 <p><strong>New features:</strong></p>
