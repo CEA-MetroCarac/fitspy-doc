@@ -53,7 +53,11 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-fitspy">What is Fitspy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-and-launching">Install and launching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyside-gui">PySide GUI :</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tkinter-gui">Tkinter GUI :</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#how-fitspy-works">How Fitspy works</a></li>
 </ul>
 </li>
@@ -168,10 +172,11 @@
 <section id="quick-start">
 <span id="id1"></span><h2>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this heading"></a></h2>
 <p>Once the <cite>Fitspy</cite> GUI has opened,</p>
-<p>&lt;u&gt;**PySide GUI**&lt;/u&gt; :</p>
-<p>from right to left, the strict minimum operations (in red) for a spectrum fitting consists of:</p>
+<section id="pyside-gui">
+<h3>PySide GUI :<a class="headerlink" href="#pyside-gui" title="Permalink to this heading"></a></h3>
+<p>The strict minimum operations (in red) for a spectrum fitting consists of:</p>
 <ul class="simple">
-<li><p>(<a class="reference external" href="files_selection.html">1</a>) <strong>Select file(s) using drag an drop mode</strong></p></li>
+<li><p>(<a class="reference external" href="files_selection.html">1</a>) <strong>Select file(s) using drag an drop mode</strong> (in the right panel)</p></li>
 <li><p>(<a class="reference external" href="fitting.html">2</a>) <strong>Select a</strong> <code class="code docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">model</span></code></p></li>
 <li><p>(<a class="reference external" href="fitting.html">3</a>) <strong>After clicking on</strong> <code class="code docutils literal notranslate"><span class="pre">Peaks</span> <span class="pre">points</span></code>, <strong>Select them on the main figure</strong> <em>(with left/right click on the figure to add/delete a peak point)</em></p></li>
 <li><p>Repeat the last two actions as needed</p></li>
@@ -179,10 +184,12 @@
 <li><p>(<a class="reference external" href="fitting.html">10</a>) <strong>Save results</strong> (<strong>fitted parameters</strong> and <strong>statistics</strong>)</p></li>
 </ul>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_static/pyside/workflow.png"><img alt="_static/pyside/workflow.png" src="_static/pyside/workflow.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/workflow.png"><img alt="../_images/workflow.png" src="../_images/workflow.png" style="width: 300px;" /></a>
 </figure>
 <br><p><em>(The entire workflow is described</em> <a class="reference external" href="workflow.html">here</a> <em>).</em></p>
-<p>&lt;u&gt;**Tkinter GUI**&lt;/u&gt;:</p>
+</section>
+<section id="tkinter-gui">
+<h3>Tkinter GUI :<a class="headerlink" href="#tkinter-gui" title="Permalink to this heading"></a></h3>
 <p>from top to bottom of the right panel, the strict minimum operations (in red) for a spectrum fitting consists of:</p>
 <ul class="simple">
 <li><p>(<a class="reference external" href="files_selection.html">1</a>) <strong>Select file(s) from</strong> <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Files</span></code>  <strong>or</strong>  <code class="code docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Dir</span></code></p></li>
@@ -194,9 +201,10 @@
 <li><p>(<a class="reference external" href="fitting.html">11</a>) <code class="code docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Results</span></code> (<strong>fitted parameters</strong> and <strong>statistics</strong>)</p></li>
 </ul>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../_images/workflow.png"><img alt="../_images/workflow.png" src="../_images/workflow.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/workflow1.png"><img alt="../_images/workflow1.png" src="../_images/workflow1.png" style="width: 300px;" /></a>
 </figure>
 <br><p><em>(The entire workflow is described</em> <a class="reference external" href="workflow.html">here</a> <em>).</em></p>
+</section>
 </section>
 <section id="how-fitspy-works">
 <h2>How Fitspy works<a class="headerlink" href="#how-fitspy-works" title="Permalink to this heading"></a></h2>
