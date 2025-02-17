@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fitspy.core.spectra module &mdash; Fitspy 2025.1dev documentation</title>
+  <title>fitspy.core.spectra module &mdash; Fitspy 2025.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -118,7 +118,7 @@
 “Spectra”</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="fitspy.core.spectra.Spectra">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.core.spectra.</span></span><span class="sig-name descname"><span class="pre">Spectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectra_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.core.spectra.</span></span><span class="sig-name descname"><span class="pre">Spectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectra_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
 <p>Class dedicated to handle ‘Spectrum’ objects contained in a list</p>
 <dl class="py attribute">
@@ -144,7 +144,10 @@
 
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>spectra_list</strong> (<em>list</em><em> of </em><em>Spectrum objects</em><em>, </em><em>optional</em>) – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spectra_list</strong> (<em>list</em><em> of </em><em>Spectrum objects</em><em>, </em><em>optional</em>) – </p></li>
+<li><p><strong>fnames</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – List of spectra pathname</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="py property">
@@ -238,12 +241,13 @@ fitspy model</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.apply_model">
-<span class="sig-name descname"><span class="pre">apply_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progressbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.apply_model" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">apply_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progressbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.apply_model" title="Permalink to this definition"></a></dt>
 <dd><p>Apply ‘model’ to all or part of the spectra</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_dict</strong> (<em>dict</em>) – Dictionary related to the Spectrum object attributes (obtained from
+<li><p><strong>model</strong> (<em>str</em><em> or </em><em>dict</em>) – filename to a Fitspy model (‘.json’ file) or
+Dictionary related to the Spectrum object attributes (obtained from
 Spectrum.save() for instance) to be applied</p></li>
 <li><p><strong>fnames</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – List of the spectrum.fname to handle.
 If None, apply the model to all the spectra</p></li>

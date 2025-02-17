@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workflow &mdash; Fitspy 2025.1dev documentation</title>
+  <title>Workflow &mdash; Fitspy 2025.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -203,22 +203,16 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">fitspy.core.spectrum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Spectrum</span>
 
 
-<span class="c1"># list of the spectra pathnames to handle</span>
-<span class="n">dirname</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\...&quot;</span><span class="p">)</span>
-<span class="n">fnames</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.txt&#39;</span><span class="p">)</span>
+<span class="n">fnames</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\...&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.txt&#39;</span><span class="p">)</span> <span class="c1"># list of the spectra pathname to handle</span>
+<span class="n">model</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\...\model.json&quot;</span> <span class="c1"># model pathname to work with</span>
 
 <span class="c1"># Spectra object creation</span>
-<span class="n">spectra</span> <span class="o">=</span> <span class="n">Spectra</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">fnames</span><span class="p">:</span>
-    <span class="n">spectrum</span> <span class="o">=</span> <span class="n">Spectrum</span><span class="p">()</span>
-    <span class="n">spectrum</span><span class="o">.</span><span class="n">load_profile</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-    <span class="n">spectra</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">spectrum</span><span class="p">)</span>
+<span class="n">spectra</span> <span class="o">=</span> <span class="n">Spectra</span><span class="p">(</span><span class="n">fnames</span><span class="o">=</span><span class="n">fnames</span><span class="p">)</span>
 
 <span class="c1"># Fitspy model loading and application</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">Spectra</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="n">fname_json</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;C:\Users\...\model.json&quot;</span><span class="p">)</span>
 <span class="n">spectra</span><span class="o">.</span><span class="n">apply_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">ncpus</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 
-<span class="c1"># save the calculated fitting parameters</span>
+<span class="c1"># Calculated fitting parameters saving</span>
 <span class="n">spectra</span><span class="o">.</span><span class="n">save_results</span><span class="p">(</span><span class="n">dirname_results</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;C:\Users\...\results&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
