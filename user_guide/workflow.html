@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workflow &mdash; Fitspy 2025.1 documentation</title>
+  <title>Workflow &mdash; Fitspy 2025.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -111,9 +111,9 @@
 </ul>
 <section id="gui-mode">
 <h2>GUI Mode<a class="headerlink" href="#gui-mode" title="Permalink to this heading"></a></h2>
-<p>** PySide GUI :**</p>
+<p>** PySide GUI:**</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../_images/workflow.png"><img alt="../_images/workflow.png" src="../_images/workflow.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/workflow.png"><img alt="../_images/workflow.png" src="../_images/workflow.png" style="width: 80%;" /></a>
 </figure>
 <br><p><strong>To create a `Fitspy` model:</strong></p>
 <ul class="simple">
@@ -143,7 +143,7 @@
 <li><p>(<a class="reference external" href="gui.html?models">15</a>) <code class="code docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">Model</span></code></p></li>
 <li><p>(<a class="reference external" href="fitting.html">10</a>) <strong>Save results</strong> (<strong>fitted parameters</strong> and <strong>statistics</strong>)</p></li>
 </ul>
-<p>** Tkinter GUI :**</p>
+<p>** Tkinter GUI:**</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/workflow1.png"><img alt="../_images/workflow1.png" src="../_images/workflow1.png" style="width: 300px;" /></a>
 </figure>
@@ -197,13 +197,40 @@
 <span class="n">spectrum</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">fname_json</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;C:\Users\...\model.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>During the peak model creation, other parameters can be passed to <a class="reference external" href="../api/fitspy.core.html#fitspy.core.spectrum.Spectrum.add_peak_model">add_peak_model()</a> (see the API doc).
+Given the large number of parameters, only the main ones have been retained as arguments. Therefore, to have fine control over each parameter, you can use a dictionary as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">peaks_params</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Lorentzian&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;x0&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">322</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">330</span><span class="p">},</span>
+                    <span class="s1">&#39;fwhm&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">45</span><span class="p">}},</span>
+
+                <span class="mi">2</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Lorentzian&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;x0&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">402</span><span class="p">,</span> <span class="s1">&#39;vary&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span>
+                    <span class="s1">&#39;ampli&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;expr&#39;</span><span class="p">:</span> <span class="s1">&#39;0.5*m01_ampli&#39;</span><span class="p">}},</span>
+
+                <span class="mi">3</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;LorentzianAsym&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;x0&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">445</span><span class="p">},</span>
+                    <span class="s1">&#39;fwhm_l&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">47</span><span class="p">},</span>
+                    <span class="s1">&#39;fwhm_r&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">}}}</span>
+
+<span class="c1"># create peaks with default values (name and x0 are the mandatory values)</span>
+<span class="k">for</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">peaks_params</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="n">spectrum</span><span class="o">.</span><span class="n">add_peak_model</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">])</span>
+
+<span class="c1"># replace default values by the user&#39;s ones (&#39;min&#39;, &#39;max&#39;, &#39;vary&#39;, &#39;expr&#39;)</span>
+<span class="k">for</span> <span class="n">peak_model</span><span class="p">,</span> <span class="n">params</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">spectrum</span><span class="o">.</span><span class="n">peak_models</span><span class="p">,</span> <span class="n">peaks_params</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+    <span class="p">[</span><span class="n">peak_model</span><span class="o">.</span><span class="n">set_param_hint</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">vals</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">vals</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;name&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
 <p>Once defined, a <cite>Fitspy</cite> model saved in a ‘.json’ file can be applied to a more consequent data set as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">fitspy.core.spectra</span><span class="w"> </span><span class="kn">import</span> <span class="n">Spectra</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">fitspy.core.spectrum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Spectrum</span>
 
 
-<span class="n">fnames</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\...&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.txt&#39;</span><span class="p">)</span> <span class="c1"># list of the spectra pathname to handle</span>
+<span class="n">fnames</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\...&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.txt&#39;</span><span class="p">)</span> <span class="c1"># list of the spectra pathnames to handle</span>
 <span class="n">model</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\...\model.json&quot;</span> <span class="c1"># model pathname to work with</span>
 
 <span class="c1"># Spectra object creation</span>

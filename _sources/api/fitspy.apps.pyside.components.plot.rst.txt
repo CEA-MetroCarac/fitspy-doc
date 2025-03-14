@@ -1,22 +1,60 @@
 fitspy.apps.pyside.components.plot package
 ==========================================
 
+.. automodule:: fitspy.apps.pyside.components.plot
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 Submodules
 ----------
 
-.. toctree::
-   :maxdepth: 4
+fitspy.apps.pyside.components.plot.controller module
+----------------------------------------------------
 
-   fitspy.apps.pyside.components.plot.controller
-   fitspy.apps.pyside.components.plot.map2d_plot
-   fitspy.apps.pyside.components.plot.model
-   fitspy.apps.pyside.components.plot.spectra_plot
-   fitspy.apps.pyside.components.plot.toolbar
+.. automodule:: fitspy.apps.pyside.components.plot.controller
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
 
-Module contents
----------------
+fitspy.apps.pyside.components.plot.map2d\_plot module
+-----------------------------------------------------
 
-.. automodule:: fitspy.apps.pyside.components.plot
+.. automodule:: fitspy.apps.pyside.components.plot.map2d_plot
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.plot.model module
+-----------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.plot.model
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.plot.spectra\_plot module
+-------------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.plot.spectra_plot
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.plot.toolbar module
+-------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.plot.toolbar
    :members:
    :private-members:
    :no-undoc-members:

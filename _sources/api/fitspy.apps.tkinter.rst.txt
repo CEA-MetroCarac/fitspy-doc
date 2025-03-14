@@ -1,21 +1,50 @@
 fitspy.apps.tkinter package
 ===========================
 
+.. automodule:: fitspy.apps.tkinter
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 Submodules
 ----------
 
-.. toctree::
-   :maxdepth: 4
+fitspy.apps.tkinter.callbacks module
+------------------------------------
 
-   fitspy.apps.tkinter.callbacks
-   fitspy.apps.tkinter.gui
-   fitspy.apps.tkinter.toplevels
-   fitspy.apps.tkinter.utils
+.. automodule:: fitspy.apps.tkinter.callbacks
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
 
-Module contents
----------------
+fitspy.apps.tkinter.gui module
+------------------------------
 
-.. automodule:: fitspy.apps.tkinter
+.. automodule:: fitspy.apps.tkinter.gui
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.tkinter.toplevels module
+------------------------------------
+
+.. automodule:: fitspy.apps.tkinter.toplevels
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.tkinter.utils module
+--------------------------------
+
+.. automodule:: fitspy.apps.tkinter.utils
    :members:
    :private-members:
    :no-undoc-members:

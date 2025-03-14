@@ -1,6 +1,13 @@
 fitspy.apps.pyside package
 ==========================
 
+.. automodule:: fitspy.apps.pyside
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 Subpackages
 -----------
 
@@ -12,19 +19,50 @@ Subpackages
 Submodules
 ----------
 
-.. toctree::
-   :maxdepth: 4
+fitspy.apps.pyside.main module
+------------------------------
 
-   fitspy.apps.pyside.main
-   fitspy.apps.pyside.main_controller
-   fitspy.apps.pyside.main_model
-   fitspy.apps.pyside.main_view
-   fitspy.apps.pyside.utils
+.. automodule:: fitspy.apps.pyside.main
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
 
-Module contents
----------------
+fitspy.apps.pyside.main\_controller module
+------------------------------------------
 
-.. automodule:: fitspy.apps.pyside
+.. automodule:: fitspy.apps.pyside.main_controller
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.main\_model module
+-------------------------------------
+
+.. automodule:: fitspy.apps.pyside.main_model
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.main\_view module
+------------------------------------
+
+.. automodule:: fitspy.apps.pyside.main_view
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.utils module
+-------------------------------
+
+.. automodule:: fitspy.apps.pyside.utils
    :members:
    :private-members:
    :no-undoc-members:

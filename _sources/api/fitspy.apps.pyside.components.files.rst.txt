@@ -1,22 +1,60 @@
 fitspy.apps.pyside.components.files package
 ===========================================
 
+.. automodule:: fitspy.apps.pyside.components.files
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 Submodules
 ----------
 
-.. toctree::
-   :maxdepth: 4
+fitspy.apps.pyside.components.files.controller module
+-----------------------------------------------------
 
-   fitspy.apps.pyside.components.files.controller
-   fitspy.apps.pyside.components.files.dragndrop_list
-   fitspy.apps.pyside.components.files.maps_list
-   fitspy.apps.pyside.components.files.model
-   fitspy.apps.pyside.components.files.spectrum_list
+.. automodule:: fitspy.apps.pyside.components.files.controller
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
 
-Module contents
----------------
+fitspy.apps.pyside.components.files.dragndrop\_list module
+----------------------------------------------------------
 
-.. automodule:: fitspy.apps.pyside.components.files
+.. automodule:: fitspy.apps.pyside.components.files.dragndrop_list
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.files.maps\_list module
+-----------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.files.maps_list
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.files.model module
+------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.files.model
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.files.spectrum\_list module
+---------------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.files.spectrum_list
    :members:
    :private-members:
    :no-undoc-members:

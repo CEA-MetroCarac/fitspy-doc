@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fitspy.apps.tkinter package &mdash; Fitspy 2025.1 documentation</title>
+  <title>fitspy.apps.tkinter package &mdash; Fitspy 2025.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -24,8 +24,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="fitspy.apps.tkinter.callbacks module" href="fitspy.apps.tkinter.callbacks.html" />
-    <link rel="prev" title="fitspy.apps.pyside.utils module" href="fitspy.apps.pyside.utils.html" /> 
+    <link rel="next" title="fitspy.core package" href="fitspy.core.html" />
+    <link rel="prev" title="fitspy.apps.pyside.components.settings package" href="fitspy.apps.pyside.components.settings.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -72,13 +72,12 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">fitspy</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="fitspy.html">fitspy package</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="fitspy.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="fitspy.apps.html">fitspy.apps package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fitspy.core.html">fitspy.core package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fitspy.apps.html">fitspy.apps package</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.pyside.html">fitspy.apps.pyside package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">fitspy.apps.tkinter package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.html#module-fitspy">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.core.html">fitspy.core package</a></li>
 </ul>
 </li>
 </ul>
@@ -112,198 +111,801 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="fitspy-apps-tkinter-package">
-<h1>fitspy.apps.tkinter package<a class="headerlink" href="#fitspy-apps-tkinter-package" title="Permalink to this heading"></a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html">fitspy.apps.tkinter.callbacks module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks"><code class="docutils literal notranslate"><span class="pre">Callbacks</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.spectra"><code class="docutils literal notranslate"><span class="pre">Callbacks.spectra</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.current_spectrum"><code class="docutils literal notranslate"><span class="pre">Callbacks.current_spectrum</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.cids"><code class="docutils literal notranslate"><span class="pre">Callbacks.cids</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.show_plot"><code class="docutils literal notranslate"><span class="pre">Callbacks.show_plot</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.lines"><code class="docutils literal notranslate"><span class="pre">Callbacks.lines</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.nearest_lines"><code class="docutils literal notranslate"><span class="pre">Callbacks.nearest_lines</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.tmp"><code class="docutils literal notranslate"><span class="pre">Callbacks.tmp</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.selected_frame"><code class="docutils literal notranslate"><span class="pre">Callbacks.selected_frame</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.model"><code class="docutils literal notranslate"><span class="pre">Callbacks.model</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.ncpus"><code class="docutils literal notranslate"><span class="pre">Callbacks.ncpus</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.update_figure_settings"><code class="docutils literal notranslate"><span class="pre">Callbacks.update_figure_settings()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.rescale"><code class="docutils literal notranslate"><span class="pre">Callbacks.rescale()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.outliers_calculation"><code class="docutils literal notranslate"><span class="pre">Callbacks.outliers_calculation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.set_outliers_coef"><code class="docutils literal notranslate"><span class="pre">Callbacks.set_outliers_coef()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.show_all"><code class="docutils literal notranslate"><span class="pre">Callbacks.show_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.show_hide_results"><code class="docutils literal notranslate"><span class="pre">Callbacks.show_hide_results()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.save_results"><code class="docutils literal notranslate"><span class="pre">Callbacks.save_results()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.load_model"><code class="docutils literal notranslate"><span class="pre">Callbacks.load_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.get_ncpus"><code class="docutils literal notranslate"><span class="pre">Callbacks.get_ncpus()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.apply_model"><code class="docutils literal notranslate"><span class="pre">Callbacks.apply_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.apply_model_to_all"><code class="docutils literal notranslate"><span class="pre">Callbacks.apply_model_to_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.messagebox_continue"><code class="docutils literal notranslate"><span class="pre">Callbacks.messagebox_continue()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.save"><code class="docutils literal notranslate"><span class="pre">Callbacks.save()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.save_selection"><code class="docutils literal notranslate"><span class="pre">Callbacks.save_selection()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.save_all"><code class="docutils literal notranslate"><span class="pre">Callbacks.save_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.reload"><code class="docutils literal notranslate"><span class="pre">Callbacks.reload()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.plot"><code class="docutils literal notranslate"><span class="pre">Callbacks.plot()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.on_press_baseline_peaks"><code class="docutils literal notranslate"><span class="pre">Callbacks.on_press_baseline_peaks()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.baseline_is_subtracted_message"><code class="docutils literal notranslate"><span class="pre">Callbacks.baseline_is_subtracted_message()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.add_baseline_point"><code class="docutils literal notranslate"><span class="pre">Callbacks.add_baseline_point()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.del_baseline_point"><code class="docutils literal notranslate"><span class="pre">Callbacks.del_baseline_point()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.apply_baseline_settings"><code class="docutils literal notranslate"><span class="pre">Callbacks.apply_baseline_settings()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.apply_baseline_settings_to_all"><code class="docutils literal notranslate"><span class="pre">Callbacks.apply_baseline_settings_to_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.set_baseline_settings"><code class="docutils literal notranslate"><span class="pre">Callbacks.set_baseline_settings()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.load_baseline"><code class="docutils literal notranslate"><span class="pre">Callbacks.load_baseline()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.load_user_model"><code class="docutils literal notranslate"><span class="pre">Callbacks.load_user_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.add_peaks_point"><code class="docutils literal notranslate"><span class="pre">Callbacks.add_peaks_point()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.del_peaks_point"><code class="docutils literal notranslate"><span class="pre">Callbacks.del_peaks_point()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.auto_peaks"><code class="docutils literal notranslate"><span class="pre">Callbacks.auto_peaks()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.set_bkg_model"><code class="docutils literal notranslate"><span class="pre">Callbacks.set_bkg_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.update_fit_settings"><code class="docutils literal notranslate"><span class="pre">Callbacks.update_fit_settings()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.colorize_from_fit_status"><code class="docutils literal notranslate"><span class="pre">Callbacks.colorize_from_fit_status()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.fit"><code class="docutils literal notranslate"><span class="pre">Callbacks.fit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.fit_all"><code class="docutils literal notranslate"><span class="pre">Callbacks.fit_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.set_range"><code class="docutils literal notranslate"><span class="pre">Callbacks.set_range()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.apply_range"><code class="docutils literal notranslate"><span class="pre">Callbacks.apply_range()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.apply_range_to_all"><code class="docutils literal notranslate"><span class="pre">Callbacks.apply_range_to_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.update_normalize"><code class="docutils literal notranslate"><span class="pre">Callbacks.update_normalize()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.get_value"><code class="docutils literal notranslate"><span class="pre">Callbacks.get_value()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.update_normalize_range"><code class="docutils literal notranslate"><span class="pre">Callbacks.update_normalize_range()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.set_normalize_settings"><code class="docutils literal notranslate"><span class="pre">Callbacks.set_normalize_settings()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.reinit"><code class="docutils literal notranslate"><span class="pre">Callbacks.reinit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.reinit_all"><code class="docutils literal notranslate"><span class="pre">Callbacks.reinit_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.reassign_current_spectrum"><code class="docutils literal notranslate"><span class="pre">Callbacks.reassign_current_spectrum()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.remove"><code class="docutils literal notranslate"><span class="pre">Callbacks.remove()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.auto_eval"><code class="docutils literal notranslate"><span class="pre">Callbacks.auto_eval()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.auto_eval_all"><code class="docutils literal notranslate"><span class="pre">Callbacks.auto_eval_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.delete_all"><code class="docutils literal notranslate"><span class="pre">Callbacks.delete_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.delete"><code class="docutils literal notranslate"><span class="pre">Callbacks.delete()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.add_items_from_dir"><code class="docutils literal notranslate"><span class="pre">Callbacks.add_items_from_dir()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.add_items"><code class="docutils literal notranslate"><span class="pre">Callbacks.add_items()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.update_markers"><code class="docutils literal notranslate"><span class="pre">Callbacks.update_markers()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.update"><code class="docutils literal notranslate"><span class="pre">Callbacks.update()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.callbacks.html#fitspy.apps.tkinter.callbacks.Callbacks.create_map"><code class="docutils literal notranslate"><span class="pre">Callbacks.create_map()</span></code></a></li>
+  <section id="module-fitspy.apps.tkinter">
+<span id="fitspy-apps-tkinter-package"></span><h1>fitspy.apps.tkinter package<a class="headerlink" href="#module-fitspy.apps.tkinter" title="Permalink to this heading"></a></h1>
+<hr class="docutils" />
+<section id="module-fitspy.apps.tkinter.callbacks">
+<span id="fitspy-apps-tkinter-callbacks-module"></span><h2>fitspy.apps.tkinter.callbacks module<a class="headerlink" href="#module-fitspy.apps.tkinter.callbacks" title="Permalink to this heading"></a></h2>
+<p>Callback functions encapsulated in a class to interact with the GUI</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.callbacks.</span></span><span class="sig-name descname"><span class="pre">Callbacks</span></span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Callback functions to interact with the GUI of the spectra fitting appli</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spectra</strong> (<em>Spectra object</em>) – List that contains all Spectrum objects</p></li>
+<li><p><strong>current_spectrum</strong> (<em>Spectrum object</em>) – The current selected spectrum to work with</p></li>
+<li><p><strong>cids</strong> (<em>list</em><em> of </em><em>ints</em>) – connection ids that can be used with FigureCanvasBase.mpl_disconnect</p></li>
+<li><p><strong>show_plot</strong> (<em>bool</em>) – Activation key for (re)plotting</p></li>
+<li><p><strong>lines</strong> (<em>list</em><em> of </em><em>Matplotlib.Lines2D</em>) – Lines related to all the spectra displaying</p></li>
+<li><p><strong>nearest_lines</strong> (<em>list Matplotlib.Lines2D</em>) – The nearest profiles of the mouse position when clicking (limited to 10)</p></li>
+<li><p><strong>tmp</strong> (<em>matplotlib.text.Annotation</em>) – Annotation to display fit parameters in the plot</p></li>
+<li><p><strong>selected_frame</strong> (<em>str</em>) – Frame to enable between ‘Baseline’ and ‘Peaks’</p></li>
+<li><p><strong>model</strong> (<em>dict</em>) – Dictionary issued from a .json model reloading</p></li>
+<li><p><strong>ncpus</strong> (<em>int</em><em> or </em><em>str</em>) – Number of CPUs to work with in fitting.
+If ncpus = “auto”, determine automatically this number according to the
+number of spectra to handle and the number of available CPUs.
+if ncpus is None (default value), consider the value passed through
+fit_settings.params[‘ncpus’]</p></li>
 </ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.apps.tkinter.gui.html">fitspy.apps.tkinter.gui module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI"><code class="docutils literal notranslate"><span class="pre">GUI</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.figure_settings"><code class="docutils literal notranslate"><span class="pre">GUI.figure_settings</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.fit_settings"><code class="docutils literal notranslate"><span class="pre">GUI.fit_settings</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.paramsview"><code class="docutils literal notranslate"><span class="pre">GUI.paramsview</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.statsview"><code class="docutils literal notranslate"><span class="pre">GUI.statsview</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.progressbar"><code class="docutils literal notranslate"><span class="pre">GUI.progressbar</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.outliers_coef"><code class="docutils literal notranslate"><span class="pre">GUI.outliers_coef</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.baseline_mode"><code class="docutils literal notranslate"><span class="pre">GUI.baseline_mode</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.baseline_coef"><code class="docutils literal notranslate"><span class="pre">GUI.baseline_coef</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.baseline_attached"><code class="docutils literal notranslate"><span class="pre">GUI.baseline_attached</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.baseline_sigma"><code class="docutils literal notranslate"><span class="pre">GUI.baseline_sigma</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.baseline_distance"><code class="docutils literal notranslate"><span class="pre">GUI.baseline_distance</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#id0"><code class="docutils literal notranslate"><span class="pre">GUI.baseline_mode</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.baseline_order_max"><code class="docutils literal notranslate"><span class="pre">GUI.baseline_order_max</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.normalize"><code class="docutils literal notranslate"><span class="pre">GUI.normalize</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.model"><code class="docutils literal notranslate"><span class="pre">GUI.model</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.bkg_name"><code class="docutils literal notranslate"><span class="pre">GUI.bkg_name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.asym"><code class="docutils literal notranslate"><span class="pre">GUI.asym</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.ax"><code class="docutils literal notranslate"><span class="pre">GUI.ax</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.canvas"><code class="docutils literal notranslate"><span class="pre">GUI.canvas</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.fileselector"><code class="docutils literal notranslate"><span class="pre">GUI.fileselector</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.frame_map_creation"><code class="docutils literal notranslate"><span class="pre">GUI.frame_map_creation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.save_settings"><code class="docutils literal notranslate"><span class="pre">GUI.save_settings()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.GUI.reload_settings"><code class="docutils literal notranslate"><span class="pre">GUI.reload_settings()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.Appli"><code class="docutils literal notranslate"><span class="pre">Appli</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.Appli.root"><code class="docutils literal notranslate"><span class="pre">Appli.root</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.Appli.force_terminal_exit"><code class="docutils literal notranslate"><span class="pre">Appli.force_terminal_exit</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.Appli.on_closing"><code class="docutils literal notranslate"><span class="pre">Appli.on_closing()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.init_app"><code class="docutils literal notranslate"><span class="pre">init_app()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.end_app"><code class="docutils literal notranslate"><span class="pre">end_app()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.gui.html#fitspy.apps.tkinter.gui.fitspy_launcher"><code class="docutils literal notranslate"><span class="pre">fitspy_launcher()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html">fitspy.apps.tkinter.toplevels module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ResultView"><code class="docutils literal notranslate"><span class="pre">ResultView</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ResultView.show_hide"><code class="docutils literal notranslate"><span class="pre">ResultView.show_hide()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView"><code class="docutils literal notranslate"><span class="pre">ParamsView</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.add_entry"><code class="docutils literal notranslate"><span class="pre">ParamsView.add_entry()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.add_check_button"><code class="docutils literal notranslate"><span class="pre">ParamsView.add_check_button()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.add_entry_peak_labels"><code class="docutils literal notranslate"><span class="pre">ParamsView.add_entry_peak_labels()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.add_combobox_peak_model"><code class="docutils literal notranslate"><span class="pre">ParamsView.add_combobox_peak_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.add_combobox_bkg_model"><code class="docutils literal notranslate"><span class="pre">ParamsView.add_combobox_bkg_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.label_has_changed"><code class="docutils literal notranslate"><span class="pre">ParamsView.label_has_changed()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.param_has_changed"><code class="docutils literal notranslate"><span class="pre">ParamsView.param_has_changed()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.model_has_changed"><code class="docutils literal notranslate"><span class="pre">ParamsView.model_has_changed()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.bkg_model_has_changed"><code class="docutils literal notranslate"><span class="pre">ParamsView.bkg_model_has_changed()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.set_header"><code class="docutils literal notranslate"><span class="pre">ParamsView.set_header()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.delete_models"><code class="docutils literal notranslate"><span class="pre">ParamsView.delete_models()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.update"><code class="docutils literal notranslate"><span class="pre">ParamsView.update()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.add_model"><code class="docutils literal notranslate"><span class="pre">ParamsView.add_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.ParamsView.delete"><code class="docutils literal notranslate"><span class="pre">ParamsView.delete()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.StatsView"><code class="docutils literal notranslate"><span class="pre">StatsView</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.StatsView.update"><code class="docutils literal notranslate"><span class="pre">StatsView.update()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.StatsView.delete"><code class="docutils literal notranslate"><span class="pre">StatsView.delete()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.Settings"><code class="docutils literal notranslate"><span class="pre">Settings</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.Settings.frame_creation"><code class="docutils literal notranslate"><span class="pre">Settings.frame_creation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.Settings.update"><code class="docutils literal notranslate"><span class="pre">Settings.update()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.Settings.on_press"><code class="docutils literal notranslate"><span class="pre">Settings.on_press()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.Settings.show_hide"><code class="docutils literal notranslate"><span class="pre">Settings.show_hide()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.FitSettings"><code class="docutils literal notranslate"><span class="pre">FitSettings</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.FitSettings.frame_creation"><code class="docutils literal notranslate"><span class="pre">FitSettings.frame_creation()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.FigureSettings"><code class="docutils literal notranslate"><span class="pre">FigureSettings</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.toplevels.html#fitspy.apps.tkinter.toplevels.FigureSettings.frame_creation"><code class="docutils literal notranslate"><span class="pre">FigureSettings.frame_creation()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.apps.tkinter.utils.html">fitspy.apps.tkinter.utils module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.add"><code class="docutils literal notranslate"><span class="pre">add()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.add_entry"><code class="docutils literal notranslate"><span class="pre">add_entry()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.interactive_entry"><code class="docutils literal notranslate"><span class="pre">interactive_entry()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.convert_dict_from_tk_variables"><code class="docutils literal notranslate"><span class="pre">convert_dict_from_tk_variables()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.ToggleFrame"><code class="docutils literal notranslate"><span class="pre">ToggleFrame</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.ToggleFrame.apply_state"><code class="docutils literal notranslate"><span class="pre">ToggleFrame.apply_state()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.ToggleFrame.disable"><code class="docutils literal notranslate"><span class="pre">ToggleFrame.disable()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.ToggleFrame.enable"><code class="docutils literal notranslate"><span class="pre">ToggleFrame.enable()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector"><code class="docutils literal notranslate"><span class="pre">FilesSelector</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector.lbox"><code class="docutils literal notranslate"><span class="pre">FilesSelector.lbox</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector.filenames"><code class="docutils literal notranslate"><span class="pre">FilesSelector.filenames</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector.move"><code class="docutils literal notranslate"><span class="pre">FilesSelector.move()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector.add_items"><code class="docutils literal notranslate"><span class="pre">FilesSelector.add_items()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector.select_files"><code class="docutils literal notranslate"><span class="pre">FilesSelector.select_files()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector.select_dir"><code class="docutils literal notranslate"><span class="pre">FilesSelector.select_dir()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector.remove"><code class="docutils literal notranslate"><span class="pre">FilesSelector.remove()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector.remove_all"><code class="docutils literal notranslate"><span class="pre">FilesSelector.remove_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.FilesSelector.select_item"><code class="docutils literal notranslate"><span class="pre">FilesSelector.select_item()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.ProgressBar"><code class="docutils literal notranslate"><span class="pre">ProgressBar</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.tkinter.utils.html#fitspy.apps.tkinter.utils.ProgressBar.update"><code class="docutils literal notranslate"><span class="pre">ProgressBar.update()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.update_figure_settings">
+<span class="sig-name descname"><span class="pre">update_figure_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.update_figure_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Update figure settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.rescale">
+<span class="sig-name descname"><span class="pre">rescale</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.rescale" title="Permalink to this definition"></a></dt>
+<dd><p>Rescale the figure</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.outliers_calculation">
+<span class="sig-name descname"><span class="pre">outliers_calculation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.outliers_calculation" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the outliers (limit)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.set_outliers_coef">
+<span class="sig-name descname"><span class="pre">set_outliers_coef</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.set_outliers_coef" title="Permalink to this definition"></a></dt>
+<dd><p>Set the outliers coefficient</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.show_all">
+<span class="sig-name descname"><span class="pre">show_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.show_all" title="Permalink to this definition"></a></dt>
+<dd><p>Show all spectra and highlight spectrum on mouse over</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.show_hide_results">
+<span class="sig-name descname"><span class="pre">show_hide_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.show_hide_results" title="Permalink to this definition"></a></dt>
+<dd><p>Show/Hide the ‘paramsview’ or the ‘statsview’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.save_results">
+<span class="sig-name descname"><span class="pre">save_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirname_res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.save_results" title="Permalink to this definition"></a></dt>
+<dd><p>Save all results (peaks parameters) in .csv files</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.load_model">
+<span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.load_model" title="Permalink to this definition"></a></dt>
+<dd><p>Load a model from a .json file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.get_ncpus">
+<span class="sig-name descname"><span class="pre">get_ncpus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nfiles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.get_ncpus" title="Permalink to this definition"></a></dt>
+<dd><p>Return the number of CPUs to work with</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.apply_model">
+<span class="sig-name descname"><span class="pre">apply_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.apply_model" title="Permalink to this definition"></a></dt>
+<dd><p>Apply model to the selected spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.apply_model_to_all">
+<span class="sig-name descname"><span class="pre">apply_model_to_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.apply_model_to_all" title="Permalink to this definition"></a></dt>
+<dd><p>Apply model to the all the spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.messagebox_continue">
+<span class="sig-name descname"><span class="pre">messagebox_continue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.messagebox_continue" title="Permalink to this definition"></a></dt>
+<dd><p>Open a messagebox if no models are found and return True/False
+concerning process continuation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save spectra in a .json file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.save_selection">
+<span class="sig-name descname"><span class="pre">save_selection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.save_selection" title="Permalink to this definition"></a></dt>
+<dd><p>Save selected spectra models in a .json file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.save_all">
+<span class="sig-name descname"><span class="pre">save_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.save_all" title="Permalink to this definition"></a></dt>
+<dd><p>Save all spectra models in a .json file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.reload">
+<span class="sig-name descname"><span class="pre">reload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.reload" title="Permalink to this definition"></a></dt>
+<dd><p>Reload spectra models from a .json file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.plot" title="Permalink to this definition"></a></dt>
+<dd><p>Plot baseline and peak models after ‘ax’ clearing</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.on_press_baseline_peaks">
+<span class="sig-name descname"><span class="pre">on_press_baseline_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.on_press_baseline_peaks" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function associated to the mouse press event in
+the ‘Baseline’ and ‘Peaks’ LabelFrames for enabling/disabling</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.baseline_is_subtracted_message">
+<span class="sig-name descname"><span class="pre">baseline_is_subtracted_message</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.baseline_is_subtracted_message" title="Permalink to this definition"></a></dt>
+<dd><p>Show an error message associated with the baseline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.add_baseline_point">
+<span class="sig-name descname"><span class="pre">add_baseline_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.add_baseline_point" title="Permalink to this definition"></a></dt>
+<dd><p>Add baseline point from the (x,y)-coordinate</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.del_baseline_point">
+<span class="sig-name descname"><span class="pre">del_baseline_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.del_baseline_point" title="Permalink to this definition"></a></dt>
+<dd><p>Delete the closest baseline ‘x’-point</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.apply_baseline_settings">
+<span class="sig-name descname"><span class="pre">apply_baseline_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.apply_baseline_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Apply baseline settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.apply_baseline_settings_to_all">
+<span class="sig-name descname"><span class="pre">apply_baseline_settings_to_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.apply_baseline_settings_to_all" title="Permalink to this definition"></a></dt>
+<dd><p>Apply baseline settings to all the spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.set_baseline_settings">
+<span class="sig-name descname"><span class="pre">set_baseline_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.set_baseline_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Set baseline settings from the baseline to the appli</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.load_baseline">
+<span class="sig-name descname"><span class="pre">load_baseline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.load_baseline" title="Permalink to this definition"></a></dt>
+<dd><p>Load a baseline from a row-column .txt file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.load_user_model">
+<span class="sig-name descname"><span class="pre">load_user_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.load_user_model" title="Permalink to this definition"></a></dt>
+<dd><p>Load users model from file to be added to PEAK_MODELS or BKG_MODEL</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.add_peaks_point">
+<span class="sig-name descname"><span class="pre">add_peaks_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.add_peaks_point" title="Permalink to this definition"></a></dt>
+<dd><p>Add peak from the (x,y)-coordinates</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.del_peaks_point">
+<span class="sig-name descname"><span class="pre">del_peaks_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.del_peaks_point" title="Permalink to this definition"></a></dt>
+<dd><p>Delete the closest peak ‘x’-point</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.auto_peaks">
+<span class="sig-name descname"><span class="pre">auto_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.auto_peaks" title="Permalink to this definition"></a></dt>
+<dd><p>Define peaks from automatic detection</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.set_bkg_model">
+<span class="sig-name descname"><span class="pre">set_bkg_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.set_bkg_model" title="Permalink to this definition"></a></dt>
+<dd><p>Set bkg_model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.update_fit_settings">
+<span class="sig-name descname"><span class="pre">update_fit_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.update_fit_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Update fit settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.colorize_from_fit_status">
+<span class="sig-name descname"><span class="pre">colorize_from_fit_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.colorize_from_fit_status" title="Permalink to this definition"></a></dt>
+<dd><p>Colorize the fileselector items from the fit success status</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Fit the peaks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.fit_all">
+<span class="sig-name descname"><span class="pre">fit_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.fit_all" title="Permalink to this definition"></a></dt>
+<dd><p>Fit the peaks for all the spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.set_range">
+<span class="sig-name descname"><span class="pre">set_range</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.set_range" title="Permalink to this definition"></a></dt>
+<dd><p>Set range from the spectrum to the appli</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.apply_range">
+<span class="sig-name descname"><span class="pre">apply_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.apply_range" title="Permalink to this definition"></a></dt>
+<dd><p>Set an apply range to the spectrum/spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.apply_range_to_all">
+<span class="sig-name descname"><span class="pre">apply_range_to_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.apply_range_to_all" title="Permalink to this definition"></a></dt>
+<dd><p>Set and apply range to all the spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.update_normalize">
+<span class="sig-name descname"><span class="pre">update_normalize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.update_normalize" title="Permalink to this definition"></a></dt>
+<dd><p>Update ‘normalize’ to all the spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Return the float value related to the ‘name’ attribute</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.update_normalize_range">
+<span class="sig-name descname"><span class="pre">update_normalize_range</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.update_normalize_range" title="Permalink to this definition"></a></dt>
+<dd><p>Update the normalization ranges to all the spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.set_normalize_settings">
+<span class="sig-name descname"><span class="pre">set_normalize_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.set_normalize_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Set normalize settings from the spectrum to the appli</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.reinit">
+<span class="sig-name descname"><span class="pre">reinit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.reinit" title="Permalink to this definition"></a></dt>
+<dd><p>Reinitialize the spectrum</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.reinit_all">
+<span class="sig-name descname"><span class="pre">reinit_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.reinit_all" title="Permalink to this definition"></a></dt>
+<dd><p>Reinitialize all the spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.reassign_current_spectrum">
+<span class="sig-name descname"><span class="pre">reassign_current_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.reassign_current_spectrum" title="Permalink to this definition"></a></dt>
+<dd><p>Reassign the current spectrum from ‘fname’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delete_tabview</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.remove" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all the features (spectrum attributes, baseline, tabview)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.auto_eval">
+<span class="sig-name descname"><span class="pre">auto_eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.auto_eval" title="Permalink to this definition"></a></dt>
+<dd><p>Fit spectrum after evaluating baseline and peaks automatically</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.auto_eval_all">
+<span class="sig-name descname"><span class="pre">auto_eval_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.auto_eval_all" title="Permalink to this definition"></a></dt>
+<dd><p>Apply automatic fitting on all spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.delete_all">
+<span class="sig-name descname"><span class="pre">delete_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.delete_all" title="Permalink to this definition"></a></dt>
+<dd><p>Delete all spectra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.delete" title="Permalink to this definition"></a></dt>
+<dd><p>Delete items from spectra selected in the ‘fileselector’
+or passed as argument</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.add_items_from_dir">
+<span class="sig-name descname"><span class="pre">add_items_from_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.add_items_from_dir" title="Permalink to this definition"></a></dt>
+<dd><p>Add new items related to a  ‘dirname’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.add_items">
+<span class="sig-name descname"><span class="pre">add_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.add_items" title="Permalink to this definition"></a></dt>
+<dd><p>Add new items from a ‘fnames’ list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.update_markers">
+<span class="sig-name descname"><span class="pre">update_markers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.update_markers" title="Permalink to this definition"></a></dt>
+<dd><p>Markers management in 2D-maps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.update" title="Permalink to this definition"></a></dt>
+<dd><p>Update the appli with the spectrum selected in the ‘fileselector’
+or passed as argument</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.callbacks.Callbacks.create_map">
+<span class="sig-name descname"><span class="pre">create_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.callbacks.Callbacks.create_map" title="Permalink to this definition"></a></dt>
+<dd><p>Create the 2D-map that consists in replacing the current spectra by
+the ones issued from the 2D-map extrusion</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-fitspy.apps.tkinter">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fitspy.apps.tkinter" title="Permalink to this heading"></a></h2>
+<section id="module-fitspy.apps.tkinter.gui">
+<span id="fitspy-apps-tkinter-gui-module"></span><h2>fitspy.apps.tkinter.gui module<a class="headerlink" href="#module-fitspy.apps.tkinter.gui" title="Permalink to this heading"></a></h2>
+<p>GUI and Appli classes associated to the spectra fitting application</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.gui.GUI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.gui.</span></span><span class="sig-name descname"><span class="pre">GUI</span></span><a class="headerlink" href="#fitspy.apps.tkinter.gui.GUI" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fitspy.apps.tkinter.callbacks.Callbacks" title="fitspy.apps.tkinter.callbacks.Callbacks"><code class="xref py py-class docutils literal notranslate"><span class="pre">Callbacks</span></code></a></p>
+<p>Gui associated to the spectra fitting application</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>canvas_map</strong> (<em>ax_map</em><em>,</em>) – Axes and canvas related to the 2D-map figure displaying</p></li>
+<li><p><strong>figure_settings</strong> (<em>FigureSettings obj</em>) – Tkinter.TopLevel derivative object for figure parameters setting</p></li>
+<li><p><strong>fit_settings</strong> (<em>FitSettings obj</em>) – Tkinter.TopLevel derivative object for fitting parameters setting</p></li>
+<li><p><strong>paramsview</strong> (<em>ParamsView obj</em>) – Tkinter.TopLevel derivative object for fitting models params displaying</p></li>
+<li><p><strong>statsview</strong> (<em>StatsView obj</em>) – Tkinter.TopLevel derivative object for fitting stats results displaying</p></li>
+<li><p><strong>progressbar</strong> (<em>ProgressBar obj</em>) – Tkinter.TopLevel derivative object with progression bar</p></li>
+<li><p><strong>range_max</strong> (<em>range_min</em><em>,</em>) – Range associated to the spectrum support</p></li>
+<li><p><strong>outliers_coef</strong> (<em>Tkinter.DoubleVar</em>) – Coefficient applied to the outliers limits</p></li>
+<li><p><strong>baseline_mode</strong> (<em>Tkinter.StringVar</em>) – Method associated with the baseline determination method (‘Semi-Auto’,
+‘Linear’ or ‘Polynomial’)</p></li>
+<li><p><strong>baseline_coef</strong> (<em>Tkinter.IntVar</em>) – Smoothing coefficient used when calculating the baseline with the
+‘Semi-Auto’ algorithm</p></li>
+<li><p><strong>baseline_attached</strong> (<em>Tkinter.BooleanVar</em>) – Activation keyword for baseline points attachment to the spectra</p></li>
+<li><p><strong>baseline_sigma</strong> (<em>Tkinter.IntVar</em>) – Smoothing gaussian coefficient applied to the spectra when calculating
+the attached baseline points</p></li>
+<li><p><strong>baseline_distance</strong> (<em>Tkinter.DoubleVar</em>) – Minimum distance used by ‘spectrum.auto_baseline’</p></li>
+<li><p><strong>baseline_mode</strong> – Type of baseline (‘Linear’ or ‘Polynomial’)</p></li>
+<li><p><strong>baseline_order_max</strong> (<em>Tkinter.IntVar</em>) – Max polynomial order to consider when plotting/removing the baseline</p></li>
+<li><p><strong>normalize</strong> (<em>Tkinter.BooleanVar</em>) – Activation keyword for spectrum profiles normalization</p></li>
+<li><p><strong>normalize_range_max</strong> (<em>normalize_range_min</em><em>,</em>) – Ranges for searching the maximum value used in the normalization</p></li>
+<li><p><strong>model</strong> (<em>Tkinter.StringVar</em>) – Spectrum peak base model name among ‘Gaussian’, ‘Lorentzian’,
+‘GaussianAsym’ and ‘LorentzianAsym’</p></li>
+<li><p><strong>bkg_name</strong> (<em>Tkinter.StringVar</em>) – Background model name among ‘None’, ‘Constant’, ‘Linear’, ‘Parabolic’
+and ‘Exponential’</p></li>
+<li><p><strong>asym</strong> (<em>Tkinter.BooleanVar</em>) – Activation keyword to consider asymetric spectrum model</p></li>
+<li><p><strong>ax</strong> (<em>Matplotlib.Axes object</em>) – Current axis to work with</p></li>
+<li><p><strong>canvas</strong> (<em>FigureCanvasTkAgg object</em>) – Current canvas to work with</p></li>
+<li><p><strong>fileselector</strong> (<em>common.core.appli_gui.FilesSelector object</em>) – Widget dedicated to the files selection</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.gui.GUI.frame_map_creation">
+<span class="sig-name descname"><span class="pre">frame_map_creation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectra_map</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.gui.GUI.frame_map_creation" title="Permalink to this definition"></a></dt>
+<dd><p>Create a frame_map Tkinter.Toplevel() and related ‘ax’ and ‘canvas’
+as spectra_map attributes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.gui.GUI.save_settings">
+<span class="sig-name descname"><span class="pre">save_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.gui.GUI.save_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Save GUI users settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.gui.GUI.reload_settings">
+<span class="sig-name descname"><span class="pre">reload_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.gui.GUI.reload_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Reload GUI users settings</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.gui.Appli">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.gui.</span></span><span class="sig-name descname"><span class="pre">Appli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1550x950'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_terminal_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.gui.Appli" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fitspy.apps.tkinter.gui.GUI" title="fitspy.apps.tkinter.gui.GUI"><code class="xref py py-class docutils literal notranslate"><span class="pre">GUI</span></code></a></p>
+<p>Application for spectra fitting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> (<em>Tkinter.Tk object</em>) – Root window</p></li>
+<li><p><strong>force_terminal_exit</strong> (<em>bool</em>) – Key to force terminal session to exit after ‘root’ destroying</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.gui.Appli.on_closing">
+<span class="sig-name descname"><span class="pre">on_closing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.gui.Appli.on_closing" title="Permalink to this definition"></a></dt>
+<dd><p>To quit ‘properly’ the application</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.gui.init_app">
+<span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.gui.</span></span><span class="sig-name descname"><span class="pre">init_app</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.gui.init_app" title="Permalink to this definition"></a></dt>
+<dd><p>Return an Appli and Tk instances</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.gui.end_app">
+<span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.gui.</span></span><span class="sig-name descname"><span class="pre">end_app</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">appli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dirname_res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.gui.end_app" title="Permalink to this definition"></a></dt>
+<dd><p>Quit properly the appli after saving the results if ‘dirname_res’ is given (for pytest)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.gui.fitspy_launcher">
+<span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.gui.</span></span><span class="sig-name descname"><span class="pre">fitspy_launcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.gui.fitspy_launcher" title="Permalink to this definition"></a></dt>
+<dd><p>Launch the Tkinter appli</p>
+</dd></dl>
+
+</section>
+<section id="module-fitspy.apps.tkinter.toplevels">
+<span id="fitspy-apps-tkinter-toplevels-module"></span><h2>fitspy.apps.tkinter.toplevels module<a class="headerlink" href="#module-fitspy.apps.tkinter.toplevels" title="Permalink to this heading"></a></h2>
+<p>Module dedicated to external widgets (Tkinter.Toplevel) creation</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ResultView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.toplevels.</span></span><span class="sig-name descname"><span class="pre">ResultView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ResultView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Master class used by ParamsView and StatsView</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ResultView.show_hide">
+<span class="sig-name descname"><span class="pre">show_hide</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ResultView.show_hide" title="Permalink to this definition"></a></dt>
+<dd><p>Show/Hide the TopLevel frame</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.toplevels.</span></span><span class="sig-name descname"><span class="pre">ParamsView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fitspy.apps.tkinter.toplevels.ResultView" title="fitspy.apps.tkinter.toplevels.ResultView"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultView</span></code></a></p>
+<p>Class for models parameters displaying</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.add_entry">
+<span class="sig-name descname"><span class="pre">add_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.add_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Add Tk.Entry at (row, col) linked to params[i][key][arg]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.add_check_button">
+<span class="sig-name descname"><span class="pre">add_check_button</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.add_check_button" title="Permalink to this definition"></a></dt>
+<dd><p>Add Tk.Checkbutton at (row, col) linked to params[i][key][arg]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.add_entry_peak_labels">
+<span class="sig-name descname"><span class="pre">add_entry_peak_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.add_entry_peak_labels" title="Permalink to this definition"></a></dt>
+<dd><p>Add Tk.Entry at (row, col) linked to models_labels[i]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.add_combobox_peak_model">
+<span class="sig-name descname"><span class="pre">add_combobox_peak_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.add_combobox_peak_model" title="Permalink to this definition"></a></dt>
+<dd><p>Add Tk.Combobox at (row, col) linked to peak_models[i]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.add_combobox_bkg_model">
+<span class="sig-name descname"><span class="pre">add_combobox_bkg_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.add_combobox_bkg_model" title="Permalink to this definition"></a></dt>
+<dd><p>Add Tk.Combobox at (row, col) linked to the bkg_model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.label_has_changed">
+<span class="sig-name descname"><span class="pre">label_has_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.label_has_changed" title="Permalink to this definition"></a></dt>
+<dd><p>Update the label related to the ith-model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.param_has_changed">
+<span class="sig-name descname"><span class="pre">param_has_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.param_has_changed" title="Permalink to this definition"></a></dt>
+<dd><p>Update the ‘key’-param ‘arg’-value related to the ith-model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.model_has_changed">
+<span class="sig-name descname"><span class="pre">model_has_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.model_has_changed" title="Permalink to this definition"></a></dt>
+<dd><p>Update the model function related to the ith-model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.bkg_model_has_changed">
+<span class="sig-name descname"><span class="pre">bkg_model_has_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.bkg_model_has_changed" title="Permalink to this definition"></a></dt>
+<dd><p>Update the ‘bkg_model’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.set_header">
+<span class="sig-name descname"><span class="pre">set_header</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.set_header" title="Permalink to this definition"></a></dt>
+<dd><p>Set the TabView header</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.delete_models">
+<span class="sig-name descname"><span class="pre">delete_models</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.delete_models" title="Permalink to this definition"></a></dt>
+<dd><p>Delete selected (peak) models</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.update" title="Permalink to this definition"></a></dt>
+<dd><p>Update the Tabview</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.add_model">
+<span class="sig-name descname"><span class="pre">add_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.add_model" title="Permalink to this definition"></a></dt>
+<dd><p>Add model in the Tabview</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.ParamsView.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.ParamsView.delete" title="Permalink to this definition"></a></dt>
+<dd><p>Delete all the values contained in frames</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.StatsView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.toplevels.</span></span><span class="sig-name descname"><span class="pre">StatsView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.StatsView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fitspy.apps.tkinter.toplevels.ResultView" title="fitspy.apps.tkinter.toplevels.ResultView"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultView</span></code></a></p>
+<p>Class for fit statistics displaying</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.StatsView.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.StatsView.update" title="Permalink to this definition"></a></dt>
+<dd><p>Update the statistics</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.StatsView.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.StatsView.delete" title="Permalink to this definition"></a></dt>
+<dd><p>Delete all the values contained in frames</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.Settings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.toplevels.</span></span><span class="sig-name descname"><span class="pre">Settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.Settings" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Master class for parameters setting</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.Settings.frame_creation">
+<span class="sig-name descname"><span class="pre">frame_creation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bind_fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.Settings.frame_creation" title="Permalink to this definition"></a></dt>
+<dd><p>Create frame with ‘params’ linked to ‘bind_fun’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.Settings.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_fun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.Settings.update" title="Permalink to this definition"></a></dt>
+<dd><p>Display the Toplevel ‘frame’ on (x, y) position with interactive
+‘params’ settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.Settings.on_press">
+<span class="sig-name descname"><span class="pre">on_press</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.Settings.on_press" title="Permalink to this definition"></a></dt>
+<dd><p>Hide the Toplevel ‘frame’ if the mouse click is outside</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.Settings.show_hide">
+<span class="sig-name descname"><span class="pre">show_hide</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.Settings.show_hide" title="Permalink to this definition"></a></dt>
+<dd><p>Show/Hide the TopLevel ‘frame’</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.FitSettings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.toplevels.</span></span><span class="sig-name descname"><span class="pre">FitSettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.FitSettings" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fitspy.apps.tkinter.toplevels.Settings" title="fitspy.apps.tkinter.toplevels.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">Settings</span></code></a></p>
+<p>Class for fitting parameters setting</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.FitSettings.frame_creation">
+<span class="sig-name descname"><span class="pre">frame_creation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bind_fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.FitSettings.frame_creation" title="Permalink to this definition"></a></dt>
+<dd><p>Create frame with ‘params’ linked to ‘bind_fun’</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.FigureSettings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.toplevels.</span></span><span class="sig-name descname"><span class="pre">FigureSettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.FigureSettings" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fitspy.apps.tkinter.toplevels.Settings" title="fitspy.apps.tkinter.toplevels.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">Settings</span></code></a></p>
+<p>Class for figure parameters setting</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.toplevels.FigureSettings.frame_creation">
+<span class="sig-name descname"><span class="pre">frame_creation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bind_fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.toplevels.FigureSettings.frame_creation" title="Permalink to this definition"></a></dt>
+<dd><p>Create frame with ‘params’ linked to ‘bind_fun’</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitspy.apps.tkinter.utils">
+<span id="fitspy-apps-tkinter-utils-module"></span><h2>fitspy.apps.tkinter.utils module<a class="headerlink" href="#module-fitspy.apps.tkinter.utils" title="Permalink to this heading"></a></h2>
+<p>utilities functions related to Tkinter</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.add">
+<span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.utils.</span></span><span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sticky</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pady</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rspan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cspan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.add" title="Permalink to this definition"></a></dt>
+<dd><p>Add tkinter object at the (row, col)-position of a grid</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.add_entry">
+<span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.utils.</span></span><span class="sig-name descname"><span class="pre">add_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_fun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.add_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Add 2 columns : ‘label’ and ‘val’ associated to a binding function
+‘bind_fun’ at ‘row’ (int) position in a ‘frame’ (Tk.Frame)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.interactive_entry">
+<span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.utils.</span></span><span class="sig-name descname"><span class="pre">interactive_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.interactive_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Return an interactive Tkinter.Entry binded to ‘fun’</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.convert_dict_from_tk_variables">
+<span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.utils.</span></span><span class="sig-name descname"><span class="pre">convert_dict_from_tk_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.convert_dict_from_tk_variables" title="Permalink to this definition"></a></dt>
+<dd><p>Convert a dictionary from Tkinter.Variables to standard types
+(thanks to a recursive processing)</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.ToggleFrame">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.utils.</span></span><span class="sig-name descname"><span class="pre">ToggleFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exceptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.ToggleFrame" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">LabelFrame</span></code></p>
+<p>Class dedicated to Enable/Disable LabelFrame and its related children</p>
+<p>Construct a labelframe widget with the parent MASTER.</p>
+<p>STANDARD OPTIONS</p>
+<blockquote>
+<div><p>borderwidth, cursor, font, foreground,
+highlightbackground, highlightcolor,
+highlightthickness, padx, pady, relief,
+takefocus, text</p>
+</div></blockquote>
+<p>WIDGET-SPECIFIC OPTIONS</p>
+<blockquote>
+<div><p>background, class, colormap, container,
+height, labelanchor, labelwidget,
+visual, width</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.ToggleFrame.apply_state">
+<span class="sig-name descname"><span class="pre">apply_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.ToggleFrame.apply_state" title="Permalink to this definition"></a></dt>
+<dd><p>Apply state ‘disable’ or ‘normal’ to Frame’s children widgets</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.ToggleFrame.disable">
+<span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.ToggleFrame.disable" title="Permalink to this definition"></a></dt>
+<dd><p>Disable Frame’s children widgets</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.ToggleFrame.enable">
+<span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.ToggleFrame.enable" title="Permalink to this definition"></a></dt>
+<dd><p>Enable Frame’s children widgets</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.FilesSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.utils.</span></span><span class="sig-name descname"><span class="pre">FilesSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lbox_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.FilesSelector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class dedicated to the files selection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lbox</strong> (<em>list</em><em> of </em><em>Listbox object</em>) – Listbox associated to the selected files</p></li>
+<li><p><strong>filenames</strong> (<em>list</em><em> of </em><em>str</em>) – List of of filenames to work with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>root</strong> (<em>Tk.widget</em>) – The main window associated to the FileSelector</p></li>
+<li><p><strong>lbox_size</strong> (<em>list</em><em> of </em><em>2 ints</em><em>, </em><em>optional</em>) – Size (width, height) of the Listbox ‘lbox’. Default value is [30, 15]</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.FilesSelector.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.FilesSelector.move" title="Permalink to this definition"></a></dt>
+<dd><p>Move cursor selection according to key value (up or down)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.FilesSelector.add_items">
+<span class="sig-name descname"><span class="pre">add_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.FilesSelector.add_items" title="Permalink to this definition"></a></dt>
+<dd><p>Add items from a ‘filenames’ list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.FilesSelector.select_files">
+<span class="sig-name descname"><span class="pre">select_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.FilesSelector.select_files" title="Permalink to this definition"></a></dt>
+<dd><p>Add items from selected files</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.FilesSelector.select_dir">
+<span class="sig-name descname"><span class="pre">select_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.FilesSelector.select_dir" title="Permalink to this definition"></a></dt>
+<dd><p>Add items from a directory</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.FilesSelector.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.FilesSelector.remove" title="Permalink to this definition"></a></dt>
+<dd><p>Remove selected items</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.FilesSelector.remove_all">
+<span class="sig-name descname"><span class="pre">remove_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.FilesSelector.remove_all" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all items</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.FilesSelector.select_item">
+<span class="sig-name descname"><span class="pre">select_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection_clear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.FilesSelector.select_item" title="Permalink to this definition"></a></dt>
+<dd><p>Select item in the listbox</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.ProgressBar">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.apps.tkinter.utils.</span></span><span class="sig-name descname"><span class="pre">ProgressBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.ProgressBar" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to create a progress bar</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.apps.tkinter.utils.ProgressBar.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ntot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpus</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.apps.tkinter.utils.ProgressBar.update" title="Permalink to this definition"></a></dt>
+<dd><p>update the progressbar info during the fitspy execution</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 
@@ -311,8 +913,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="fitspy.apps.pyside.utils.html" class="btn btn-neutral float-left" title="fitspy.apps.pyside.utils module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="fitspy.apps.tkinter.callbacks.html" class="btn btn-neutral float-right" title="fitspy.apps.tkinter.callbacks module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fitspy.apps.pyside.components.settings.html" class="btn btn-neutral float-left" title="fitspy.apps.pyside.components.settings package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fitspy.core.html" class="btn btn-neutral float-right" title="fitspy.core package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

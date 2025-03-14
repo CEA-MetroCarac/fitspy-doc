@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Release Notes &mdash; Fitspy 2025.1 documentation</title>
+  <title>Release Notes &mdash; Fitspy 2025.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -63,7 +63,8 @@
 <p class="caption" role="heading"><span class="caption-text">Release Notes</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#version-2025-dev">Version 2025.dev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2025-2-february-24-2025">Version 2025.2 (February 24, 2025)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2025-1-february-17-2025">Version 2025.1 (February 17, 2025)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-2024-5-september-4-2024">Version 2024.5 (September 4, 2024)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-2024-4-february-27-2024">Version 2024.4 (February 27, 2024)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-2024-2-january-29-2024">Version 2024.2 (January 29, 2024)</a></li>
@@ -107,8 +108,22 @@
              
   <section id="release-notes">
 <h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this heading"></a></h1>
-<section id="version-2025-dev">
-<h2>Version 2025.dev<a class="headerlink" href="#version-2025-dev" title="Permalink to this heading"></a></h2>
+<section id="version-2025-2-february-24-2025">
+<h2>Version 2025.2 (February 24, 2025)<a class="headerlink" href="#version-2025-2-february-24-2025" title="Permalink to this heading"></a></h2>
+<p><strong>Enhancements:</strong></p>
+<ul class="simple">
+<li><p>Added python version in About window (PySide).</p></li>
+<li><p>Added reinit_spectra method to Appli class for spectra reinitialization (PySide).</p></li>
+</ul>
+<p><strong>Bug fixes:</strong></p>
+<ul class="simple">
+<li><p>Fixed #42: Do not reinitialize params when ‘vary’ is False</p></li>
+<li><p>Fixed #43: Fit fails when Xmin/Xmax contains “inf” or “NaN”</p></li>
+<li><p>Fixed #44: Peak Table values not in the correct columns</p></li>
+</ul>
+</section>
+<section id="version-2025-1-february-17-2025">
+<h2>Version 2025.1 (February 17, 2025)<a class="headerlink" href="#version-2025-1-february-17-2025" title="Permalink to this heading"></a></h2>
 <p><strong>New features:</strong></p>
 <ul class="simple">
 <li><p>A PySide application has been added (MAJOR CHANGE), aiming to be more flexible, easier to maintain (using the MVC approach), and more user-friendly (featuring Drag-and-Drop functionality, etc…).</p></li>
@@ -117,6 +132,8 @@
 </ul>
 <p><strong>Enhancements:</strong></p>
 <ul class="simple">
+<li><p>Spectrum objects can be created directly by passing ‘fnames’ to Spectra(fnames=fnames)</p></li>
+<li><p>a ‘model.json’ fname can be passed directly as ‘model’ to apply_model(model=model.json)</p></li>
 <li><p>Peak label visibility has been improved (PySide).</p></li>
 <li><p>Colormap settings have been added for peaks and 2D maps (PySide).</p></li>
 <li><p>User warnings have been introduced for incorrect bounds in model parameters (PySide).</p></li>

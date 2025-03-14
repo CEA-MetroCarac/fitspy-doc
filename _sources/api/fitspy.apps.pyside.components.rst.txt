@@ -1,6 +1,13 @@
 fitspy.apps.pyside.components package
 =====================================
 
+.. automodule:: fitspy.apps.pyside.components
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 Subpackages
 -----------
 
@@ -14,16 +21,30 @@ Subpackages
 Submodules
 ----------
 
-.. toctree::
-   :maxdepth: 4
+fitspy.apps.pyside.components.about module
+------------------------------------------
 
-   fitspy.apps.pyside.components.about
-   fitspy.apps.pyside.components.menubar
+.. automodule:: fitspy.apps.pyside.components.about
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
 
-Module contents
----------------
+fitspy.apps.pyside.components.custom\_widgets module
+----------------------------------------------------
 
-.. automodule:: fitspy.apps.pyside.components
+.. automodule:: fitspy.apps.pyside.components.custom_widgets
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.menubar module
+--------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.menubar
    :members:
    :private-members:
    :no-undoc-members:

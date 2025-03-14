@@ -1,6 +1,13 @@
 fitspy package
 ==============
 
+.. automodule:: fitspy
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 Subpackages
 -----------
 
@@ -13,19 +20,50 @@ Subpackages
 Submodules
 ----------
 
-.. toctree::
-   :maxdepth: 4
+fitspy.baseline module
+----------------------
 
-   fitspy.baseline
-   fitspy.models
-   fitspy.spectra
-   fitspy.spectra_map
-   fitspy.spectrum
+.. automodule:: fitspy.baseline
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
 
-Module contents
----------------
+fitspy.models module
+--------------------
 
-.. automodule:: fitspy
+.. automodule:: fitspy.models
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.spectra module
+---------------------
+
+.. automodule:: fitspy.spectra
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.spectra\_map module
+--------------------------
+
+.. automodule:: fitspy.spectra_map
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.spectrum module
+----------------------
+
+.. automodule:: fitspy.spectrum
    :members:
    :private-members:
    :no-undoc-members:

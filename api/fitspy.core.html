@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fitspy.core package &mdash; Fitspy 2025.1 documentation</title>
+  <title>fitspy.core package &mdash; Fitspy 2025.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -21,11 +21,11 @@
       <script src="../_static/sphinx_highlight.js"></script>
       <script src="../_static/clipboard.min.js"></script>
       <script src="../_static/copybutton.js"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="fitspy.core.baseline module" href="fitspy.core.baseline.html" />
-    <link rel="prev" title="fitspy.apps.tkinter.utils module" href="fitspy.apps.tkinter.utils.html" /> 
+    <link rel="prev" title="fitspy.apps.tkinter package" href="fitspy.apps.tkinter.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -72,13 +72,8 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">fitspy</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="fitspy.html">fitspy package</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="fitspy.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="fitspy.apps.html">fitspy.apps package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">fitspy.core package</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.html#module-fitspy">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitspy.apps.html">fitspy.apps package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">fitspy.core package</a></li>
 </ul>
 </li>
 </ul>
@@ -111,171 +106,982 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="fitspy-core-package">
-<h1>fitspy.core package<a class="headerlink" href="#fitspy-core-package" title="Permalink to this heading"></a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.core.baseline.html">fitspy.core.baseline module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine"><code class="docutils literal notranslate"><span class="pre">BaseLine</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.points"><code class="docutils literal notranslate"><span class="pre">BaseLine.points</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.mode"><code class="docutils literal notranslate"><span class="pre">BaseLine.mode</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.coef"><code class="docutils literal notranslate"><span class="pre">BaseLine.coef</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.order_max"><code class="docutils literal notranslate"><span class="pre">BaseLine.order_max</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.distance"><code class="docutils literal notranslate"><span class="pre">BaseLine.distance</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.sigma"><code class="docutils literal notranslate"><span class="pre">BaseLine.sigma</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.attached"><code class="docutils literal notranslate"><span class="pre">BaseLine.attached</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.is_subtracted"><code class="docutils literal notranslate"><span class="pre">BaseLine.is_subtracted</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.y_eval"><code class="docutils literal notranslate"><span class="pre">BaseLine.y_eval</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.reinit"><code class="docutils literal notranslate"><span class="pre">BaseLine.reinit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.add_point"><code class="docutils literal notranslate"><span class="pre">BaseLine.add_point()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.attached_points"><code class="docutils literal notranslate"><span class="pre">BaseLine.attached_points()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.load_baseline"><code class="docutils literal notranslate"><span class="pre">BaseLine.load_baseline()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.eval"><code class="docutils literal notranslate"><span class="pre">BaseLine.eval()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.BaseLine.plot"><code class="docutils literal notranslate"><span class="pre">BaseLine.plot()</span></code></a></li>
+  <section id="module-fitspy.core">
+<span id="fitspy-core-package"></span><h1>fitspy.core package<a class="headerlink" href="#module-fitspy.core" title="Permalink to this heading"></a></h1>
+<hr class="docutils" />
+<section id="module-fitspy.core.baseline">
+<span id="fitspy-core-baseline-module"></span><h2>fitspy.core.baseline module<a class="headerlink" href="#module-fitspy.core.baseline" title="Permalink to this heading"></a></h2>
+<p>Class dedicated to spectrum baseline manipulation</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.core.baseline.BaseLine">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.core.baseline.</span></span><span class="sig-name descname"><span class="pre">BaseLine</span></span><a class="headerlink" href="#fitspy.core.baseline.BaseLine" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class dedicated to spectrum baseline manipulation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>list</em><em> of </em><em>2 lists</em>) – List of the (x,y) baseline points coordinates</p></li>
+<li><p><strong>mode</strong> (<em>str</em><em> or </em><em>None</em>) – Mode used to determine the baseline, among None, ‘Semi-Auto’ (semi-automatic
+baseline determination), ‘Linear’ (piecewise linear decomposition based
+on users points definition) and ‘Polynomial’. Default mode is None</p></li>
+<li><p><strong>coef</strong> (<em>int</em>) – Smoothing coefficient used in the ‘Semi-Auto’ mode.
+The larger coef is, the smoother the resulting baseline</p></li>
+<li><p><strong>order_max</strong> (<em>int</em>) – Maximum order of the baseline polynomial evaluation</p></li>
+<li><p><strong>distance</strong> (<em>float</em>) – Minimum distance between baseline point to consider when doing automatic
+detection with ‘Spectrum.auto_baseline’</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – Smoothing coefficient (standard deviation) related to a gaussian
+filtering when defining baseline attached points to the spectrum</p></li>
+<li><p><strong>attached</strong> (<em>bool</em>) – Activation key for attach the baseline points to the spectrum</p></li>
+<li><p><strong>is_subtracted</strong> (<em>bool</em>) – Key used to indicate whether the baseline has been subtracted from the
+spectrum</p></li>
+<li><p><strong>y_eval</strong> (<em>numpy.ndarray</em><em>(</em><em>n</em><em>)</em>) – The baseline profile resulting from the ‘eval’ function</p></li>
 </ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.baseline.html#fitspy.core.baseline.arpls"><code class="docutils literal notranslate"><span class="pre">arpls()</span></code></a></li>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.baseline.BaseLine.reinit">
+<span class="sig-name descname"><span class="pre">reinit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.baseline.BaseLine.reinit" title="Permalink to this definition"></a></dt>
+<dd><p>Reinitialize the main attributes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.baseline.BaseLine.add_point">
+<span class="sig-name descname"><span class="pre">add_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.baseline.BaseLine.add_point" title="Permalink to this definition"></a></dt>
+<dd><p>Add point in the baseline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.baseline.BaseLine.attached_points">
+<span class="sig-name descname"><span class="pre">attached_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.baseline.BaseLine.attached_points" title="Permalink to this definition"></a></dt>
+<dd><p>Return baseline points attached to (x,y) ‘spectrum’ profile coords</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.baseline.BaseLine.load_baseline">
+<span class="sig-name descname"><span class="pre">load_baseline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.baseline.BaseLine.load_baseline" title="Permalink to this definition"></a></dt>
+<dd><p>Load baseline from ‘fname’ with 1 header line and 2 (x,y) columns</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.baseline.BaseLine.eval">
+<span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attached</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.baseline.BaseLine.eval" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate the baseline on a ‘x’ support and a ‘y’ profile
+possibly smoothed with a gaussian filter</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.baseline.BaseLine.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attached</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Baseline'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.baseline.BaseLine.plot" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the baseline and its related points</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<em>Matplotlib.Axes</em>) – Axis to work with</p></li>
+<li><p><strong>x</strong> (<em>iterable</em><em> of </em><em>floats</em><em>, </em><em>optional</em>) – Support to consider for the baseline plotting.
+If None, create a support from the baseline extrema points</p></li>
+<li><p><strong>y</strong> (<em>iterable</em><em> of </em><em>floats</em><em>, </em><em>optional</em>) – Values for baseline points attachment (if provided), sharing the
+same x coordinates</p></li>
+<li><p><strong>label</strong> (<em>str</em><em>, </em><em>optional</em>) – Label displays in the figure</p></li>
+<li><p><strong>show_all</strong> (<em>bool</em><em>, </em><em>optional</em>) – Activation key to display the primary baseline components (before
+attachment)</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.core.models.html">fitspy.core.models module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.models.html#fitspy.core.models.gaussian"><code class="docutils literal notranslate"><span class="pre">gaussian()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.models.html#fitspy.core.models.gaussian_asym"><code class="docutils literal notranslate"><span class="pre">gaussian_asym()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.models.html#fitspy.core.models.lorentzian"><code class="docutils literal notranslate"><span class="pre">lorentzian()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.models.html#fitspy.core.models.lorentzian_asym"><code class="docutils literal notranslate"><span class="pre">lorentzian_asym()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.models.html#fitspy.core.models.pseudovoigt"><code class="docutils literal notranslate"><span class="pre">pseudovoigt()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.core.spectra.html">fitspy.core.spectra module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra"><code class="docutils literal notranslate"><span class="pre">Spectra</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.spectra_maps"><code class="docutils literal notranslate"><span class="pre">Spectra.spectra_maps</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.pbar_index"><code class="docutils literal notranslate"><span class="pre">Spectra.pbar_index</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.fnames"><code class="docutils literal notranslate"><span class="pre">Spectra.fnames</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.all"><code class="docutils literal notranslate"><span class="pre">Spectra.all</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.intensity"><code class="docutils literal notranslate"><span class="pre">Spectra.intensity()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.get_spectrum"><code class="docutils literal notranslate"><span class="pre">Spectra.get_spectrum()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.get_objects"><code class="docutils literal notranslate"><span class="pre">Spectra.get_objects()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.outliers_limit_calculation"><code class="docutils literal notranslate"><span class="pre">Spectra.outliers_limit_calculation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.save_results"><code class="docutils literal notranslate"><span class="pre">Spectra.save_results()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.save_figures"><code class="docutils literal notranslate"><span class="pre">Spectra.save_figures()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.load_model"><code class="docutils literal notranslate"><span class="pre">Spectra.load_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.apply_model"><code class="docutils literal notranslate"><span class="pre">Spectra.apply_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.progressbar"><code class="docutils literal notranslate"><span class="pre">Spectra.progressbar()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.save"><code class="docutils literal notranslate"><span class="pre">Spectra.save()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.load"><code class="docutils literal notranslate"><span class="pre">Spectra.load()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra.html#fitspy.core.spectra.Spectra.set_attributes"><code class="docutils literal notranslate"><span class="pre">Spectra.set_attributes()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.core.spectra_map.html">fitspy.core.spectra_map module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap"><code class="docutils literal notranslate"><span class="pre">SpectraMap</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.fname"><code class="docutils literal notranslate"><span class="pre">SpectraMap.fname</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.arr0"><code class="docutils literal notranslate"><span class="pre">SpectraMap.arr0</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.xy_map"><code class="docutils literal notranslate"><span class="pre">SpectraMap.xy_map</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.shape_map"><code class="docutils literal notranslate"><span class="pre">SpectraMap.shape_map</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.extent"><code class="docutils literal notranslate"><span class="pre">SpectraMap.extent</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.coords"><code class="docutils literal notranslate"><span class="pre">SpectraMap.coords</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.fnames_map"><code class="docutils literal notranslate"><span class="pre">SpectraMap.fnames_map</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.intensity"><code class="docutils literal notranslate"><span class="pre">SpectraMap.intensity</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.arr"><code class="docutils literal notranslate"><span class="pre">SpectraMap.arr</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.ax"><code class="docutils literal notranslate"><span class="pre">SpectraMap.ax</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.img"><code class="docutils literal notranslate"><span class="pre">SpectraMap.img</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.cbar"><code class="docutils literal notranslate"><span class="pre">SpectraMap.cbar</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.ax_slider"><code class="docutils literal notranslate"><span class="pre">SpectraMap.ax_slider</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.slider"><code class="docutils literal notranslate"><span class="pre">SpectraMap.slider</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.xrange"><code class="docutils literal notranslate"><span class="pre">SpectraMap.xrange</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.marker"><code class="docutils literal notranslate"><span class="pre">SpectraMap.marker</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.create_map"><code class="docutils literal notranslate"><span class="pre">SpectraMap.create_map()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.get_spectrum"><code class="docutils literal notranslate"><span class="pre">SpectraMap.get_spectrum()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.spectrum_coords"><code class="docutils literal notranslate"><span class="pre">SpectraMap.spectrum_coords()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.spectrum_indices"><code class="docutils literal notranslate"><span class="pre">SpectraMap.spectrum_indices()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.plot_map"><code class="docutils literal notranslate"><span class="pre">SpectraMap.plot_map()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.plot_map_update"><code class="docutils literal notranslate"><span class="pre">SpectraMap.plot_map_update()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.set_marker"><code class="docutils literal notranslate"><span class="pre">SpectraMap.set_marker()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.export_to_csv"><code class="docutils literal notranslate"><span class="pre">SpectraMap.export_to_csv()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectra_map.html#fitspy.core.spectra_map.SpectraMap.load_map"><code class="docutils literal notranslate"><span class="pre">SpectraMap.load_map()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.core.spectrum.html">fitspy.core.spectrum module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.create_model"><code class="docutils literal notranslate"><span class="pre">create_model()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum"><code class="docutils literal notranslate"><span class="pre">Spectrum</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.fname"><code class="docutils literal notranslate"><span class="pre">Spectrum.fname</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.normalize"><code class="docutils literal notranslate"><span class="pre">Spectrum.normalize</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.outliers_limit"><code class="docutils literal notranslate"><span class="pre">Spectrum.outliers_limit</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.baseline"><code class="docutils literal notranslate"><span class="pre">Spectrum.baseline</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.baseline_history"><code class="docutils literal notranslate"><span class="pre">Spectrum.baseline_history</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.bkg_model"><code class="docutils literal notranslate"><span class="pre">Spectrum.bkg_model</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.peak_models"><code class="docutils literal notranslate"><span class="pre">Spectrum.peak_models</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.peak_labels"><code class="docutils literal notranslate"><span class="pre">Spectrum.peak_labels</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.peak_index"><code class="docutils literal notranslate"><span class="pre">Spectrum.peak_index</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.fit_params"><code class="docutils literal notranslate"><span class="pre">Spectrum.fit_params</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.result_fit"><code class="docutils literal notranslate"><span class="pre">Spectrum.result_fit</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.reinit"><code class="docutils literal notranslate"><span class="pre">Spectrum.reinit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.set_attributes"><code class="docutils literal notranslate"><span class="pre">Spectrum.set_attributes()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.preprocess"><code class="docutils literal notranslate"><span class="pre">Spectrum.preprocess()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.load_profile"><code class="docutils literal notranslate"><span class="pre">Spectrum.load_profile()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.apply_range"><code class="docutils literal notranslate"><span class="pre">Spectrum.apply_range()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.calculate_outliers"><code class="docutils literal notranslate"><span class="pre">Spectrum.calculate_outliers()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.y_no_outliers"><code class="docutils literal notranslate"><span class="pre">Spectrum.y_no_outliers</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.normalization"><code class="docutils literal notranslate"><span class="pre">Spectrum.normalization()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.create_peak_model"><code class="docutils literal notranslate"><span class="pre">Spectrum.create_peak_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.reassign_params"><code class="docutils literal notranslate"><span class="pre">Spectrum.reassign_params()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.add_peak_model"><code class="docutils literal notranslate"><span class="pre">Spectrum.add_peak_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.del_peak_model"><code class="docutils literal notranslate"><span class="pre">Spectrum.del_peak_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.reorder"><code class="docutils literal notranslate"><span class="pre">Spectrum.reorder()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.get_model_name"><code class="docutils literal notranslate"><span class="pre">Spectrum.get_model_name()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.remove_models"><code class="docutils literal notranslate"><span class="pre">Spectrum.remove_models()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.set_bkg_model"><code class="docutils literal notranslate"><span class="pre">Spectrum.set_bkg_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.fit"><code class="docutils literal notranslate"><span class="pre">Spectrum.fit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.auto_baseline"><code class="docutils literal notranslate"><span class="pre">Spectrum.auto_baseline()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.eval_baseline"><code class="docutils literal notranslate"><span class="pre">Spectrum.eval_baseline()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.subtract_baseline"><code class="docutils literal notranslate"><span class="pre">Spectrum.subtract_baseline()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.auto_peaks"><code class="docutils literal notranslate"><span class="pre">Spectrum.auto_peaks()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.plot"><code class="docutils literal notranslate"><span class="pre">Spectrum.plot()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.plot_residual"><code class="docutils literal notranslate"><span class="pre">Spectrum.plot_residual()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.save_params"><code class="docutils literal notranslate"><span class="pre">Spectrum.save_params()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.save_stats"><code class="docutils literal notranslate"><span class="pre">Spectrum.save_stats()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.save"><code class="docutils literal notranslate"><span class="pre">Spectrum.save()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="fitspy.core.spectrum.html#fitspy.core.spectrum.Spectrum.load"><code class="docutils literal notranslate"><span class="pre">Spectrum.load()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.core.utils.html">fitspy.core.utils module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.closest_item"><code class="docutils literal notranslate"><span class="pre">closest_item()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.closest_index"><code class="docutils literal notranslate"><span class="pre">closest_index()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.hsorted"><code class="docutils literal notranslate"><span class="pre">hsorted()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.fileparts"><code class="docutils literal notranslate"><span class="pre">fileparts()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.check_or_rename"><code class="docutils literal notranslate"><span class="pre">check_or_rename()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.load_from_json"><code class="docutils literal notranslate"><span class="pre">load_from_json()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.save_to_json"><code class="docutils literal notranslate"><span class="pre">save_to_json()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.compress"><code class="docutils literal notranslate"><span class="pre">compress()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.decompress"><code class="docutils literal notranslate"><span class="pre">decompress()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.load_models_from_txt"><code class="docutils literal notranslate"><span class="pre">load_models_from_txt()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.load_models_from_py"><code class="docutils literal notranslate"><span class="pre">load_models_from_py()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.get_dim"><code class="docutils literal notranslate"><span class="pre">get_dim()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.get_reader_from_rsciio"><code class="docutils literal notranslate"><span class="pre">get_reader_from_rsciio()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.get_x_data_from_rsciio"><code class="docutils literal notranslate"><span class="pre">get_x_data_from_rsciio()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.get_1d_profile"><code class="docutils literal notranslate"><span class="pre">get_1d_profile()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.get_2d_map"><code class="docutils literal notranslate"><span class="pre">get_2d_map()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils.html#fitspy.core.utils.eval_noise_amplitude"><code class="docutils literal notranslate"><span class="pre">eval_noise_amplitude()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fitspy.core.utils_mp.html">fitspy.core.utils_mp module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils_mp.html#fitspy.core.utils_mp.fit"><code class="docutils literal notranslate"><span class="pre">fit()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils_mp.html#fitspy.core.utils_mp.initializer"><code class="docutils literal notranslate"><span class="pre">initializer()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fitspy.core.utils_mp.html#fitspy.core.utils_mp.fit_mp"><code class="docutils literal notranslate"><span class="pre">fit_mp()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</div>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.baseline.arpls">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.baseline.</span></span><span class="sig-name descname"><span class="pre">arpls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coef</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itermax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.baseline.arpls" title="Permalink to this definition"></a></dt>
+<dd><p>Asymmetrically Reweighted Penalized Least Squares smoothing extracted from:
+<a class="reference external" href="https://irfpy.irf.se/projects/ica/_modules/irfpy/ica/baseline.html#arpls">https://irfpy.irf.se/projects/ica/_modules/irfpy/ica/baseline.html#arpls</a></p>
+<section id="original-article">
+<h3>Original article<a class="headerlink" href="#original-article" title="Permalink to this heading"></a></h3>
+<p>Sung-June Baek, Aaron Park, Young-Jin Ahna and Jaebum Choo,
+Analyst, 2015, 140, 250 (2015), <a class="reference external" href="https://doi.org/10.1039/C4AN01061B">https://doi.org/10.1039/C4AN01061B</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">param y<span class="colon">:</span></dt>
+<dd class="field-odd"><p>input data (i.e. spectrum intensity)</p>
+</dd>
+<dt class="field-even">type y<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy.ndarray(n)</p>
+</dd>
+<dt class="field-odd">param coef<span class="colon">:</span></dt>
+<dd class="field-odd"><p>parameter that can be adjusted by user.
+The larger coef is, the smoother the resulting background, y_smooth</p>
+</dd>
+<dt class="field-even">type coef<span class="colon">:</span></dt>
+<dd class="field-even"><p>float, optional</p>
+</dd>
+<dt class="field-odd">param ratio<span class="colon">:</span></dt>
+<dd class="field-odd"><p>wheighting deviations: 0 &lt; ratio &lt; 1, smaller values allow less negative
+values</p>
+</dd>
+<dt class="field-even">type ratio<span class="colon">:</span></dt>
+<dd class="field-even"><p>float, optional</p>
+</dd>
+<dt class="field-odd">param itermax<span class="colon">:</span></dt>
+<dd class="field-odd"><p>number of iterations to perform</p>
+</dd>
+<dt class="field-even">type itermax<span class="colon">:</span></dt>
+<dd class="field-even"><p>int, optional</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>y_smooth</strong> (<em>numpy.ndarray(n)</em>) – the fitted background</p>
+</dd>
+</dl>
 </section>
-<section id="module-fitspy.core">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fitspy.core" title="Permalink to this heading"></a></h2>
+</dd></dl>
+
+</section>
+<section id="module-fitspy.core.models">
+<span id="fitspy-core-models-module"></span><h2>fitspy.core.models module<a class="headerlink" href="#module-fitspy.core.models" title="Permalink to this heading"></a></h2>
+<p>Module containing different basic models (gaussian, lorentzian, …)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models.gaussian">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models.</span></span><span class="sig-name descname"><span class="pre">gaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models.gaussian" title="Permalink to this definition"></a></dt>
+<dd><p>Return Gaussian function defined as:
+<span class="math notranslate nohighlight">\(ampli * e^{-(x-x0)^2/(2*\sigma^2)}\)</span>
+with <span class="math notranslate nohighlight">\(\sigma = fwhm / (2*\sqrt{2*log(2)})\)</span></p>
+<p class="rubric">Example</p>
+<p>(<a class="reference download internal" download="" href="../_downloads/0e49bf389652d4ffeade13f49e8b4605/fitspy-core-1.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../_downloads/9ab8cca8831e5d247ea50b92bce417fe/fitspy-core-1.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/3b47f568c99e6e75b762b403c7f63b30/fitspy-core-1.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/0b7e30c779da5dcab4971c108b076d53/fitspy-core-1.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../_images/fitspy-core-1.png" class="plot-directive" src="../_images/fitspy-core-1.png" />
+</figure>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models.gaussian_asym">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models.</span></span><span class="sig-name descname"><span class="pre">gaussian_asym</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models.gaussian_asym" title="Permalink to this definition"></a></dt>
+<dd><p>Return Asymmetric Gaussian function defined as:
+<span class="math notranslate nohighlight">\((x &lt; x0) * Gaussian(fwhm\_l) +  (x &gt;= x0) * Gaussian(fwhm\_r)\)</span></p>
+<p class="rubric">Example</p>
+<p>(<a class="reference download internal" download="" href="../_downloads/a0e19f19abab1b5566bb7774c67f0dac/fitspy-core-2.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../_downloads/b6b4c15ce98c349b3a715cd6709b45e7/fitspy-core-2.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/77322e56c6306edf5a4928b207ddcd08/fitspy-core-2.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/2a64fcb6c7883f1b7676b71e99d94cab/fitspy-core-2.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../_images/fitspy-core-2.png" class="plot-directive" src="../_images/fitspy-core-2.png" />
+</figure>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models.lorentzian">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models.</span></span><span class="sig-name descname"><span class="pre">lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models.lorentzian" title="Permalink to this definition"></a></dt>
+<dd><p>Return Lorentzian function defined as:
+<span class="math notranslate nohighlight">\(ampli * \frac{fwhm^2}{4 * ((x - x0)^2 + fwhm^2 / 4)}\)</span></p>
+<p class="rubric">Example</p>
+<p>(<a class="reference download internal" download="" href="../_downloads/3cd98e85c3cc9536de52ddcde79932f5/fitspy-core-3.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../_downloads/edee05d18b0a86ae44e89657ba3e1f7d/fitspy-core-3.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/e52d6824eaec926356b68b307ece8f52/fitspy-core-3.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/6fd97d7817e4340e44601af2b5e72183/fitspy-core-3.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../_images/fitspy-core-3.png" class="plot-directive" src="../_images/fitspy-core-3.png" />
+</figure>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models.lorentzian_asym">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models.</span></span><span class="sig-name descname"><span class="pre">lorentzian_asym</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models.lorentzian_asym" title="Permalink to this definition"></a></dt>
+<dd><p>Return Asymmetric Lorentzian function defined as:
+<span class="math notranslate nohighlight">\((x &lt; x0) * Lorentzian(fwhm\_l) +  (x &gt;= x0) * Lorentzian(fwhm\_r)\)</span></p>
+<p class="rubric">Example</p>
+<p>(<a class="reference download internal" download="" href="../_downloads/e48fa5652656454455ed939945ab4a4a/fitspy-core-4.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../_downloads/38c85069f656ccc7cc1bf5a8272771fa/fitspy-core-4.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/fe5df184f76f9e48990503faf6b6b52b/fitspy-core-4.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/77850623a2103a0240b359bffdb52dbc/fitspy-core-4.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../_images/fitspy-core-4.png" class="plot-directive" src="../_images/fitspy-core-4.png" />
+</figure>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models.pseudovoigt">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models.</span></span><span class="sig-name descname"><span class="pre">pseudovoigt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models.pseudovoigt" title="Permalink to this definition"></a></dt>
+<dd><p>Return Pseudovoigt function defined as:
+<span class="math notranslate nohighlight">\(alpha * Gaussian + (1 - alpha) * Lorentzian\)</span></p>
+<p class="rubric">Example</p>
+<p>(<a class="reference download internal" download="" href="../_downloads/43377f4a5fd8dd1ad675cc4a520198e5/fitspy-core-5.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../_downloads/a6e2d95bf518d4dde3a7edf1571cb9a1/fitspy-core-5.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/d1b2d5e6efcd56067d1a8e182da0ae28/fitspy-core-5.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/b695a0ade5d85f170f46975a8d2574e8/fitspy-core-5.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../_images/fitspy-core-5.png" class="plot-directive" src="../_images/fitspy-core-5.png" />
+</figure>
+</dd></dl>
+
+</section>
+<section id="module-fitspy.core.spectra">
+<span id="fitspy-core-spectra-module"></span><h2>fitspy.core.spectra module<a class="headerlink" href="#module-fitspy.core.spectra" title="Permalink to this heading"></a></h2>
+<p>Class dedicated to handle ‘Spectrum’ objects contained in a list managed by
+“Spectra”</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.core.spectra.</span></span><span class="sig-name descname"><span class="pre">Spectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectra_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
+<p>Class dedicated to handle ‘Spectrum’ objects contained in a list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spectra_maps</strong> (<em>list</em><em> of </em><em>SpectraMap objects</em>) – </p></li>
+<li><p><strong>pbar_index</strong> (<em>int</em>) – Index related to the Progress bar during the fit processing</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>spectra_list</strong> (<em>list</em><em> of </em><em>Spectrum objects</em><em>, </em><em>optional</em>) – </p></li>
+<li><p><strong>fnames</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – List of spectra pathname</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.fnames">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fnames</span></span><a class="headerlink" href="#fitspy.core.spectra.Spectra.fnames" title="Permalink to this definition"></a></dt>
+<dd><p>Return all the fnames related to spectra AND spectra maps</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.all">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all</span></span><a class="headerlink" href="#fitspy.core.spectra.Spectra.all" title="Permalink to this definition"></a></dt>
+<dd><p>Return all the spectra related to spectra AND spectra maps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.intensity">
+<span class="sig-name descname"><span class="pre">intensity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.intensity" title="Permalink to this definition"></a></dt>
+<dd><p>Return the raw intensity array related to spectra AND spectra maps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.get_spectrum">
+<span class="sig-name descname"><span class="pre">get_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.get_spectrum" title="Permalink to this definition"></a></dt>
+<dd><p>Return spectrum from ‘fname’ contained in the ‘spectra’ list only</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.get_objects">
+<span class="sig-name descname"><span class="pre">get_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.get_objects" title="Permalink to this definition"></a></dt>
+<dd><p>Return spectrum and parent (spectra or spectra map) related to ‘fname’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.outliers_limit_calculation">
+<span class="sig-name descname"><span class="pre">outliers_limit_calculation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coef</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.outliers_limit_calculation" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the outliers limit from ‘coef’ * intensity_ref</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.save_results">
+<span class="sig-name descname"><span class="pre">save_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirname_res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.save_results" title="Permalink to this definition"></a></dt>
+<dd><p>Save spectra results (peaks parameters and statistics) in .csv files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dirname_res</strong> (<em>str</em><em> or </em><em>pathlib.Path object</em>) – Dirname where to save the .csv files</p></li>
+<li><p><strong>fnames</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – List of the spectrum ‘fnames’ to save. If None, consider all the
+spectrum contained in the ‘spectra’ list</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.save_figures">
+<span class="sig-name descname"><span class="pre">save_figures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirname_fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.save_figures" title="Permalink to this definition"></a></dt>
+<dd><p>Save spectra figures</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dirname_fig</strong> (<em>str</em><em> or </em><em>pathlib.Path object</em>) – Dirname where to save the figures</p></li>
+<li><p><strong>fnames</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – List of the spectrum ‘fnames’ to save. If None, consider all the
+spectrum contained in the ‘spectra’ list</p></li>
+<li><p><strong>bounds</strong> (<em>tuple</em><em> of </em><em>2 tuples</em><em>, </em><em>optional</em>) – Axis limits corresponding to ((xmin, xmax), (ymin, ymax))</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.load_model">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_json</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.load_model" title="Permalink to this definition"></a></dt>
+<dd><p>Return a fitspy model (‘model_dict’) from a ‘.json’ file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname_json</strong> (<em>str</em>) – Filename associated to the spectra .json file where to extract the
+fitspy model</p></li>
+<li><p><strong>ind</strong> (<em>int</em><em>, </em><em>optional</em>) – Spectrum index to consider as model in the spectra issued from the
+.json file reloading</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>model_dict</strong> (<em>dict</em>) – The corresponding fitspy model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.apply_model">
+<span class="sig-name descname"><span class="pre">apply_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progressbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.apply_model" title="Permalink to this definition"></a></dt>
+<dd><p>Apply ‘model’ to all or part of the spectra</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>str</em><em> or </em><em>dict</em>) – filename to a Fitspy model (‘.json’ file) or
+Dictionary related to the Spectrum object attributes (obtained from
+Spectrum.save() for instance) to be applied</p></li>
+<li><p><strong>fnames</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – List of the spectrum.fname to handle.
+If None, apply the model to all the spectra</p></li>
+<li><p><strong>ncpus</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of CPU to use during the fit processing</p></li>
+<li><p><strong>show_progressbar</strong> (<em>bool</em><em>, </em><em>optional</em>) – Activation key to show the progress bar</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.progressbar">
+<span class="sig-name descname"><span class="pre">progressbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue_incr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ntot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progressbar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.progressbar" title="Permalink to this definition"></a></dt>
+<dd><p>Progress bar</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.save" title="Permalink to this definition"></a></dt>
+<dd><p>Return a ‘dict_spectra’ dictionary with all the spectrum attributes (but objects) and
+Save it in a .json file if a ‘fname_json’ is given</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname_json</strong> (<em>str</em><em>, </em><em>optional</em>) – Filename associated to the .json file for the spectra saving</p></li>
+<li><p><strong>fnames</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – List of the spectrum ‘fnames’ to save. If None, consider all the
+spectrum contained in the ‘spectra’ list</p></li>
+<li><p><strong>save_data</strong> (<em>bool</em><em>, </em><em>optional</em>) – Activation keyword to write spectra/spectramap values at the end of the dictionary</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>dict_spectra</strong> (<em>dict</em>) – Dictionary with all the spectrum attributes but objects, and input data if ‘save_data’
+is set to True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.load">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_spectra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocess</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.load" title="Permalink to this definition"></a></dt>
+<dd><p>Return a Spectra object from a .json file or directly from ‘dict_spectra’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra.Spectra.set_attributes">
+<span class="sig-name descname"><span class="pre">set_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_spectra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocess</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra.Spectra.set_attributes" title="Permalink to this definition"></a></dt>
+<dd><p>Set attributes to spectrum object related to ‘dict_spectra’</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitspy.core.spectra_map">
+<span id="fitspy-core-spectra-map-module"></span><h2>fitspy.core.spectra_map module<a class="headerlink" href="#module-fitspy.core.spectra_map" title="Permalink to this heading"></a></h2>
+<p>Class dedicated to handle ‘Spectrum’ objects from a 2D map managed by SpectraMap</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.core.spectra_map.SpectraMap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.core.spectra_map.</span></span><span class="sig-name descname"><span class="pre">SpectraMap</span></span><a class="headerlink" href="#fitspy.core.spectra_map.SpectraMap" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fitspy.core.spectra.Spectra" title="fitspy.core.spectra.Spectra"><code class="xref py py-class docutils literal notranslate"><span class="pre">Spectra</span></code></a></p>
+<p>Class dedicated to handle ‘Spectrum’ objects from a 2D map</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<em>str</em>) – Pathname associated to the loaded object</p></li>
+<li><p><strong>arr0</strong> (<em>numpy.ndarray</em>) – Raw array with coordinates and intensities returned by fitspy.core.utils.get_2d_map()</p></li>
+<li><p><strong>xy_map</strong> (<em>tuple</em><em> of </em><em>2 list</em>) – Lists of x and y coordinates used in the 2D-map</p></li>
+<li><p><strong>shape_map</strong> (<em>tuple</em><em> of </em><em>2 ints</em>) – Shape associated to the 2D-map</p></li>
+<li><p><strong>extent</strong> (<em>iterable</em><em> of </em><em>4 floats</em>) – bounding box in data coordinates that the image will fill specified as
+(xmin, xmax, ymin, ymax)</p></li>
+<li><p><strong>coords</strong> (<em>list</em><em> of </em><em>list</em><em> of </em><em>2 floats</em>) – List containing the (x,y) coordinates for each spectrum in the 2D-map</p></li>
+<li><p><strong>fnames_map</strong> (<em>list</em><em> of </em><em>str</em>) – List of the spectrum names related to the 2D-map</p></li>
+<li><p><strong>intensity</strong> (<em>numpy.ndarray</em><em>(</em><em>(</em><em>(</em><em>len</em><em>(</em><em>shape_map</em><em>[</em><em>0</em><em>]</em><em>) </em><em>* len</em><em>(</em><em>shape_map</em><em>[</em><em>1</em><em>]</em><em>)</em><em>, </em><em>n</em><em>)</em><em>)</em>) – Array of spectra intensities (n-values) associated to the xy_map coords</p></li>
+<li><p><strong>arr</strong> (<em>numpy.ndarray</em><em>(</em><em>(</em><em>len</em><em>(</em><em>shape_map</em><em>[</em><em>0</em><em>]</em><em>)</em><em>, </em><em>len</em><em>(</em><em>shape_map</em><em>[</em><em>1</em><em>]</em><em>)</em><em>)</em>) – Array associated to the xy_map coords</p></li>
+<li><p><strong>ax</strong> (<em>Matplotlib.pyplot.axis</em>) – Axis associated to the 2D-map displaying</p></li>
+<li><p><strong>img</strong> (<em>Matplotlib.image.AxesImage</em>) – Image related to the 2D-map displaying</p></li>
+<li><p><strong>cbar</strong> (<em>Matplotlib.pyplot.colorbar</em>) – Colorbar associated to the spectra 2D-map displaying</p></li>
+<li><p><strong>ax_slider</strong> (<em>Matplotlib.pyplot.axis</em>) – Axis associated to the RangeSlider object</p></li>
+<li><p><strong>slider</strong> (<em>Matplotlib.widgets.RangeSlider</em>) – Slider associated to the intensity integration range or to a model
+parameter in the 2D-map displaying</p></li>
+<li><p><strong>xrange</strong> (<em>tuple</em><em> of </em><em>2 floats</em>) – Range of intensity to consider in the 2D-map displaying</p></li>
+<li><p><strong>marker</strong> (<em>matplotlib.lines.Line2D</em>) – Maker used in the 2D-map axis to set a spectrum position</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra_map.SpectraMap.create_map">
+<span class="sig-name descname"><span class="pre">create_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra_map.SpectraMap.create_map" title="Permalink to this definition"></a></dt>
+<dd><p>Create map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra_map.SpectraMap.get_spectrum">
+<span class="sig-name descname"><span class="pre">get_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra_map.SpectraMap.get_spectrum" title="Permalink to this definition"></a></dt>
+<dd><p>Return the spectrum object related to ‘fname’ in the spectra map list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra_map.SpectraMap.spectrum_coords">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">spectrum_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectrum</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra_map.SpectraMap.spectrum_coords" title="Permalink to this definition"></a></dt>
+<dd><p>Return the (x, y) map coordinates associated with ‘spectrum’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra_map.SpectraMap.spectrum_indices">
+<span class="sig-name descname"><span class="pre">spectrum_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectrum</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra_map.SpectraMap.spectrum_indices" title="Permalink to this definition"></a></dt>
+<dd><p>Return the (i, j) map indices associated with ‘spectrum’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra_map.SpectraMap.plot_map">
+<span class="sig-name descname"><span class="pre">plot_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_slider</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'viridis'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra_map.SpectraMap.plot_map" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the integrated spectra map intensities on ‘ax’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra_map.SpectraMap.plot_map_update">
+<span class="sig-name descname"><span class="pre">plot_map_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xrange</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Intensity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra_map.SpectraMap.plot_map_update" title="Permalink to this definition"></a></dt>
+<dd><p>Update ‘plot_map’ with intensity or models parameter passed through
+‘var’ and ‘label’, and apply a custom colormap if provided.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra_map.SpectraMap.set_marker">
+<span class="sig-name descname"><span class="pre">set_marker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectrum_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canvas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra_map.SpectraMap.set_marker" title="Permalink to this definition"></a></dt>
+<dd><p>Set a marker on the plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>spectrum_id</strong> (<em>Spectrum object</em><em>, </em><em>str</em><em> or </em><em>a tuple</em><em> of </em><em>2 floats</em>) – a Spectrum object or its filename ‘fname’ or its (x, y) coordinates</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>None if spectrum_id is a spectrum object or a spectrum fname.</em></p></li>
+<li><p><em>A string corresponding to “{fname}  X={x}  Y={y}” if spectrum_id is a tuple (x, y).</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra_map.SpectraMap.export_to_csv">
+<span class="sig-name descname"><span class="pre">export_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra_map.SpectraMap.export_to_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Export ‘arr’ class attribute in a .csv file named ‘fname’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectra_map.SpectraMap.load_map">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectra_map.SpectraMap.load_map" title="Permalink to this definition"></a></dt>
+<dd><p>Return a SpectraMap object from a .txt file issued either from the labspec file
+conversion or from the corresponding array ‘arr0’ previously saved and reloaded</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitspy.core.spectrum">
+<span id="fitspy-core-spectrum-module"></span><h2>fitspy.core.spectrum module<a class="headerlink" href="#module-fitspy.core.spectrum" title="Permalink to this heading"></a></h2>
+<p>Class dedicated to spectrum processing</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.create_model">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.spectrum.</span></span><span class="sig-name descname"><span class="pre">create_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.create_model" title="Permalink to this definition"></a></dt>
+<dd><p>Return a ‘model’ (peak_model or ‘bkg_model’) object</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fitspy.core.spectrum.</span></span><span class="sig-name descname"><span class="pre">Spectrum</span></span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class dedicated to spectrum processing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<em>str</em>) – Filename associated to spectrum to handle</p></li>
+<li><p><strong>range_max</strong> (<em>range_min</em><em>,</em>) – Range associated to the spectrum support to work with</p></li>
+<li><p><strong>y0</strong> (<em>x0</em><em>,</em>) – Arrays related to the spectrum raw support and intensity (resp.)</p></li>
+<li><p><strong>y</strong> (<em>x</em><em>,</em>) – Arrays related to spectrum modified support and intensity (resp.)</p></li>
+<li><p><strong>normalize</strong> (<em>bool</em>) – Activation keyword for the spectrum profile normalization</p></li>
+<li><p><strong>normalize_range_max</strong> (<em>normalize_range_min</em><em>,</em>) – Ranges for searching the maximum value used in the normalization</p></li>
+<li><p><strong>outliers_limit</strong> (<em>numpy.array</em><em>(</em><em>(</em><em>n0</em><em>)</em><em>)</em>) – Array related to the outliers limit associated to the raw data (x0, y0)</p></li>
+<li><p><strong>baseline</strong> (<em>Baseline object</em>) – Baseline associated to the spectrum (to subract)</p></li>
+<li><p><strong>baseline_history</strong> (<em>list</em><em> of </em><em>list - DEPRECATED from v2024.2</em>) – Concatenation list of all baselines applied to the spectrum. Each item
+of the list consist in the max order of the baseline polynom and the
+(x, y) baseline points coordinates.</p></li>
+<li><p><strong>bkg_model</strong> (<em>lmfit.Model</em>) – Background model to fit with the composite peaks models, among :
+[None, ‘ConstantModel’, ‘LinearModel’, ‘ParabolicModel’,
+‘ExponentialModel’]</p></li>
+<li><p><strong>peak_models</strong> (<em>list</em><em> of </em><em>lmfit.Model</em>) – List of peak models</p></li>
+<li><p><strong>peak_labels</strong> (<em>list</em><em> of </em><em>str</em>) – List of labels associated to the peak models. Default is [‘1’, ‘2’, …]</p></li>
+<li><p><strong>peak_index</strong> (<em>itertools.count</em>) – Counter used for peak models indexing when creating a lmfit.Model</p></li>
+<li><p><strong>fit_params</strong> (<em>dict</em>) – <p>Dictionary used to manage the fit parameters:
+* method: str</p>
+<blockquote>
+<div><p>Method used for fitting. See lmfit.Model.fit().
+Default method is ‘Leastsq’.</p>
+</div></blockquote>
+<ul>
+<li><dl class="simple">
+<dt>fit_negative: bool</dt><dd><p>Activation keyword to take into account negative values when
+fitting.
+Default is False.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>fit_outliers: bool</dt><dd><p>Activation keyword to take into account outliers points when
+fitting.
+Default is False.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>max_ite: int</dt><dd><p>Maximum number of iteration associated to the fitting process.
+An iteration consists in evaluating all the ‘free’ parameters once.
+Default is 200.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>coef_noise: float</dt><dd><p>Coefficient applied to the estimated noise amplitude to define a
+threshold below which the mask values are set to False, and local
+peak models are disabled.
+Default is 2.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>xtol: float</dt><dd><p>Relative error desired in the solution approximated by the ‘Leastsq’
+or the ‘Least_square’ algorithm.
+Default is 1e-4.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>independent_models: bool</dt><dd><p>Key to fit each model of the composite model separately.
+Default value is False.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p></li>
+<li><p><strong>result_fit</strong> (<em>lmfit.ModelResult</em>) – Object resulting from lmfit fitting. Default value is a ‘None’ object
+(function) that enables to address a ‘result_fit.success’ status.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.reinit">
+<span class="sig-name descname"><span class="pre">reinit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.reinit" title="Permalink to this definition"></a></dt>
+<dd><p>Reinitialize the main attributes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.set_attributes">
+<span class="sig-name descname"><span class="pre">set_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.set_attributes" title="Permalink to this definition"></a></dt>
+<dd><p>Set attributes from a dictionary (obtained from a .json reloading)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.preprocess">
+<span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.preprocess" title="Permalink to this definition"></a></dt>
+<dd><p>Preprocess the spectrum: call successively load_profile(),
+apply_range(), eval_baseline(), subtract_baseline() and
+normalization()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.load_profile">
+<span class="sig-name descname"><span class="pre">load_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.load_profile" title="Permalink to this definition"></a></dt>
+<dd><p>Load profile from ‘fname’ with 1 header line and 2 (x,y) columns</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.apply_range">
+<span class="sig-name descname"><span class="pre">apply_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">range_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.apply_range" title="Permalink to this definition"></a></dt>
+<dd><p>Apply range to the raw spectrum</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.calculate_outliers">
+<span class="sig-name descname"><span class="pre">calculate_outliers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.calculate_outliers" title="Permalink to this definition"></a></dt>
+<dd><p>Return outliers points (x,y) coordinates</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.y_no_outliers">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">y_no_outliers</span></span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.y_no_outliers" title="Permalink to this definition"></a></dt>
+<dd><p>Return spectrum profile where outliers have been removed
+and replaced by interpolated values</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.normalization">
+<span class="sig-name descname"><span class="pre">normalization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.normalization" title="Permalink to this definition"></a></dt>
+<dd><p>Normalize spectrum according to the ‘Maximum’ value or the nearest
+‘Attractor’ value from reference position, assuming that the baseline
+has been correctly defined (y_min value ~ 0)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.create_peak_model">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_peak_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dfwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.create_peak_model" title="Permalink to this definition"></a></dt>
+<dd><p>Create a ‘lmfit’ model associated to one peak</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<em>int</em>) – Index used to create the ‘prefix’ associated to the peak model</p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – Model name among ‘Gaussian’, ‘Lorentzian’, ‘PseudoVoigt’,
+‘GaussianAsym’, ‘LorentzianAsym’</p></li>
+<li><p><strong>x0</strong> (<em>float</em>) – Position of the peak model</p></li>
+<li><p><strong>ampli</strong> (<em>float</em>) – Amplitude of the peak model.</p></li>
+<li><p><strong>fwhm</strong> (<em>floats</em><em>, </em><em>optional</em>) – Optional parameters passed to the model related to the Full Width
+at Half Maximum. Default values are 1.</p></li>
+<li><p><strong>fwhm_l</strong> (<em>floats</em><em>, </em><em>optional</em>) – Optional parameters passed to the model related to the Full Width
+at Half Maximum. Default values are 1.</p></li>
+<li><p><strong>fwhm_r</strong> (<em>floats</em><em>, </em><em>optional</em>) – Optional parameters passed to the model related to the Full Width
+at Half Maximum. Default values are 1.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Optional parameter passed to the ‘PseudoVoigt’ model.
+Default value is 0.5.</p></li>
+<li><p><strong>dx0</strong> (<em>float</em><em>, </em><em>optional</em>) – Variation allowed around x0. x0 in [x0-dx0; x0+dx0].
+Default value is 20.</p></li>
+<li><p><strong>dfwhm</strong> (<em>float</em><em>, </em><em>optional</em>) – Variation (upper value) allowed for fwhm / fwhm_l /fwhm_r. <a href="#id1"><span class="problematic" id="id2">fwhm_</span></a> in [0; dfwhm]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>peak_model</strong> (<em>lmfit.Model</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.reassign_params">
+<span class="sig-name descname"><span class="pre">reassign_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.reassign_params" title="Permalink to this definition"></a></dt>
+<dd><p>Reassign fitted ‘params’ values to the ‘models’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.add_peak_model">
+<span class="sig-name descname"><span class="pre">add_peak_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dfwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.add_peak_model" title="Permalink to this definition"></a></dt>
+<dd><p>Add a peak model passing model_name and indice position or parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_name</strong> (<em>str</em>) – Model name among ‘Gaussian’, ‘Lorentzian’, ‘GaussianAsym’,
+‘LorentzianAsym’</p></li>
+<li><p><strong>x0</strong> (<em>float</em>) – Position of the peak model</p></li>
+<li><p><strong>ampli</strong> (<em>float</em><em>, </em><em>Optional</em>) – Amplitude of the peak model. If None, consider the amplitude of the
+spectrum profile at position x0</p></li>
+<li><p><strong>fwhm</strong> (<em>floats</em><em>, </em><em>optional</em>) – Optional parameters passed to the model related to the Full Width
+at Half Maximum. Default values are the maximum x-step size Max(x[i+1]-x[i]).</p></li>
+<li><p><strong>fwhm_l</strong> (<em>floats</em><em>, </em><em>optional</em>) – Optional parameters passed to the model related to the Full Width
+at Half Maximum. Default values are the maximum x-step size Max(x[i+1]-x[i]).</p></li>
+<li><p><strong>fwhm_r</strong> (<em>floats</em><em>, </em><em>optional</em>) – Optional parameters passed to the model related to the Full Width
+at Half Maximum. Default values are the maximum x-step size Max(x[i+1]-x[i]).</p></li>
+<li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Optional parameter passed to the ‘PseudoVoigt’ model.
+Default value is 0.5.</p></li>
+<li><p><strong>dx0</strong> (<em>float</em><em>, </em><em>optional</em>) – Variation allowed around x0, i.e. x0 should be in [x0-dx0; x0+dx0].
+Default value is 20.</p></li>
+<li><p><strong>dfwhm</strong> (<em>float</em><em>, </em><em>optional</em>) – Variation (upper value) allowed for the fwhm’s, i.e. the fwhm’s should be in [0; dfwhm]
+Default value is 200.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.del_peak_model">
+<span class="sig-name descname"><span class="pre">del_peak_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.del_peak_model" title="Permalink to this definition"></a></dt>
+<dd><p>Delete the ith-peak model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.reorder">
+<span class="sig-name descname"><span class="pre">reorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'x0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.reorder" title="Permalink to this definition"></a></dt>
+<dd><p>Return increasing or decreasing ordered models list from ‘key’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.get_model_name">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_model_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.get_model_name" title="Permalink to this definition"></a></dt>
+<dd><p>from model class attribute return the function name associated
+Ex: Model(‘LorentzianAsym’…) -&gt; ‘lorentzian_asym’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.remove_models">
+<span class="sig-name descname"><span class="pre">remove_models</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.remove_models" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all the models</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.set_bkg_model">
+<span class="sig-name descname"><span class="pre">set_bkg_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bkg_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.set_bkg_model" title="Permalink to this definition"></a></dt>
+<dd><p>Set the ‘bkg_model’ attribute from ‘bkg_name’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fit_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_negative</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_outliers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">independent_models</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_ite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coef_noise</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reinit_guess</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Fit the peaks and background models</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fit_method</strong> (<em>str</em><em>, </em><em>optional</em>) – Method passed to lmfit.fit() like ‘leastsq’, ‘least_squares’,
+‘nelder’, ‘slsqp’, … (see the lmfit documentation).
+Default value is ‘leastsq’.</p></li>
+<li><p><strong>fit_negative</strong> (<em>bool</em><em>, </em><em>optional</em>) – Activation key to take into account negative values during the fit.
+Default value is False.</p></li>
+<li><p><strong>fit_outliers</strong> (<em>bool</em><em>, </em><em>optional</em>) – Activation key to take into account outliers during the fit.
+Default value is False.</p></li>
+<li><p><strong>independent_models</strong> (<em>bool</em><em>, </em><em>optional</em>) – Key to fit each model of the composite model separately.
+Default value is False.</p></li>
+<li><p><strong>max_ite</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of maximum iterations (1 iteration corresponds to 1 gradient
+descent of all the variables).
+Default value is 200.</p></li>
+<li><p><strong>coef_noise</strong> (<em>float</em><em>, </em><em>optional</em>) – Multiplication factor associated with the estimated noise level.
+Default value is 1.</p></li>
+<li><p><strong>xtol</strong> (<em>float</em><em>, </em><em>optional</em>) – Relative tolerance associated with the ‘leastsq’ and the
+‘least_squares’ fit algorithm.
+Default value is 0.0001.</p></li>
+<li><p><strong>reinit_guess</strong> (<em>bool</em><em>, </em><em>optional</em>) – Key to adapt initial values for ‘ampli’ and ‘fwhm’, ‘fwhm_l’ or
+‘fwhm_r’ to the spectrum intensity at the corresponding point ‘x0’.
+Default value is True.</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dictionary of optional arguments passed to lmfit.fit()</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.auto_baseline">
+<span class="sig-name descname"><span class="pre">auto_baseline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.auto_baseline" title="Permalink to this definition"></a></dt>
+<dd><p>set baseline.mode to ‘Semi-Auto</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.eval_baseline">
+<span class="sig-name descname"><span class="pre">eval_baseline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.eval_baseline" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate baseline profile</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.subtract_baseline">
+<span class="sig-name descname"><span class="pre">subtract_baseline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.subtract_baseline" title="Permalink to this definition"></a></dt>
+<dd><p>Subtract the baseline to the spectrum profile</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.auto_peaks">
+<span class="sig-name descname"><span class="pre">auto_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.auto_peaks" title="Permalink to this definition"></a></dt>
+<dd><p>Create automatically ‘model_name’ peak-models in the limit of
+5% of the maximum intensity peaks and nmax_nfev=400</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_outliers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_outliers_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_negative_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_noise_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_peak_models</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_result</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtract_baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtract_bkg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap_peaks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.plot" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the spectrum with the peak models</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.plot_residual">
+<span class="sig-name descname"><span class="pre">plot_residual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.plot_residual" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the residual x factor obtained after fitting</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.save_params">
+<span class="sig-name descname"><span class="pre">save_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirname_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.save_params" title="Permalink to this definition"></a></dt>
+<dd><p>Save fit parameters in a ‘.csv’ file located in ‘dirname_params’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.save_stats">
+<span class="sig-name descname"><span class="pre">save_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirname_stats</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.save_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Save statistics in a ‘.txt’ file located in ‘dirname_stats’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.save" title="Permalink to this definition"></a></dt>
+<dd><p>Return a ‘model_dict’ dictionary from the spectrum attributes and
+Save it if a ‘fname_json’ is given</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.load">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_json</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocess</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.load" title="Permalink to this definition"></a></dt>
+<dd><p>Return a Spectrum object created from a .json file reloading</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.create_from_model">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_from_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.create_from_model" title="Permalink to this definition"></a></dt>
+<dd><p>Create a dummy spectrum with appropriate x-range based on model parameters</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitspy.core.utils">
+<span id="fitspy-core-utils-module"></span><h2>fitspy.core.utils module<a class="headerlink" href="#module-fitspy.core.utils" title="Permalink to this heading"></a></h2>
+<p>utilities functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.closest_item">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">closest_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.closest_item" title="Permalink to this definition"></a></dt>
+<dd><p>Return the closest element in the given list</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.closest_index">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">closest_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.closest_index" title="Permalink to this definition"></a></dt>
+<dd><p>Return the closest element index in the given list</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.hsorted">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">hsorted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.hsorted" title="Permalink to this definition"></a></dt>
+<dd><p>Sort the given list in the way that humans expect</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.fileparts">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">fileparts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.fileparts" title="Permalink to this definition"></a></dt>
+<dd><p>Returns different file parts of a file</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.check_or_rename">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">check_or_rename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.check_or_rename" title="Permalink to this definition"></a></dt>
+<dd><p>Return filename with increment xx_{add}.yy if file access is denied</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.load_from_json">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">load_from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.load_from_json" title="Permalink to this definition"></a></dt>
+<dd><p>Load a dictionary from a ‘.json’ file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Pathname of the .json file</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>a dict object</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.save_to_json">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">save_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dictionary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.save_to_json" title="Permalink to this definition"></a></dt>
+<dd><p>Function to save dictionary in a ‘.json’ file with a compact format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Pathname of the .json file</p></li>
+<li><p><strong>dictionary</strong> (<em>dict object</em>) – The dictionary to save</p></li>
+<li><p><strong>indent</strong> (<em>int</em><em>, </em><em>optional</em>) – json keyword for indentation. See dedicated doc for more details</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.compress">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">compress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.compress" title="Permalink to this definition"></a></dt>
+<dd><p>Return a dict from a numpy array, compressed and encoded to a base64 string,
+to be decompressed later</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.decompress">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">decompress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.decompress" title="Permalink to this definition"></a></dt>
+<dd><p>Decode and decompress a base64 string to a numpy array
+from a ‘data’ dictionary produced by the compress() function</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.load_models_from_txt">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">load_models_from_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODELS</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.load_models_from_txt" title="Permalink to this definition"></a></dt>
+<dd><p>Load models from ‘.txt’ file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fname</strong> (<em>str</em><em> or </em><em>WindowsPath</em>) – Filename of the .txt file with the models expressions:
+model_name1 = expression1
+model_name2 = expression2</p></li>
+<li><p><strong>MODELS</strong> (<em>dict</em>) – Dictionary corresponding to fitspy.PEAK_MODELS or fitspy.BKG_MODELS</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.load_models_from_py">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">load_models_from_py</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.load_models_from_py" title="Permalink to this definition"></a></dt>
+<dd><p>Load models from ‘.py’ file (See the documentation for more details)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.get_dim">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">get_dim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.get_dim" title="Permalink to this definition"></a></dt>
+<dd><p>Return the dimension (1, 2 or None) of the spectrum/spectra field</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.get_reader_from_rsciio">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">get_reader_from_rsciio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.get_reader_from_rsciio" title="Permalink to this definition"></a></dt>
+<dd><p>Return the reader object using the Rosettasciio library</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.get_x_data_from_rsciio">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">get_x_data_from_rsciio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.get_x_data_from_rsciio" title="Permalink to this definition"></a></dt>
+<dd><p>Return the spectrum/spectra support (‘x’) and the related intensities
+(‘data’) using the Rosettasciio library</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.get_1d_profile">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">get_1d_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.get_1d_profile" title="Permalink to this definition"></a></dt>
+<dd><p>Return the spectrum support (‘x0’) and its intensity (‘y0’)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.get_2d_map">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">get_2d_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.get_2d_map" title="Permalink to this definition"></a></dt>
+<dd><p>Return the array related to a 2D-map.
+For more details about the array shape, see:
+<a class="reference external" href="https://cea-metrocarac.github.io/fitspy/doc/user_guide/input_data.html#d-map-spectra">https://cea-metrocarac.github.io/fitspy/doc/user_guide/input_data.html#d-map-spectra</a>”</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils.eval_noise_amplitude">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">eval_noise_amplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.eval_noise_amplitude" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate the noise amplitude wrt oscillations at every other point</p>
+</dd></dl>
+
+</section>
+<section id="module-fitspy.core.utils_mp">
+<span id="fitspy-core-utils-mp-module"></span><h2>fitspy.core.utils_mp module<a class="headerlink" href="#module-fitspy.core.utils_mp" title="Permalink to this heading"></a></h2>
+<p>utilities functions related to multiprocessing</p>
+<p>notes:
+The strategy (see commented lines below) of passing the models to the workers
+once instead of duplicating them for each spectrum turned out to be slightly</p>
+<blockquote>
+<div><p>more costly in terms of CPU time finally (?).</p>
+</div></blockquote>
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils_mp.fit">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils_mp.</span></span><span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectrum_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils_mp.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Fitting function used in multiprocessing</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils_mp.initializer">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils_mp.</span></span><span class="sig-name descname"><span class="pre">initializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue_incr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils_mp.initializer" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize a global var shared btw the processes and the progressbar</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.utils_mp.fit_mp">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.utils_mp.</span></span><span class="sig-name descname"><span class="pre">fit_mp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncpus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_incr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils_mp.fit_mp" title="Permalink to this definition"></a></dt>
+<dd><p>Multiprocessing fit function applied to spectra</p>
+</dd></dl>
+
 </section>
 </section>
 
@@ -283,8 +1089,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="fitspy.apps.tkinter.utils.html" class="btn btn-neutral float-left" title="fitspy.apps.tkinter.utils module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="fitspy.core.baseline.html" class="btn btn-neutral float-right" title="fitspy.core.baseline module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fitspy.apps.tkinter.html" class="btn btn-neutral float-left" title="fitspy.apps.tkinter package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -1,28 +1,100 @@
 fitspy.apps.pyside.components.settings package
 ==============================================
 
+.. automodule:: fitspy.apps.pyside.components.settings
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 Submodules
 ----------
 
-.. toctree::
-   :maxdepth: 4
+fitspy.apps.pyside.components.settings.baseline\_table module
+-------------------------------------------------------------
 
-   fitspy.apps.pyside.components.settings.baseline_table
-   fitspy.apps.pyside.components.settings.bkg_table
-   fitspy.apps.pyside.components.settings.controller
-   fitspy.apps.pyside.components.settings.custom_spinbox
-   fitspy.apps.pyside.components.settings.dragndrop_combo
-   fitspy.apps.pyside.components.settings.generic_table
-   fitspy.apps.pyside.components.settings.model
-   fitspy.apps.pyside.components.settings.model_builder
-   fitspy.apps.pyside.components.settings.more_settings
-   fitspy.apps.pyside.components.settings.peaks_table
-   fitspy.apps.pyside.components.settings.status_box
+.. automodule:: fitspy.apps.pyside.components.settings.baseline_table
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
 
-Module contents
----------------
+fitspy.apps.pyside.components.settings.bkg\_table module
+--------------------------------------------------------
 
-.. automodule:: fitspy.apps.pyside.components.settings
+.. automodule:: fitspy.apps.pyside.components.settings.bkg_table
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.settings.controller module
+--------------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.settings.controller
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.settings.generic\_table module
+------------------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.settings.generic_table
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.settings.model module
+---------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.settings.model
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.settings.model\_builder module
+------------------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.settings.model_builder
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.settings.more\_settings module
+------------------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.settings.more_settings
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.settings.peaks\_table module
+----------------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.settings.peaks_table
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.apps.pyside.components.settings.status\_box module
+---------------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.settings.status_box
    :members:
    :private-members:
    :no-undoc-members:
