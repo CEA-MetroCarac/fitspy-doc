@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Peak models &mdash; Fitspy 2025.3 documentation</title>
+  <title>Peak models &mdash; Fitspy 2025.4dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -64,6 +64,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#user-defined-models">User-defined models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bichromatic-models">Bichromatic models</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="fitting.html">Fitting</a></li>
@@ -182,7 +183,67 @@
 <p>Through the GUI, the corresponding <em>‘.txt’</em> or <em>‘.py’</em> files can be loaded via the button <code class="code docutils literal notranslate"><span class="pre">Load</span></code> located to the right of the <strong>Peak model</strong> combobox.</p>
 <p>In python, the users models can be loaded by the functions <code class="xref py py-func docutils literal notranslate"><span class="pre">load_models_from_txt()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">load_models_from_py()</span></code>.
 <em>(See example in</em> <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/tree/main/examples/ex_gui_users_defined_models.py">ex_gui_users_defined_models.py</a> <em>)</em></p>
-<p>For recurrent use, the user-defined models can be defined in files named <code class="code docutils literal notranslate"><span class="pre">peak_models.txt</span></code> or <code class="code docutils literal notranslate"><span class="pre">peak_models.py</span></code> to put in <code class="code docutils literal notranslate"><span class="pre">%HOMEUSER%/Fitspy</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>For recurrent use</strong>, the user-defined models can be defined in files named <code class="code docutils literal notranslate"><span class="pre">peak_models.txt</span></code> or <code class="code docutils literal notranslate"><span class="pre">peak_models.py</span></code> to put in <code class="code docutils literal notranslate"><span class="pre">%HOMEUSER%/Fitspy</span></code>.</p>
+</div>
+</section>
+<section id="bichromatic-models">
+<h2>Bichromatic models<a class="headerlink" href="#bichromatic-models" title="Permalink to this heading"></a></h2>
+<p>In the case of bichromatic sources, as used for example in <strong>XRD</strong> or <strong>XRF</strong>, double-peak models can be defined and applied using the <strong>recurrent use</strong> approach notified in the <strong>User-defined</strong> section above.
+Here is an example of a peak_models.py file to be placed in <code class="code docutils literal notranslate"><span class="pre">%HOMEUSER%/Fitspy</span></code>, considering:</p>
+<p><span class="math notranslate nohighlight">\(x0\)</span> : the peak position as 2Theta angle in degree</p>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[2d_{hkl} \sin \theta_{1} = \lambda_{Ka1}
+2d_{hkl} \sin \theta_{2} = \lambda_{Ka2}
+\sin \theta_{2}  =  \frac{\lambda_{Ka2}}{\lambda_{Ka1}} \sin \theta_{1}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fitspy.core.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">pseudovoigt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fitspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">PEAK_MODELS</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pseudovoigt_ka12</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">cathode</span><span class="o">=</span><span class="s1">&#39;Cu&#39;</span><span class="p">):</span>
+
+    <span class="c1"># KL3/KL2 fluorescence energy ratio</span>
+    <span class="n">wavelength_ratio</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Cu&#39;</span><span class="p">:</span> <span class="mf">1.0024847494284688</span><span class="p">,</span>
+                        <span class="s1">&#39;Mo&#39;</span><span class="p">:</span> <span class="mf">17.4793</span> <span class="o">/</span> <span class="mf">17.3744</span><span class="p">,</span>
+                        <span class="s1">&#39;Ag&#39;</span><span class="p">:</span> <span class="mf">22.1629</span> <span class="o">/</span> <span class="mf">21.9903</span><span class="p">,</span>
+                        <span class="s1">&#39;Co&#39;</span><span class="p">:</span> <span class="mf">6.9303</span> <span class="o">/</span> <span class="mf">6.9153</span><span class="p">}</span>
+
+    <span class="c1"># KL3/KL2 fluorescence rate ratio</span>
+    <span class="n">amplitude_ratio</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Cu&#39;</span><span class="p">:</span> <span class="mf">.558282</span> <span class="o">/</span> <span class="mf">.29913</span><span class="p">,</span>
+                       <span class="s1">&#39;Mo&#39;</span><span class="p">:</span> <span class="mf">.549</span> <span class="o">/</span> <span class="mf">.288</span><span class="p">,</span>
+                       <span class="s1">&#39;Ag&#39;</span><span class="p">:</span> <span class="mf">.5411</span> <span class="o">/</span> <span class="mf">.2865</span><span class="p">,</span>
+                       <span class="s1">&#39;Co&#39;</span><span class="p">:</span> <span class="mf">.58292</span> <span class="o">/</span> <span class="mf">.29807</span><span class="p">}</span>
+
+    <span class="n">ampli2</span> <span class="o">=</span> <span class="n">ampli</span> <span class="o">/</span> <span class="n">amplitude_ratio</span><span class="p">[</span><span class="n">cathode</span><span class="p">]</span>
+    <span class="n">ratio</span> <span class="o">=</span> <span class="n">wavelength_ratio</span><span class="p">[</span><span class="n">cathode</span><span class="p">]</span>
+
+    <span class="n">x02</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">ratio</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">x0</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">))))</span>
+    <span class="n">fwhm2</span> <span class="o">=</span> <span class="n">fwhm</span> <span class="c1"># small approx</span>
+
+    <span class="k">return</span> <span class="n">pseudovoigt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span> <span class="o">+</span> \
+        <span class="n">pseudovoigt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli2</span><span class="p">,</span> <span class="n">fwhm2</span><span class="p">,</span> <span class="n">x02</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pseudovoigt_ka12_Cu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pseudovoigt_ka12</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">cathode</span><span class="o">=</span><span class="s1">&#39;Cu&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pseudovoigt_ka12_Mo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pseudovoigt_ka12</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">cathode</span><span class="o">=</span><span class="s1">&#39;Mo&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pseudovoigt_ka12_Ag</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pseudovoigt_ka12</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">cathode</span><span class="o">=</span><span class="s1">&#39;Ag&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pseudovoigt_ka12_Co</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pseudovoigt_ka12</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ampli</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">cathode</span><span class="o">=</span><span class="s1">&#39;Co&#39;</span><span class="p">)</span>
+
+<span class="n">PEAK_MODELS</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;PseudoVoigtKa12_Cu&quot;</span><span class="p">:</span> <span class="n">pseudovoigt_ka12_Cu</span><span class="p">})</span>
+<span class="n">PEAK_MODELS</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;PseudoVoigtKa12_Mo&quot;</span><span class="p">:</span> <span class="n">pseudovoigt_ka12_Mo</span><span class="p">})</span>
+<span class="n">PEAK_MODELS</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;PseudoVoigtKa12_Ag&quot;</span><span class="p">:</span> <span class="n">pseudovoigt_ka12_Ag</span><span class="p">})</span>
+<span class="n">PEAK_MODELS</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;PseudoVoigtKa12_Co&quot;</span><span class="p">:</span> <span class="n">pseudovoigt_ka12_Co</span><span class="p">})</span>
+</pre></div>
+</div>
 </section>
 </section>
 
