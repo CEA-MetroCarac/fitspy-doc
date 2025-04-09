@@ -61,7 +61,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#fitting-algorithm">Fitting algorithm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#convergence-criterion">Convergence criterion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#maximum-number-of-iterations">Maximum number of iterations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#weighting">Weighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mask-and-weights">Mask and Weights</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#multi-threading">Multi-threading</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#parameters-values-initialization">Parameters values initialization</a></li>
 </ul>
@@ -133,10 +133,10 @@
 <p>First, a ‘normal spectra’ envelop is determined from the values of the 5th maximum intensity of all the spectra at any point (considering a null probability of having more than 5 outliers at the same point).</p>
 <p>Outliers are then determined as points exceeding this envelope by a certain coefficient.</p>
 <p>In the fit processing, outliers have a null weight associated with them (see below), and at the preceding baseline definition step, linear interpolations of the signal with respect to the points surrounding these outliers are performed.</p>
-<figure class="align-center" id="id1">
+<figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../_images/outliers.png"><img alt="../_images/outliers.png" src="../_images/outliers.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-text">Illustration for a 2D-map spectra of the ‘normal spectra’ envelop (in red line) with coefficient 1.5, and resulting outliers (in green dots).</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Illustration for a 2D-map spectra of the ‘normal spectra’ envelop (in red line) with coefficient 1.5, and resulting outliers (in green dots).</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -158,10 +158,11 @@ For <code class="code docutils literal notranslate"><span class="pre">Leastsq</s
 <p>This number, which corresponds to the maximum number of calls of the gradient descent process, is set by default to 200. It can be beneficial, when fitting numerous spectra, to decrease this value to save computation time, ensuring it does not significantly compromise the quality of the fits. Sometimes, just a few dozen iterations are indeed sufficient.</p>
 <p>In the GUI, when the maximum number is reached without meeting the convergence criterion, the fit result is labeled as ‘non-converged’ and is displayed with an orange banner in the files selector widget. In case of convergence, the banner turns green.</p>
 </section>
-<section id="weighting">
-<h3>Weighting<a class="headerlink" href="#weighting" title="Permalink to this heading"></a></h3>
-<p>Similarly to noisy areas of outliers, the presence of negative values in the profiles to be fitted, resulting notably from baseline or background removal, can adversely affect the quality of results. To mitigate the impact of these negative values during the fit, a weight of ‘0’ can be assigned to them. This is achieved through the <strong>‘fit negative values : Off’</strong> option in the GUI or by the <code class="code docutils literal notranslate"><span class="pre">fit_negative</span></code> parameter passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">fit()</span></code>.</p>
+<section id="mask-and-weights">
+<h3>Mask and Weights<a class="headerlink" href="#mask-and-weights" title="Permalink to this heading"></a></h3>
+<p>Similarly to noisy areas of outliers, the presence of negative values in the profiles to be fitted, resulting notably from baseline or background removal, can adversely affect the quality of results. To mitigate the impact of these negative values during the fit, a mask to ignore them during the fit processing can be assigned to these values. This is achieved through the <strong>‘fit negative values : Off’</strong> option in the GUI or by the <code class="code docutils literal notranslate"><span class="pre">fit_negative</span></code> parameter passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">fit()</span></code>.</p>
 <p>(The same with <code class="code docutils literal notranslate"><span class="pre">fit_outliers</span></code> for outliers and <code class="code docutils literal notranslate"><span class="pre">coef_noise</span></code> to bypass regions defined mainly by noise).</p>
+<p>Moreover, from the 2025.4, <a class="reference external" href="https://lmfit.github.io/lmfit-py/model.html#lmfit.model.weights">weights</a> (related to uncertainties measurements for instance) can be set via the input data files. See <a class="reference external" href="input_data.html#d-spectrum">here</a>.</p>
 </section>
 <section id="multi-threading">
 <h3>Multi-threading<a class="headerlink" href="#multi-threading" title="Permalink to this heading"></a></h3>
@@ -195,8 +196,8 @@ For <code class="code docutils literal notranslate"><span class="pre">Leastsq</s
 <h2>Performance<a class="headerlink" href="#performance" title="Permalink to this heading"></a></h2>
 <p>The performance varies depending on factors such as the number of spectra to handle, the number of points per spectrum, the number of peaks to fit, the <code class="code docutils literal notranslate"><span class="pre">xtol</span></code> convergence criterion,… and, of course, the machine ‘s performance, including its multiprocessing capabilities.</p>
 <p>Here is an example of the performance obtained from applying the <cite>Fitspy</cite> <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/blob/main/examples/data/2D_maps/model.json">model.json</a> (which includes the baseline removal and fitting 5 peak models per spectrum) to all <strong>1520 spectra</strong> related to the example <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/tree/main/examples/ex_gui_users_defined_models_2d_map.py">ex_gui_users_defined_models_2d_map.py</a>.</p>
-<table class="docutils align-center" id="id2">
-<caption><span class="caption-text">Performance</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<table class="docutils align-center" id="id3">
+<caption><span class="caption-text">Performance</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 29.4%" />
 <col style="width: 58.8%" />
