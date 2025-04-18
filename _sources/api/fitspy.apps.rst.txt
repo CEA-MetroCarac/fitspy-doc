@@ -16,3 +16,16 @@ Subpackages
 
    fitspy.apps.pyside
    fitspy.apps.tkinter
+
+Submodules
+----------
+
+fitspy.apps.interactive\_bounds module
+--------------------------------------
+
+.. automodule:: fitspy.apps.interactive_bounds
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

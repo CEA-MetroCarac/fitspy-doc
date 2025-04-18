@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workflow &mdash; Fitspy 2025.4dev documentation</title>
+  <title>Workflow &mdash; Fitspy 2025.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -56,7 +56,12 @@
 <li class="toctree-l1"><a class="reference internal" href="peak_models.html">Peak models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fitting.html">Fitting</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Workflow</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#gui-mode">GUI Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gui-mode">GUI Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyside-gui">PySide GUI:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tkinter-gui">Tkinter GUI:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interactive-bounds">interactive bounds:</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#scripting-mode">Scripting Mode</a></li>
 </ul>
 </li>
@@ -111,9 +116,10 @@
 </ul>
 <section id="gui-mode">
 <h2>GUI Mode<a class="headerlink" href="#gui-mode" title="Permalink to this heading"></a></h2>
-<p>** PySide GUI:**</p>
+<section id="pyside-gui">
+<h3>PySide GUI:<a class="headerlink" href="#pyside-gui" title="Permalink to this heading"></a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../_images/workflow.png"><img alt="../_images/workflow.png" src="../_images/workflow.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/workflow.png"><img alt="../_images/workflow.png" src="../_images/workflow.png" style="width: 100%;" /></a>
 </figure>
 <br><p><strong>To create a `Fitspy` model:</strong></p>
 <ul class="simple">
@@ -143,7 +149,9 @@
 <li><p>(<a class="reference external" href="gui.html?models">15</a>) <code class="code docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">Model</span></code></p></li>
 <li><p>(<a class="reference external" href="fitting.html">10</a>) <strong>Save results</strong> (<strong>fitted parameters</strong> and <strong>statistics</strong>)</p></li>
 </ul>
-<p>** Tkinter GUI:**</p>
+</section>
+<section id="tkinter-gui">
+<h3>Tkinter GUI:<a class="headerlink" href="#tkinter-gui" title="Permalink to this heading"></a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/workflow1.png"><img alt="../_images/workflow1.png" src="../_images/workflow1.png" style="width: 300px;" /></a>
 </figure>
@@ -174,6 +182,18 @@
 <li><p>(<a class="reference external" href="gui.html?models">15</a>) <code class="code docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">to</span> <span class="pre">Sel.</span></code> <em>or</em> <code class="code docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">to</span> <span class="pre">All</span></code></p></li>
 <li><p>(<a class="reference external" href="fitting.html">11</a>) <code class="code docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Results</span></code> (<strong>fitted parameters</strong> and <strong>statistics</strong>)</p></li>
 </ul>
+</section>
+<section id="interactive-bounds">
+<h3>interactive bounds:<a class="headerlink" href="#interactive-bounds" title="Permalink to this heading"></a></h3>
+<p>Since version 2025.4, bounds can be adjusted interactively using the mouse.</p>
+<p>When a new peak is added, model parameters are estimated based on the local profile of the spectrum.</p>
+<p>The user can then move the entire set of bounding boxes by clicking and dragging the dark blue area, which updates the values of both <strong>x0</strong> and <strong>ampli</strong>.</p>
+<p>The <strong>bounds</strong> related to <strong>x0</strong> and <strong>fwhm</strong> can be modified by dragging the left/right edges of the lower and upper bounding boxes, respectively.</p>
+<p>Note that for <strong>symmetric</strong> models, the left and right <strong>fwhm bounds</strong> are synchronized, contrarily to <strong>asymmetric</strong> models that allow independent control of the left and right fwhm values.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/interactive_bounds.png"><img alt="../_images/interactive_bounds.png" src="../_images/interactive_bounds.png" style="width: 60%;" /></a>
+</figure>
+</section>
 </section>
 <section id="scripting-mode">
 <h2>Scripting Mode<a class="headerlink" href="#scripting-mode" title="Permalink to this heading"></a></h2>

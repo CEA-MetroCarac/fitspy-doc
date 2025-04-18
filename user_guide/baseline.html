@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baselines and Background models &mdash; Fitspy 2025.4dev documentation</title>
+  <title>Baselines and Background models &mdash; Fitspy 2025.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -145,7 +145,15 @@ This feature allows to adapt the baseline points to the spectrum notably when pr
 <figure class="align-center">
 <img alt="../_images/gen_figures_bkg.png" src="../_images/gen_figures_bkg.png" />
 </figure>
-<p>The available predefined <strong>BKG models</strong> are <code class="code docutils literal notranslate"><span class="pre">Constant</span></code>, <code class="code docutils literal notranslate"><span class="pre">Linear</span></code>, <code class="code docutils literal notranslate"><span class="pre">Parabolic</span></code>, <code class="code docutils literal notranslate"><span class="pre">Exponential</span></code> related to the <cite>lmfit</cite> standard models defined <a class="reference external" href="https://lmfit.github.io/lmfit-py/builtin_models.html">here</a>.</p>
+<p>The available predefined <strong>BKG models</strong> are <code class="code docutils literal notranslate"><span class="pre">Constant</span></code>, <code class="code docutils literal notranslate"><span class="pre">Linear</span></code>, <code class="code docutils literal notranslate"><span class="pre">Parabolic</span></code>, <code class="code docutils literal notranslate"><span class="pre">Exponential</span></code>, <code class="code docutils literal notranslate"><span class="pre">PowerLaw</span></code> related to the <cite>lmfit</cite> standard models defined <a class="reference external" href="https://lmfit.github.io/lmfit-py/builtin_models.html">here</a>.</p>
+<p>Note that all the <cite>lmfit</cite> standard models (that make sense for background) can be added from a <em>‘.py’</em> file according to the <em>User-defined background models</em> approach described just below. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">lmfit.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">PolynomialModel</span><span class="p">,</span> <span class="n">SplinelModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fitspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">BKG_MODELS</span>
+
+<span class="n">BKG_MODELS</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Polynomial&quot;</span><span class="p">:</span> <span class="n">PolynomialModel</span><span class="p">})</span>
+<span class="n">BKG_MODELS</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Spline&quot;</span><span class="p">:</span> <span class="n">SplinelModel</span><span class="p">})</span>
+</pre></div>
+</div>
 <section id="user-defined-background-models">
 <h3>User-defined background models<a class="headerlink" href="#user-defined-background-models" title="Permalink to this heading"></a></h3>
 <p>User-defined models can be defined through literal expressions in a <em>‘.txt’</em> file or from python scripts in a <em>‘.py’</em> file.</p>
@@ -171,8 +179,8 @@ This feature allows to adapt the baseline points to the spectrum notably when pr
 </div>
 <p>Through the GUI, the corresponding <em>‘.txt’</em> or <em>‘.py’</em> files can be loaded via the button <code class="code docutils literal notranslate"><span class="pre">Load</span></code> located to the right of the <strong>BKG model</strong> combobox.</p>
 <p>In python, the users models can be loaded by the related functions <code class="xref py py-func docutils literal notranslate"><span class="pre">load_models_from_txt()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">load_models_from_py()</span></code>.
-<em>(See example in</em> <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/tree/main/examples/ex_gui_users_defined_models.py">ex_gui_users_defined_models.py</a> <em>)</em></p>
-<p>For recurrent use, the user-defined models can be defined in files named <code class="code docutils literal notranslate"><span class="pre">bkg_models.txt</span></code> or <code class="code docutils literal notranslate"><span class="pre">bkg_models.py</span></code> to put in <code class="code docutils literal notranslate"><span class="pre">%HOMEUSER%/Fitspy</span></code>.</p>
+<em>(See example in</em> <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/tree/main/examples/ex_gui_users_defined_models_2d_map.py">ex_gui_users_defined_models_2d_map.py</a> <em>)</em></p>
+<p>For recurrent use, the user-defined models can be defined in files named <code class="code docutils literal notranslate"><span class="pre">bkg_models.txt</span></code> or <code class="code docutils literal notranslate"><span class="pre">bkg_models.py</span></code> to put in <code class="code docutils literal notranslate"><span class="pre">%HOMEUSER%/Fitspy</span></code> (typically C:Usersmy_accountFitspy in windows and /home/Fitspy in Linux).</p>
 <p>The variable associated with the support must necessarily be used in expressions under the term <code class="code docutils literal notranslate"><span class="pre">x</span></code> and the mathematical functions must be designated according to the terminology defined in the <a class="reference external" href="https://newville.github.io/asteval/basics.html#built-in-functions">asteval</a> package.</p>
 <p>Note that in the examples given above, the resulting <code class="code docutils literal notranslate"><span class="pre">Linear_1</span></code>, <code class="code docutils literal notranslate"><span class="pre">Linear_2</span></code> models yield identical results to those obtained from the predefined <code class="code docutils literal notranslate"><span class="pre">Linear</span></code> model, when converged.
 The same for <code class="code docutils literal notranslate"><span class="pre">Exponential_1</span></code>, <code class="code docutils literal notranslate"><span class="pre">Exponential_2</span></code> and <code class="code docutils literal notranslate"><span class="pre">Exponential</span></code>.</p>
