@@ -345,6 +345,75 @@ with <span class="math notranslate nohighlight">\(\sigma = fwhm / (2*\sqrt{2*log
 </dd></dl>
 
 </section>
+<section id="module-fitspy.core.models_bichromatic">
+<span id="fitspy-core-models-bichromatic-module"></span><h2>fitspy.core.models_bichromatic module<a class="headerlink" href="#module-fitspy.core.models_bichromatic" title="Permalink to this heading"></a></h2>
+<p>Module related to bichromatic models</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models_bichromatic.pseudovoigt_ka12">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models_bichromatic.</span></span><span class="sig-name descname"><span class="pre">pseudovoigt_ka12</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cathode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Cu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models_bichromatic.pseudovoigt_ka12" title="Permalink to this definition"></a></dt>
+<dd><p>Return a double Pseudovoigt function often used in X-Ray Diffraction when
+using a lab source delivering a bichromatic beam.
+When deriving Bragg law for both wavelength. The position of the Ka2 peak
+is fully determined by the Ka1 one. For sake a simplicity, fwhm2 is set to
+fwhm (minor approximation).</p>
+<div class="math notranslate nohighlight">
+\[2d_{hkl} \sin \theta_{1} = \lambda_{Ka1}
+2d_{hkl} \sin \theta_{2} = \lambda_{Ka2}
+\sin \theta_{2}  =  \frac{\lambda_{Ka2}}{\lambda_{Ka1}} \sin \theta_{1}\]</div>
+<p>The ratio between wavelengths depends on the cathode element (Cu, Mo, Ag, Co…).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>ndarray</em>) – ‘2θ’ angles in degree or ‘qx’ (depending on ‘MODE’)</p></li>
+<li><p><strong>ampli</strong> (<em>float</em>) – amplitude of the pseudo-Voigt</p></li>
+<li><p><strong>fwhm</strong> (<em>float</em>) – width of the pseudo-Voigt</p></li>
+<li><p><strong>x0</strong> (<em>float</em>) – center of the pseudo-Voigt</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – gaussian weight of the pseudo-Voigt</p></li>
+<li><p><strong>cathode</strong> (<em>str</em>) – element of the X-ray source cathode</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>(<a class="reference download internal" download="" href="../_downloads/abebfc78a3c83f1a31f23408b4a3e127/fitspy-core-6.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models_bichromatic.pseudovoigt_ka12_Cu">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models_bichromatic.</span></span><span class="sig-name descname"><span class="pre">pseudovoigt_ka12_Cu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models_bichromatic.pseudovoigt_ka12_Cu" title="Permalink to this definition"></a></dt>
+<dd><p>PseudoVoigt Bi-chromatic related to ‘Cu’ cathode</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models_bichromatic.pseudovoigt_ka12_Mo">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models_bichromatic.</span></span><span class="sig-name descname"><span class="pre">pseudovoigt_ka12_Mo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models_bichromatic.pseudovoigt_ka12_Mo" title="Permalink to this definition"></a></dt>
+<dd><p>PseudoVoigt Bi-chromatic related to ‘Mo’ cathode</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models_bichromatic.pseudovoigt_ka12_Ag">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models_bichromatic.</span></span><span class="sig-name descname"><span class="pre">pseudovoigt_ka12_Ag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models_bichromatic.pseudovoigt_ka12_Ag" title="Permalink to this definition"></a></dt>
+<dd><p>PseudoVoigt Bi-chromatic related to ‘Ag’ cathode</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models_bichromatic.pseudovoigt_ka12_Co">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models_bichromatic.</span></span><span class="sig-name descname"><span class="pre">pseudovoigt_ka12_Co</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models_bichromatic.pseudovoigt_ka12_Co" title="Permalink to this definition"></a></dt>
+<dd><p>PseudoVoigt Bi-chromatic related to ‘Co’ cathode</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models_bichromatic.add_models">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models_bichromatic.</span></span><span class="sig-name descname"><span class="pre">add_models</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models_bichromatic.add_models" title="Permalink to this definition"></a></dt>
+<dd><p>Add bichromatic models in the PEAK_MODELS list</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.models_bichromatic.remove_models">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.models_bichromatic.</span></span><span class="sig-name descname"><span class="pre">remove_models</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.models_bichromatic.remove_models" title="Permalink to this definition"></a></dt>
+<dd><p>Remove bichromatic models in the PEAK_MODELS list</p>
+</dd></dl>
+
+</section>
 <section id="module-fitspy.core.spectra">
 <span id="fitspy-core-spectra-module"></span><h2>fitspy.core.spectra module<a class="headerlink" href="#module-fitspy.core.spectra" title="Permalink to this heading"></a></h2>
 <p>Class dedicated to handle ‘Spectrum’ objects contained in a list managed by
@@ -737,7 +806,7 @@ normalization()</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.dx">
 <span class="sig-name descname"><span class="pre">dx</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.dx" title="Permalink to this definition"></a></dt>
-<dd><p>Return the median x-step size (dx)</p>
+<dd><p>Return the local mean step size (dx) according to uniform_filter1d()</p>
 </dd></dl>
 
 <dl class="py method">
@@ -799,9 +868,9 @@ at Half Maximum. Default values are 1.</p></li>
 at Half Maximum. Default values are 1.</p></li>
 <li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Optional parameter passed to the ‘PseudoVoigt’ model.
 Default value is 0.5.</p></li>
-<li><p><strong>dx0</strong> (<em>float</em><em>, </em><em>optional</em>) – Variation allowed around x0. x0 in [x0-dx0; x0+dx0].
+<li><p><strong>dx0</strong> (<em>tuple</em><em> of </em><em>2 floats</em><em>, </em><em>optional</em>) – Bounds associated with x0 such as x0 is in [x0-dx0[0]; x0+dx0[1]].
 Default value is 20.</p></li>
-<li><p><strong>dfwhm</strong> (<em>float</em><em>, </em><em>optional</em>) – Variation (upper value) allowed for fwhm / fwhm_l /fwhm_r. <a href="#id1"><span class="problematic" id="id2">fwhm_</span></a> in [0; dfwhm]</p></li>
+<li><p><strong>dfwhm</strong> (<em>float</em><em>, </em><em>optional</em>) – Upper bound allowed for fwhm / fwhm_l /fwhm_r. <a href="#id1"><span class="problematic" id="id2">fwhm_</span></a> in [0; dfwhm]</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -817,46 +886,34 @@ Default value is 20.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.params_from_local_profile">
-<span class="sig-name descname"><span class="pre">params_from_local_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.params_from_local_profile" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.params_from_profile">
+<span class="sig-name descname"><span class="pre">params_from_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.params_from_profile" title="Permalink to this definition"></a></dt>
 <dd><p>Return model with parameters estimated from the local spectrum profile</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.add_peak_model">
-<span class="sig-name descname"><span class="pre">add_peak_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dfwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_from_profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.add_peak_model" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">add_peak_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dfwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.add_peak_model" title="Permalink to this definition"></a></dt>
 <dd><p>Add a peak model passing model_name and indice position or parameters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>model_name</strong> (<em>str</em>) – Model name among ‘Gaussian’, ‘Lorentzian’, ‘GaussianAsym’, ‘LorentzianAsym’, …</p></li>
 <li><p><strong>x0</strong> (<em>float</em>) – Position of the peak model</p></li>
-<li><p><strong>ampli</strong> (<em>float</em><em>, </em><em>Optional</em>) – <p>Amplitude of the peak model.
-If None, consider the amplitude of the spectrum profile at position x0 or local spectrum</p>
-<blockquote>
-<div><p>profile (if activated)</p>
-</div></blockquote>
-</p></li>
-<li><p><strong>fwhm</strong> (<em>floats</em><em>, </em><em>optional</em>) – Optional parameters passed to the model related to the Full Width
-at Half Maximum.
-Default values are based on local estimation of fwhm estimated from local minima after
-spectrum smoothing or local spectrum profile (if activated).</p></li>
-<li><p><strong>fwhm_l</strong> (<em>floats</em><em>, </em><em>optional</em>) – Optional parameters passed to the model related to the Full Width
-at Half Maximum.
-Default values are based on local estimation of fwhm estimated from local minima after
-spectrum smoothing or local spectrum profile (if activated).</p></li>
-<li><p><strong>fwhm_r</strong> (<em>floats</em><em>, </em><em>optional</em>) – Optional parameters passed to the model related to the Full Width
-at Half Maximum.
-Default values are based on local estimation of fwhm estimated from local minima after
-spectrum smoothing or local spectrum profile (if activated).</p></li>
+<li><p><strong>ampli</strong> (<em>float</em><em>, </em><em>Optional</em>) – Amplitude of the peak model.
+If None, consider the amplitude of the spectrum profile at position x0.</p></li>
+<li><p><strong>fwhm</strong> (<em>floats</em><em>, </em><em>optional</em>) – Full Width(s) at Half Maximum passed to the model.
+Default value are based on local estimations related to the spectrum profile.</p></li>
+<li><p><strong>fwhm_l</strong> (<em>floats</em><em>, </em><em>optional</em>) – Full Width(s) at Half Maximum passed to the model.
+Default value are based on local estimations related to the spectrum profile.</p></li>
+<li><p><strong>fwhm_r</strong> (<em>floats</em><em>, </em><em>optional</em>) – Full Width(s) at Half Maximum passed to the model.
+Default value are based on local estimations related to the spectrum profile.</p></li>
 <li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Optional parameter passed to the ‘PseudoVoigt’ model.
 Default value is 0.5.</p></li>
-<li><p><strong>dx0</strong> (<em>float</em><em>, </em><em>optional</em>) – Variation allowed around x0, i.e. x0 should be in [x0-dx0; x0+dx0].
-Default value is based on the median x-step size (dx) as 10 * dx.</p></li>
-<li><p><strong>dfwhm</strong> (<em>float</em><em>, </em><em>optional</em>) – Variation (upper value) allowed for the fwhm’s, i.e. the fwhm’s should be in [0; dfwhm]
-Default value is based on local estimation of fwhm estimated from local minima after
-spectrum smoothing or local spectrum profile (if activated).</p></li>
-<li><p><strong>params_from_profile</strong> (<em>bool</em><em>, </em><em>optional</em>) – Activation key for model parameters estimation from the local spectrum profile.</p></li>
+<li><p><strong>dx0</strong> (<em>tuple</em><em> of </em><em>2 floats</em><em>, </em><em>optional</em>) – Bounds associated with x0 such as x0 is in [x0-dx0[0]; x0+dx0[1]].
+Default value is based on a local estimation related to the spectrum profile.</p></li>
+<li><p><strong>dfwhm</strong> (<em>float</em><em>, </em><em>optional</em>) – Upper bound allowed for fwhm / fwhm_l /fwhm_r. <a href="#id3"><span class="problematic" id="id4">fwhm_</span></a> in [0; dfwhm]
+Default value are based on local estimations related to the spectrum profile.</p></li>
 </ul>
 </dd>
 </dl>

@@ -31,6 +31,16 @@ fitspy.core.models module
    :show-inheritance:
    :ignore-module-all:
 
+fitspy.core.models\_bichromatic module
+--------------------------------------
+
+.. automodule:: fitspy.core.models_bichromatic
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 fitspy.core.spectra module
 --------------------------
 
