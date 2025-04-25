@@ -808,7 +808,7 @@ normalization()</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.dx">
-<span class="sig-name descname"><span class="pre">dx</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.dx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">dx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.dx" title="Permalink to this definition"></a></dt>
 <dd><p>Return the local mean step size (dx) according to uniform_filter1d()</p>
 </dd></dl>
 
@@ -816,12 +816,6 @@ normalization()</p>
 <dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.inds_local_minima">
 <span class="sig-name descname"><span class="pre">inds_local_minima</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.inds_local_minima" title="Permalink to this definition"></a></dt>
 <dd><p>Return indexes of local minima obtained after smoothing</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.fwhm">
-<span class="sig-name descname"><span class="pre">fwhm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.fwhm" title="Permalink to this definition"></a></dt>
-<dd><p>Return a local estimation of fwhm</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1192,7 +1186,7 @@ model_name2 = expression2</p></li>
 <span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">get_2d_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.get_2d_map" title="Permalink to this definition"></a></dt>
 <dd><p>Return the array related to a 2D-map.
 For more details about the array shape, see:
-<a class="reference external" href="https://cea-metrocarac.github.io/fitspy/doc/user_guide/input_data.html#d-map-spectra">https://cea-metrocarac.github.io/fitspy/doc/user_guide/input_data.html#d-map-spectra</a>”</p>
+<a class="reference external" href="https://cea-metrocarac.github.io/fitspy/user_guide/input_data.html#d-map-spectra">https://cea-metrocarac.github.io/fitspy/user_guide/input_data.html#d-map-spectra</a>”</p>
 </dd></dl>
 
 <dl class="py function">
