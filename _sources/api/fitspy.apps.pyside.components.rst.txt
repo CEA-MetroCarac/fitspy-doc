@@ -41,6 +41,16 @@ fitspy.apps.pyside.components.custom\_widgets module
    :show-inheritance:
    :ignore-module-all:
 
+fitspy.apps.pyside.components.fit\_stats module
+-----------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.fit_stats
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 fitspy.apps.pyside.components.menubar module
 --------------------------------------------
 
