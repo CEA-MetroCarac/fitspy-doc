@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fitspy.core package &mdash; Fitspy 2025.6 documentation</title>
+  <title>fitspy.core package &mdash; Fitspy 2025.7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -830,7 +830,7 @@ has been correctly defined (y_min value ~ 0)</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.create_peak_model">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_peak_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dfwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.create_peak_model" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_peak_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ampli</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[-20.0,</span> <span class="pre">20.0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dfwhm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.create_peak_model" title="Permalink to this definition"></a></dt>
 <dd><p>Create a ‘lmfit’ model associated to one peak</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1001,6 +1001,12 @@ Default value is True.</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.save_profiles">
+<span class="sig-name descname"><span class="pre">save_profiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirname_profiles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.save_profiles" title="Permalink to this definition"></a></dt>
+<dd><p>Save profiles in a ‘.csv’ file located in ‘dirname_params’</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.save_params">
 <span class="sig-name descname"><span class="pre">save_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirname_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.save_params" title="Permalink to this definition"></a></dt>
 <dd><p>Save fit parameters in a ‘.csv’ file located in ‘dirname_params’</p>
@@ -1059,6 +1065,10 @@ Save it if a ‘fname_json’ is given</p>
 <dt class="sig sig-object py" id="fitspy.core.utils.fileparts">
 <span class="sig-prename descclassname"><span class="pre">fitspy.core.utils.</span></span><span class="sig-name descname"><span class="pre">fileparts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.utils.fileparts" title="Permalink to this definition"></a></dt>
 <dd><p>Returns different file parts of a file</p>
+<p>fileparts(r”toto/tata/tutu.xyz”)
+&gt;&gt; (‘tototata’, ‘tutu’, ‘.xyz’)
+fileparts(r”toto/tata/tutu X=12.3 Y=56.7”)
+&gt;&gt; (‘tototata’, ‘tutu X=12.3 Y=56.7’, None)</p>
 </dd></dl>
 
 <dl class="py function">

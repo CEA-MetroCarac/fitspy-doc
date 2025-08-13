@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Outputs &mdash; Fitspy 2025.6 documentation</title>
+  <title>Outputs &mdash; Fitspy 2025.7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -106,7 +106,7 @@
 <p>Fitspy provides two types of outputs:</p>
 <ul class="simple">
 <li><p>those related to the <strong>models</strong>,</p></li>
-<li><p>and those related to the fits (<strong>parameters</strong> of the fitted models and <strong>statistics</strong>).</p></li>
+<li><p>and those related to the fits (<strong>parameters</strong> of the fitted models, <strong>statistics</strong> and <strong>profiles</strong> (raw and fitted spectrum, baseline, background and peak decomposition).</p></li>
 </ul>
 <section id="outputs-models">
 <h2>Outputs models<a class="headerlink" href="#outputs-models" title="Permalink to this heading"></a></h2>
@@ -183,10 +183,10 @@
 <section id="fit-results">
 <h2>Fit results<a class="headerlink" href="#fit-results" title="Permalink to this heading"></a></h2>
 <p>Once fitted, a spectra data set can generate several files related to the fitting statistics and the fitted parameters.</p>
-<p>In a ‘results’ directory (to be specified by the user), the <strong>statistics</strong> files are built when clicking on <code class="code docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Results</span></code> in the GUI, according to the following model: {spectrum basename}**_stats.txt** file).</p>
+<p>In a ‘results’ directory (to be specified by the user), the <strong>statistics</strong> and <strong>profiles</strong> files are built when clicking on <code class="code docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Results</span></code> in the GUI, according to the following model: {spectrum basename}**_stats.txt** and {spectrum basename}**_profiles.txt** file respectively).</p>
 <p>The same for the <strong>fitted parameters</strong> attached to each spectrum: {spectrum basename}**.csv** file)</p>
 <ul>
-<li><p>Example of <strong>statistics</strong> returned in <em>ordered_map.txt  X=1757.0  Y=65_stats.txt</em> (obtained from <em>examples/ex_gui_users_defined_models_2d_map.py</em>):</p>
+<li><p>Example of <strong>statistics</strong> returned in <em>ordered_map.txt  X=1757.0  Y=65.7_stats.txt</em> (obtained from <em>examples/ex_gui_users_defined_models_2d_map.py</em>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Fit</span> <span class="n">Statistics</span><span class="p">]]</span>
 <span class="c1"># fitting method   = leastsq</span>
 <span class="c1"># function evals   = 93</span>
@@ -217,7 +217,13 @@
 </pre></div>
 </div>
 </li>
-<li><p>Example of the <strong>fitted parameters</strong> in <em>ordered_map.txt  X=1757.0  Y=65.csv</em>:</p></li>
+<li><p>Example of the <strong>profiles</strong> in <em>ordered_map.txt  X=1757.0  Y=65.7_profiles.csv</em>:</p></li>
+</ul>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../_images/params_profiles_csv.png"><img alt="../_images/params_profiles_csv.png" src="../_images/params_profiles_csv.png" style="width: 75%;" /></a>
+</figure>
+<br><ul class="simple">
+<li><p>Example of the <strong>fitted parameters</strong> in <em>ordered_map.txt  X=1757.0  Y=65.7.csv</em>:</p></li>
 </ul>
 <figure class="align-left">
 <a class="reference internal image-reference" href="../_images/params_csv.png"><img alt="../_images/params_csv.png" src="../_images/params_csv.png" style="width: 75%;" /></a>
