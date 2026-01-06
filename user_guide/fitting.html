@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fitting &mdash; Fitspy 2025.7 documentation</title>
+  <title>Fitting &mdash; Fitspy 2026.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -129,10 +129,14 @@
 </section>
 <section id="outliers">
 <h2>Outliers<a class="headerlink" href="#outliers" title="Permalink to this heading"></a></h2>
-<p>To determine outliers, a certain number of spectra of the same nature are required in order to be able to deduce numerically abnormal amplitude variations. This is well-suited particularly for 2D-map spectra.</p>
+<p>To determine outliers <strong>automatically</strong>, a certain number of spectra of the same nature are required in order to be able to deduce numerically abnormal amplitude variations. This is well-suited particularly for 2D-map spectra.</p>
 <p>First, a ‘normal spectra’ envelop is determined from the values of the 5th maximum intensity of all the spectra at any point (considering a null probability of having more than 5 outliers at the same point).</p>
 <p>Outliers are then determined as points exceeding this envelope by a certain coefficient.</p>
 <p>In the fit processing, outliers have a null weight associated with them (see below), and at the preceding baseline definition step, linear interpolations of the signal with respect to the points surrounding these outliers are performed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From the v2026.1, outliers can be defined <strong>manually</strong> by selecting <strong>Outliers</strong> in <code class="code docutils literal notranslate"><span class="pre">Click</span> <span class="pre">Mode</span></code> and then left- or right-clicking in the figure to add or remove outliers, respectively.</p>
+</div>
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../_images/outliers.png"><img alt="../_images/outliers.png" src="../_images/outliers.png" style="width: 100%;" /></a>
 <figcaption>
@@ -248,7 +252,7 @@ For <code class="code docutils literal notranslate"><span class="pre">Leastsq</s
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2025, The Fitspy development team.</p>
+    <p>&#169; Copyright 2023-2026, The Fitspy development team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

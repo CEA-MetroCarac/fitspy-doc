@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fitspy.core package &mdash; Fitspy 2025.7 documentation</title>
+  <title>fitspy.core package &mdash; Fitspy 2026.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -697,6 +697,7 @@ conversion or from the corresponding array ‘arr0’ previously saved and reloa
 <li><p><strong>normalize</strong> (<em>bool</em>) – Activation keyword for the spectrum profile normalization</p></li>
 <li><p><strong>normalize_range_max</strong> (<em>normalize_range_min</em><em>,</em>) – Ranges for searching the maximum value used in the normalization</p></li>
 <li><p><strong>outliers_limit</strong> (<em>numpy.array</em><em>(</em><em>(</em><em>n0</em><em>)</em><em>)</em>) – Array related to the outliers limit associated to the raw data (x0, y0)</p></li>
+<li><p><strong>outliers_inds</strong> (<em>list</em><em> of </em><em>int</em>) – Indices related to (extra) users-defined outliers</p></li>
 <li><p><strong>baseline</strong> (<em>Baseline object</em>) – Baseline associated to the spectrum (to subract)</p></li>
 <li><p><strong>baseline_history</strong> (<em>list</em><em> of </em><em>list - DEPRECATED from v2024.2</em>) – Concatenation list of all baselines applied to the spectrum. Each item
 of the list consist in the max order of the baseline polynom and the
@@ -1235,7 +1236,7 @@ once instead of duplicating them for each spectrum turned out to be slightly</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2025, The Fitspy development team.</p>
+    <p>&#169; Copyright 2023-2026, The Fitspy development team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
