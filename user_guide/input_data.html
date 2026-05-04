@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Input data files &mdash; Fitspy 2026.1 documentation</title>
+  <title>Input data files &mdash; Fitspy 2026.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -119,7 +119,13 @@
 <h2>1D-spectrum<a class="headerlink" href="#d-spectrum" title="Permalink to this heading"></a></h2>
 <p>The input data file format for a single spectrum is based on 2 columns representing the support (x) - typically associated to wavelengths or energies - and the spectrum intensity (y).</p>
 <p>The separators between the columns can be tabulation <code class="code docutils literal notranslate"><span class="pre">t</span></code>, comma <code class="code docutils literal notranslate"><span class="pre">,</span></code>, semicolon <code class="code docutils literal notranslate"><span class="pre">;</span></code> or space <code class="code docutils literal notranslate"></code>.</p>
-<p>Note that <strong>the first row is skipped</strong> and the (x, y) rows can be unordered.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When reading 1D-spectrum files, only lines where the first two tokens are numeric are
+retained. Tokens are split on commas or any whitespace (spaces, tabs). Decimal and
+scientific notation (for example, <code class="docutils literal notranslate"><span class="pre">1e-3</span></code>) are accepted. Header lines, comments, or
+any line with fewer than two numeric values are ignored by the reader.</p>
+</div>
 <p>Example of input data file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Wave       #Intensity</span>
 <span class="mf">958.468750</span>  <span class="mf">307.873749</span>

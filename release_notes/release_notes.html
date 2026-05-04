@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Release Notes &mdash; Fitspy 2026.1 documentation</title>
+  <title>Release Notes &mdash; Fitspy 2026.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -63,6 +63,9 @@
 <p class="caption" role="heading"><span class="caption-text">Release Notes</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-2026-4-april-30-2026">Version 2026.4 (April 30, 2026)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2026-3-april-04-2026">Version 2026.3 (April 04, 2026)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2026-2-january-29-2026">Version 2026.2 (January 29, 2026)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-2026-1-january-6-2026">Version 2026.1 (January 6, 2026)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-2025-7-august-13-2025">Version 2025.7 (August 13, 2025)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-2025-6-may-19-2025">Version 2025.6 (May 19, 2025)</a></li>
@@ -114,6 +117,57 @@
              
   <section id="release-notes">
 <h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this heading"></a></h1>
+<section id="version-2026-4-april-30-2026">
+<h2>Version 2026.4 (April 30, 2026)<a class="headerlink" href="#version-2026-4-april-30-2026" title="Permalink to this heading"></a></h2>
+<p><strong>New features:</strong></p>
+<ul class="simple">
+<li><p>Added Multi-background models capability in the GUI (PySide).</p></li>
+</ul>
+<p><strong>Bug fixes:</strong></p>
+<ul class="simple">
+<li><p>missing argument passed to eval_xy() (9fd8294)</p></li>
+<li><p>fix x_label, y_label misplacement (f83f187)</p></li>
+<li><p>Various others minor bug fixes and code refactoring.</p></li>
+</ul>
+</section>
+<section id="version-2026-3-april-04-2026">
+<h2>Version 2026.3 (April 04, 2026)<a class="headerlink" href="#version-2026-3-april-04-2026" title="Permalink to this heading"></a></h2>
+<p><strong>Enhancements:</strong></p>
+<ul class="simple">
+<li><p>Replaced the Matplotlib backend with PyQtGraph in the PySide GUI to improve spectra visualization performance and capabilities.</p></li>
+</ul>
+<p><strong>Bug fixes:</strong></p>
+<ul class="simple">
+<li><p>Fixed <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/96">#96</a> Error when loading custom peak model</p></li>
+<li><p>Fixed <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/99">#99</a> Error when reopening json model with ‘arpls’ baseline</p></li>
+<li><p>Fixed <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/100">#100</a> Baseline =&gt; import in the pyside gui does nothing</p></li>
+<li><p>Fixed <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/101">#101</a> Import Baseline : Automatic method selection</p></li>
+<li><p>Fixed <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/102">#102</a> Import Baseline : setting an X-range makes the baseline disappear</p></li>
+<li><p>Fixed <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/103">#103</a> Import Baseline : bad log displaying</p></li>
+<li><p>Fixed <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/104">#104</a> Zoom requires double click</p></li>
+<li><p>Fixed <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/105">#105</a> Y-Log option is not saved (?)</p></li>
+</ul>
+</section>
+<section id="version-2026-2-january-29-2026">
+<h2>Version 2026.2 (January 29, 2026)<a class="headerlink" href="#version-2026-2-january-29-2026" title="Permalink to this heading"></a></h2>
+<p><strong>Enhancements:</strong></p>
+<ul class="simple">
+<li><p>Better centralized handling of retro-compatibility (old .json models + old GUI settings)</p></li>
+<li><p>Adjusted behavior of peaks table header when switching models (previously, switching models from Asym to Sym thus removing fwhm_l and fwhm_r columns would compact the columns making it hard to read; now, the header fits to contents, making the table less compact but more readable)</p></li>
+</ul>
+<p><strong>New features:</strong></p>
+<ul class="simple">
+<li><p>New CLI to list and reset Fitspy GUI session settings</p></li>
+<li><p><a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/94">#94</a> Extended baseline methods with pybaselines package and Sonneveld-Vesser method</p></li>
+</ul>
+<p><strong>Bug fixes:</strong></p>
+<ul class="simple">
+<li><p>Fixed <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/93">#93</a> click_mode combo now persist between sessions</p></li>
+<li><p>Fixed <a class="reference external" href="https://github.com/CEA-MetroCarac/fitspy/issues/95">#95</a> “Save with data” now works</p></li>
+<li><p>Fixed wrong legend when previewing model from .json file</p></li>
+<li><p>Fixed multi-row edits and whole column selection for model change in peaks table</p></li>
+</ul>
+</section>
 <section id="version-2026-1-january-6-2026">
 <h2>Version 2026.1 (January 6, 2026)<a class="headerlink" href="#version-2026-1-january-6-2026" title="Permalink to this heading"></a></h2>
 <p>Remove deprecated files (spectrum.py, spectra.py, …) from <code class="code docutils literal notranslate"><span class="pre">fitspy</span></code> (please, use now the corresponding files located in <code class="code docutils literal notranslate"><span class="pre">fitspy.core</span></code>).</p>

@@ -29,3 +29,13 @@ fitspy.apps.interactive\_bounds module
    :no-undoc-members:
    :show-inheritance:
    :ignore-module-all:
+
+fitspy.apps.interactive\_bounds\_pg module
+------------------------------------------
+
+.. automodule:: fitspy.apps.interactive_bounds_pg
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

@@ -16,3 +16,16 @@ Subpackages
 
    fitspy.apps
    fitspy.core
+
+Submodules
+----------
+
+fitspy.\_\_main\_\_ module
+--------------------------
+
+.. automodule:: fitspy.__main__
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:

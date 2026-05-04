@@ -21,6 +21,26 @@ fitspy.core.baseline module
    :show-inheritance:
    :ignore-module-all:
 
+fitspy.core.baseline\_methods module
+------------------------------------
+
+.. automodule:: fitspy.core.baseline_methods
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
+fitspy.core.migrations module
+-----------------------------
+
+.. automodule:: fitspy.core.migrations
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 fitspy.core.models module
 -------------------------
 

@@ -11,6 +11,16 @@ fitspy.apps.pyside.components.plot package
 Submodules
 ----------
 
+fitspy.apps.pyside.components.plot.backend\_manager module
+----------------------------------------------------------
+
+.. automodule:: fitspy.apps.pyside.components.plot.backend_manager
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 fitspy.apps.pyside.components.plot.controller module
 ----------------------------------------------------
 

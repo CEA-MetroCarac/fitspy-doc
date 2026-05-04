@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fitspy.core package &mdash; Fitspy 2026.1 documentation</title>
+  <title>fitspy.core package &mdash; Fitspy 2026.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -121,10 +121,10 @@
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>points</strong> (<em>list</em><em> of </em><em>2 lists</em>) – List of the (x,y) baseline points coordinates</p></li>
-<li><p><strong>mode</strong> (<em>str</em><em> or </em><em>None</em>) – Mode used to determine the baseline, among None, ‘Semi-Auto’ (semi-automatic
+<li><p><strong>mode</strong> (<em>str</em><em> or </em><em>None</em>) – Mode used to determine the baseline, among None, ‘arpls’ (semi-automatic
 baseline determination), ‘Linear’ (piecewise linear decomposition based
 on users points definition) and ‘Polynomial’. Default mode is None</p></li>
-<li><p><strong>coef</strong> (<em>int</em>) – Smoothing coefficient used in the ‘Semi-Auto’ mode.
+<li><p><strong>coef</strong> (<em>int</em>) – Smoothing coefficient used in the ‘arpls’ mode.
 The larger coef is, the smoother the resulting baseline</p></li>
 <li><p><strong>order_max</strong> (<em>int</em>) – Maximum order of the baseline polynomial evaluation</p></li>
 <li><p><strong>distance</strong> (<em>float</em>) – Minimum distance between baseline point to consider when doing automatic
@@ -274,11 +274,36 @@ padding).</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="fitspy.core.baseline.sonneveld_vesser">
+<span class="sig-prename descclassname"><span class="pre">fitspy.core.baseline.</span></span><span class="sig-name descname"><span class="pre">sonneveld_vesser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.008</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">niter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.baseline.sonneveld_vesser" title="Permalink to this definition"></a></dt>
+<dd><p>Sonneveld–Visser automatic background estimation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Input spectrum intensity.</p></li>
+<li><p><strong>step</strong> (<em>int</em><em>, </em><em>optional</em>) – Subsampling step (default keeps ~5% of points, like Match).</p></li>
+<li><p><strong>c</strong> (<em>float</em><em>, </em><em>optional</em>) – Relative clipping threshold (percentage of max background).</p></li>
+<li><p><strong>niter</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of clipping iterations.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>baseline</strong> (<em>numpy.ndarray</em>) – Estimated baseline, interpolated to full resolution.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="fitspy.core.baseline.generate_penalties">
 <span class="sig-prename descclassname"><span class="pre">fitspy.core.baseline.</span></span><span class="sig-name descname"><span class="pre">generate_penalties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">differentiation_order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing_factor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.baseline.generate_penalties" title="Permalink to this definition"></a></dt>
 <dd><p>Generates the initial weights and smoothness penalty matrix</p>
 </dd></dl>
 
+</section>
+<section id="module-fitspy.core.baseline_methods">
+<span id="fitspy-core-baseline-methods-module"></span><h2>fitspy.core.baseline_methods module<a class="headerlink" href="#module-fitspy.core.baseline_methods" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-fitspy.core.migrations">
+<span id="fitspy-core-migrations-module"></span><h2>fitspy.core.migrations module<a class="headerlink" href="#module-fitspy.core.migrations" title="Permalink to this heading"></a></h2>
 </section>
 <section id="module-fitspy.core.models">
 <span id="fitspy-core-models-module"></span><h2>fitspy.core.models module<a class="headerlink" href="#module-fitspy.core.models" title="Permalink to this heading"></a></h2>
@@ -867,9 +892,9 @@ Default value is 20.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.params_from_profile">
-<span class="sig-name descname"><span class="pre">params_from_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.params_from_profile" title="Permalink to this definition"></a></dt>
-<dd><p>Return model with parameters estimated from the local spectrum profile</p>
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.estimate_params">
+<span class="sig-name descname"><span class="pre">estimate_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.estimate_params" title="Permalink to this definition"></a></dt>
+<dd><p>Return model parameters estimated from the local spectrum profile</p>
 </dd></dl>
 
 <dl class="py method">
@@ -967,7 +992,7 @@ Default value is True.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.auto_baseline">
 <span class="sig-name descname"><span class="pre">auto_baseline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.auto_baseline" title="Permalink to this definition"></a></dt>
-<dd><p>set baseline.mode to ‘Semi-Auto</p>
+<dd><p>set baseline.mode to ‘arpls</p>
 </dd></dl>
 
 <dl class="py method">
@@ -987,6 +1012,18 @@ Default value is True.</p></li>
 <span class="sig-name descname"><span class="pre">auto_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.auto_peaks" title="Permalink to this definition"></a></dt>
 <dd><p>Create automatically ‘model_name’ peak-models in the limit of
 5% of the maximum intensity peaks and nmax_nfev=400</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.eval_outliers">
+<span class="sig-name descname"><span class="pre">eval_outliers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subtract_baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.eval_outliers" title="Permalink to this definition"></a></dt>
+<dd><p>Return outliers points (x,y) coordinates for plotting</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitspy.core.spectrum.Spectrum.eval_xy">
+<span class="sig-name descname"><span class="pre">eval_xy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subtract_baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtract_bkg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fitspy.core.spectrum.Spectrum.eval_xy" title="Permalink to this definition"></a></dt>
+<dd><p>Return spectrum (x,y) coordinates for plotting</p>
 </dd></dl>
 
 <dl class="py method">

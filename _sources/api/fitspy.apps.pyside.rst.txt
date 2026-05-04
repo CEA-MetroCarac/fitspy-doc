@@ -59,6 +59,16 @@ fitspy.apps.pyside.main\_view module
    :show-inheritance:
    :ignore-module-all:
 
+fitspy.apps.pyside.reset\_settings module
+-----------------------------------------
+
+.. automodule:: fitspy.apps.pyside.reset_settings
+   :members:
+   :private-members:
+   :no-undoc-members:
+   :show-inheritance:
+   :ignore-module-all:
+
 fitspy.apps.pyside.utils module
 -------------------------------
 
